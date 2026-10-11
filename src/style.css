@@ -19,3 +19,9 @@ html, body { margin: 0; font: 14px/1.4 system-ui, sans-serif; }
 .context-menu { position: fixed; z-index: 10; min-width: 200px; padding: 4px; background: #111827; border: 1px solid #374151; border-radius: 8px; box-shadow: 0 8px 24px rgb(0 0 0 / 0.25); }
 .context-menu button { display: block; width: 100%; text-align: left; font: inherit; font-size: 13px; padding: 6px 10px; border: 0; border-radius: 5px; background: transparent; color: #f9fafb; cursor: pointer; }
 .context-menu button:hover { background: #f472b6; color: #111827; }
+/* Episode 025 – status badge */
+.status-badge { display: inline-block; margin-top: 6px; padding: 0 10px; line-height: 20px; border-radius: 10px; font-size: 12px; font-weight: 600; }
+.status-open { background: #e0e7ff; color: #3730a3; }
+.status-paid { background: #dcfce7; color: #166534; }
+.status-shipped { background: #fce7f3; color: #9d174d; }
+.status-cancelled { background: #f3f4f6; color: #6b7280; text-decoration: line-through; }

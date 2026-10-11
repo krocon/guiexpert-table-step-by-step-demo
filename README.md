@@ -647,3 +647,36 @@ new ExcelService().downloadExcel(matrix, "orders-all.xlsx", "GuiExpert");
 ```bash
 npm run dev   # → http://localhost:5173/?q=berlin   („xlsx: view“ und „xlsx: all“)
 ```
+
+---
+
+## Folge 025 – Zellen gestalten mit Cell-Renderern
+
+Ein Renderer bestimmt, wie eine Zelle **aussieht** – der Wert bleibt gleich (Sortieren, Filter, Kopieren und Excel
+arbeiten weiter mit dem Rohwert). `src/model/order-renderers.ts`:
+
+```ts
+export class StatusBadgeRenderer implements CellRendererIf {
+  render(cellDiv, rowIndex, columnIndex, areaIdent, areaModel, cellValue, dom) {
+    const badge = dom.createElement<HTMLSpanElement>("span");
+    dom.addClass(badge, `status-${cellValue}`);
+    badge.textContent = cellValue;
+    dom.appendChild(cellDiv, badge);
+    return undefined;                     // optional: Cleanup-Funktion
+  }
+}
+
+column("date").rendererMap.body = new DateToLocaleDateCellRenderer();                  // eingebaut
+column("quantity").rendererMap.body = new NumberCellProgressBarCellRenderer(20, false); // eingebaut
+column("status").rendererMap.body = new StatusBadgeRenderer();                         // eigener
+column("total").rendererMap.footer = new EuroRenderer();                               // auch im Footer
+```
+
+- Eingebaut u. a.: `NumberCellRenderer`, `ProgressBarCellRenderer`, `StarRatingCellRenderer`, `DateToLocaleDateCellRenderer`.
+- Renderer werden nur für **sichtbare** Zellen aufgerufen.
+- Ein eigenes Area-Modell (Footer aus Folge 016) wählt seine Renderer selbst: `getCellRenderer(row, col)`.
+- Alternativ beim Anlegen: `ColumnDef.create({ …, bodyRenderer: new EuroRenderer() })`.
+
+```bash
+npm run dev   # → http://localhost:5173/
+```

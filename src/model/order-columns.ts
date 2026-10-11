@@ -3,6 +3,7 @@ import {
   px80, px100, px110, px120, px130, px160, px180, px200
 } from "@guiexpert/table";
 import { Order } from "../data/orders";
+import { applyOrderRenderers } from "./order-renderers";
 
 // Episode 020 – own comparators: names by locale ("Müller" before "Nordlicht"), status by workflow.
 const STATUS_ORDER: Order["status"][] = ["open", "paid", "shipped", "cancelled"];
@@ -35,3 +36,6 @@ export const ORDER_COLUMNS: ColumnDefIf[] = [
 // Episode 020 – all other columns sortable too (double-click on the header: asc → desc → asc …).
 // (before 1.1.88, ColumnDef.create() without `sortable` also hid the sort icon for good.)
 for (const column of ORDER_COLUMNS) column.sortable ??= TrueFn;
+
+// Episode 025 – how the cells look
+applyOrderRenderers(ORDER_COLUMNS);

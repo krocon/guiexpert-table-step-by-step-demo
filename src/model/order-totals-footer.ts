@@ -1,4 +1,4 @@
-import { AreaModel, AreaModelObjectArray, ColumnDefIf } from "@guiexpert/table";
+import { AreaModel, AreaModelObjectArray, CellRendererIf, ColumnDefIf } from "@guiexpert/table";
 import { Order } from "../data/orders";
 
 // Episode 016 – a footer that follows filter and sorting: it reads the rows the body currently shows.
@@ -12,6 +12,11 @@ export class OrderTotalsFooterModel extends AreaModel {
   }
   override getRowCount(): number { return 1; }
   override getRowHeight(_rowIndex: number): number { return this.rowHeight; }
+
+  // Episode 025 – an own area model chooses its renderers itself: here the footer renderer of the column
+  override getCellRenderer(_rowIndex: number, columnIndex: number): CellRendererIf | undefined {
+    return this.columnDefs[columnIndex]?.rendererMap?.footer;
+  }
 
   private cache?: { rows: Order[]; length: number; qty: number; total: number };
 
