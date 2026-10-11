@@ -1,0 +1,7 @@
+body { margin: 0; font: 14px/1.4 system-ui, sans-serif; }
+header { position: sticky; top: 0; padding: 8px 12px; background: #111827; color: #f9fafb; display: flex; gap: 24px; }
+#stats { color: #f472b6; font-family: ui-monospace, monospace; }
+.scroller { height: calc(100vh - 40px); overflow: auto; }
+table { border-collapse: collapse; }
+th, td { border: 1px solid #e5e7eb; padding: 4px 8px; white-space: nowrap; }
+th { position: sticky; top: 0; background: #f3f4f6; cursor: pointer; }

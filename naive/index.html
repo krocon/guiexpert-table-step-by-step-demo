@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Episode 001 – naive table with 100,000 rows</title>
+  <link rel="stylesheet" href="./naive.css" />
+</head>
+<body>
+  <header>
+    <b>Naive &lt;table&gt;</b> – <span id="count">100,000</span> orders · click a column header to sort
+    <span id="stats">rendering …</span>
+  </header>
+  <div class="scroller"><table id="orders"></table></div>
+  <script type="module" src="./naive-table.ts"></script>
+</body>
+</html>
