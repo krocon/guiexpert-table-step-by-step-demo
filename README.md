@@ -620,3 +620,30 @@ In den Framework-Wrappern heißen die Events `mouseClicked`, `contextmenu` … (
 ```bash
 npm run dev   # → http://localhost:5173/   (Doppelklick auf eine Zeile, Rechtsklick)
 ```
+
+---
+
+## Folge 024 – Excel-Export ohne Library
+
+Der Core hat einen eigenen XLSX-Writer – keine Zusatz-Bibliothek. Zwei Wege (`src/order-excel.ts`):
+
+```ts
+// 1. die aktuelle Sicht: gefilterte Zeilen, aktuelle Sortierung, Header + Footer, sichtbare Spalten
+tableApi.downloadExcel("orders-view.xlsx", "GuiExpert");
+
+// 2. alle Daten, unabhängig von Filter und Sortierung – Spalten wählst du selbst
+const body = tableApi.getBodyModel() as AreaModelObjectArray<Order>;
+const matrix = [["ID", "Date", "Customer", "Country", "Category", "Total", "Status"],
+  ...body.getAllRows().map(o => [o.id, o.date, o.customer, o.country, o.category, o.total, o.status])];
+new ExcelService().downloadExcel(matrix, "orders-all.xlsx", "GuiExpert");
+```
+
+- Zahlen bleiben Zahlen, Text bleibt Text (Datum als ISO-Text).
+- Die Summenzeile aus Folge 016 landet in Weg 1 automatisch mit im Export.
+- Ab 1.1.86 gültige Dateien (CRC, Blattgröße); ab 1.1.88 ohne versteckte Spalten.
+- Ab 1.1.90 komprimiert (DEFLATE über den eingebauten `CompressionStream`, ohne Library):
+  100.000 Zeilen ≈ 3,9 MB statt 40 MB. `downloadExcel()` liefert jetzt ein Promise.
+
+```bash
+npm run dev   # → http://localhost:5173/?q=berlin   („xlsx: view“ und „xlsx: all“)
+```

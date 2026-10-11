@@ -7,6 +7,7 @@ import { createOrderTableOptions } from "./model/order-table-options";
 import { matchesOrder, orderFilter } from "./order-filter";
 import { OrderEvents } from "./order-events";
 import { showContextMenu } from "./context-menu";
+import { downloadAll, downloadView } from "./order-excel";
 import { createOrdersModel } from "./model/order-table-model";
 
 const params = new URLSearchParams(location.search);       // e.g. /?rows=1000000&scrollTo=50000
@@ -32,7 +33,7 @@ const events = new OrderEvents(showInfo, row => showOrder(orderAt(row)), evt => 
     { label: `Show order #${order.id}`, action: () => showOrder(order) },
     { label: "Copy selection", action: () => tableApi.copyToClipboard() },
     { label: `Only ${order.customer}`, action: () => { search.value = order.customer; filterChanged(); } },
-    { label: "Export view as Excel", action: () => tableApi.downloadExcel("orders.xlsx", "GuiExpert") }
+    { label: "Export view as Excel", action: () => downloadView(tableApi) }
   ]);
 });
 const tableScope = new TableScope(host, tableModel, new SimpleDomService(), options, events);
@@ -64,12 +65,14 @@ function filterChanged(): void {
 }
 search.addEventListener("input", filterChanged);
 minTotal.addEventListener("input", filterChanged);
-if (params.has("q")) { search.value = params.get("q")!; filterChanged(); }
 // Episode 022 – copy the selection (same as ⌘/Ctrl+C)
 document.querySelector("#copy")?.addEventListener("click", async () => {
   const text = await tableApi.copyToClipboard();
   showInfo(`copied ${text.split("\n").length.toLocaleString("en")} lines to the clipboard`);
 });
+// Episode 024 – Excel: the current view or all data
+document.querySelector("#xlsx-view")?.addEventListener("click", () => downloadView(tableApi));
+document.querySelector("#xlsx-all")?.addEventListener("click", () => downloadAll(tableApi));
 if (params.has("scrollTo")) tableApi.scrollToIndex(0, Number(params.get("scrollTo")));
 
 // (only for the demo) show what it cost
@@ -81,4 +84,5 @@ requestAnimationFrame(() => {
   document.querySelector("#model")!.textContent = describeModel(tableModel);   // episode 011
   (window as any).__stats = { ms, nodes };
   (window as any).tableApi = tableApi;
+  if (params.has("q")) { search.value = params.get("q")!; filterChanged(); }   // e.g. /?q=berlin
 });
