@@ -718,3 +718,30 @@ Komponenten entstehen nur für **sichtbare** Zellen und werden beim Wegscrollen 
 ```bash
 npm run dev:react     # bzw. npm run dev:angular
 ```
+
+---
+
+## Folge 027 – Heatmap und bedingte Formatierung
+
+Umsatz pro Stadt und Monat (aus den 100.000 Orders aggregiert), die Farbe kommt aus dem Wert
+(`src/model/revenue-heatmap.ts`):
+
+```ts
+export class RevenueHeatmapModel extends AreaModelArrayOfArrays<string | number> {
+  private readonly gradient = new ThreeColorGradientArg(
+    min, new ColorRgb(255, 255, 255), mid, new ColorRgb(244, 114, 182), max, new ColorRgb(79, 70, 229));
+
+  override getCustomStyleAt(rowIndex: number, columnIndex: number) {      // nur für sichtbare Zellen
+    const value = Number(this.getValueAt(rowIndex, columnIndex));
+    return { "background-color": GeCssColorUtil.getThreeColorGradientRGB(value, this.gradient) };
+  }
+}
+```
+
+- `getCustomStyleAt` → Inline-Styles, `getCustomClassesAt` → CSS-Klassen (z. B. `negative`, `overdue`).
+- Farb-Helfer aus dem Core: `GeCssColorUtil.getTwoColorGradientRGB` / `getThreeColorGradientRGB`, `ColorRgb`.
+- Header als `headerData`, Body als eigenes Modell, Stadt-Spalte fixiert (`fixedLeftColumnCount: 1`).
+
+```bash
+npm run dev   # → http://localhost:5173/heatmap/
+```
