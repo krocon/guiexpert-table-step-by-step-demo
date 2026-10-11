@@ -861,3 +861,27 @@ Die Zeile bleibt an ihrer Position – neu sortieren mit `tableApi.reSort()`.
 ```bash
 npm run dev   # → http://localhost:5173/   (Doppelklick auf eine Menge)
 ```
+
+---
+
+## Folge 032 – Live-Daten ohne Neuaufbau
+
+1.000 Kurse, alle 100 ms bewegen sich 50 davon → 1.500 Zell-Updates pro Sekunde (`src/model/ticker.ts`):
+
+```ts
+events.push(
+  new TableCellUpdateEvent("body", row, 2, price, { "tick-up": up, "tick-down": !up }),
+  new TableCellUpdateEvent("body", row, 3, change, { "tick-up": up, "tick-down": !up }),
+  new TableCellUpdateEvent("body", row, 4, volume));
+api.updateCells(events);       // Wert ins Modell schreiben, nur diese Zellen neu zeichnen
+```
+
+- Zellen außerhalb des Bildes bekommen nur den neuen Wert – gezeichnet werden sie erst beim Hinscrollen.
+- Die CSS-Klassen gelten für die **aktuelle** Zelle (ein „Aufblitzen“). Dauerhafte Farben gehören ins Modell
+  (`getCustomClassesAt`, Folge 027).
+- `updateCells(events, true)` zeichnet stattdessen die ganze Tabelle neu.
+- Ab 1.1.89 sucht `updateCells` die Zelle nur in der eigenen Tabelle (mehrere Tabellen auf einer Seite).
+
+```bash
+npm run dev   # → http://localhost:5173/live/
+```
