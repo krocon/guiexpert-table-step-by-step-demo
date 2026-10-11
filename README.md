@@ -186,3 +186,28 @@ table.data = { tableModel: createOrderTableModel(), tableOptions: { ...new Table
 ```bash
 npm run dev   # → http://localhost:5173/web-component/   und   http://localhost:5173/cdn/
 ```
+
+---
+
+## Folge 007 – GuiExpert Table in React
+
+Ein Workspace pro Framework unter `frameworks/` – alle nutzen **dasselbe** Modell aus `src/model/order-table.ts`.
+
+```bash
+npm i                 # einmal im Wurzelordner, installiert alle Workspaces
+npm run dev:react     # → http://localhost:5173/
+```
+
+```tsx
+// frameworks/react/src/App.tsx
+const model = useMemo(() => createOrderTableModel(rows), [rows]);
+const options = useMemo(() => ({ ...new TableOptions() }), []);
+
+<GuiexpertTable tableModel={model} tableOptions={options}
+                tableReady={onReady} mouseClicked={onClick} />
+```
+
+- Ein **neues** `tableModel`- oder `tableOptions`-Objekt baut die Tabelle neu auf (ab 18.1.86) – darum `useMemo`.
+  Der Knopf oben schaltet zwischen 100.000 und 1.000 Zeilen um: neues Modell → neue Tabelle, `tableReady` feuert erneut.
+- Callbacks als Props: `tableReady`, `mouseClicked`, `selectionChanged`, `contextmenu`, `modelChanged` …
+- Typen der Callbacks (`(evt) => void`) ab `@guiexpert/react-table@18.1.88`.
