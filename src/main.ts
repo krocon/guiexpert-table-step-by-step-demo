@@ -1,13 +1,15 @@
 import "@guiexpert/table/css/main.css";   // styles of the table (CSS variables --ge-table-*)
 import "./style.css";
-import { EventAdapter, SimpleDomService, TableOptions, TableScope } from "@guiexpert/table";
+import { SimpleDomService, TableOptions, TableScope } from "@guiexpert/table";
 import { createOrders, Order } from "./data/orders";
 import { describeModel } from "./model/describe-model";
 import { createOrderTableOptions } from "./model/order-table-options";
 import { matchesOrder, orderFilter } from "./order-filter";
+import { OrderEvents } from "./order-events";
 import { createOrdersModel } from "./model/order-table-model";
 
 const params = new URLSearchParams(location.search);       // e.g. /?rows=1000000&scrollTo=50000
+const showInfo = (text: string) => document.querySelector("#info")!.textContent = text;
 const rowCount = Number(params.get("rows") ?? 100_000);
 const t0 = performance.now();
 const orders = createOrders(rowCount);
@@ -20,7 +22,7 @@ const options = params.has("defaults")                        // episode 019: /?
 options.externalFilterFunction = matchesOrder;                // episode 021
 const tableModel = createOrdersModel(orders, options);        // episode 012
 const tableScope = new TableScope(
-  host, tableModel, new SimpleDomService(), options, new EventAdapter());
+  host, tableModel, new SimpleDomService(), options, new OrderEvents(showInfo));
 tableScope.firstInit();
 
 const tableApi = tableScope.getApi();
@@ -50,6 +52,11 @@ function filterChanged(): void {
 search.addEventListener("input", filterChanged);
 minTotal.addEventListener("input", filterChanged);
 if (params.has("q")) { search.value = params.get("q")!; filterChanged(); }
+// Episode 022 – copy the selection (same as ⌘/Ctrl+C)
+document.querySelector("#copy")?.addEventListener("click", async () => {
+  const text = await tableApi.copyToClipboard();
+  showInfo(`copied ${text.split("\n").length.toLocaleString("en")} lines to the clipboard`);
+});
 if (params.has("scrollTo")) tableApi.scrollToIndex(0, Number(params.get("scrollTo")));
 
 // (only for the demo) show what it cost

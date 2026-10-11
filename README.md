@@ -563,3 +563,24 @@ search.addEventListener("input", () => {                     // bei jeder Eingab
 ```bash
 npm run dev   # → http://localhost:5173/?q=berlin
 ```
+
+---
+
+## Folge 022 – Zellen, Zeilen, Bereiche auswählen und kopieren
+
+Ein Selection-Model pro Tabelle (`src/model/order-table-options.ts`):
+
+```ts
+const selectionModel = new SelectionModel("range", "multi");   // "cell" | "row" | "column" | "range"
+return { ...new TableOptions(), getSelectionModel: () => selectionModel };
+```
+
+- Maus: ziehen = Bereich (ab 1.1.88), Shift-Klick = Bereich bis hierher, ⌘/Strg-Klick = weitere Zelle.
+- Tastatur: ⌘/Strg+C kopiert, ⌘/Strg+A wählt alles, Pfeiltasten bewegen den Fokus.
+- Event: `onSelectionChanged(model)` in `src/order-events.ts` (`class OrderEvents extends EventAdapter`).
+- Button „copy“: `await tableApi.copyToClipboard()` – Text mit Tabs und Zeilenumbrüchen, passt direkt in Excel.
+  Versteckte Spalten (Category) werden ab 1.1.88 nicht mitkopiert.
+
+```bash
+npm run dev   # → http://localhost:5173/   (Bereich ziehen, dann „copy“)
+```

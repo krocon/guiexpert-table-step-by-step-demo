@@ -33,5 +33,5 @@ export const ORDER_COLUMNS: ColumnDefIf[] = [
 ];
 
 // Episode 020 – all other columns sortable too (double-click on the header: asc → desc → asc …).
-// ColumnDef.create() needs `sortable` in its parameters, otherwise the sort icon stays hidden.
+// (before 1.1.88, ColumnDef.create() without `sortable` also hid the sort icon for good.)
 for (const column of ORDER_COLUMNS) column.sortable ??= TrueFn;
