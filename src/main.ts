@@ -7,6 +7,8 @@ import { describeModel } from "./model/describe-model";
 import { createOrderTableOptions } from "./model/order-table-options";
 import { matchesOrder, orderFilter } from "./order-filter";
 import { OrderEvents } from "./order-events";
+import { recalcOrder } from "./model/order-editing";
+import { OrderTotalsFooterModel } from "./model/order-totals-footer";
 import { showContextMenu } from "./context-menu";
 import { downloadAll, downloadView } from "./order-excel";
 import { createOrdersModel } from "./model/order-table-model";
@@ -36,6 +38,12 @@ const events = new OrderEvents(showInfo, row => showOrder(orderAt(row)), evt => 
     { label: `Only ${order.customer}`, action: () => { search.value = order.customer; filterChanged(); } },
     { label: "Export view as Excel", action: () => downloadView(tableApi) }
   ]);
+}, (row, col) => {                                              // episode 031: after an edit
+  const order = orderAt(row);
+  recalcOrder(order);                                           // total = quantity × price
+  (tableModel.getAreaModel("footer") as OrderTotalsFooterModel).invalidate();
+  tableApi.repaint();
+  showInfo(`edited #${order.id} · ${tableModel.getColumnDef(col)?.property} → total ${order.total}`);
 });
 const tableScope = new TableScope(host, tableModel, new SimpleDomService(), options, events);
 tableScope.firstInit();

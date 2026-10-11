@@ -1,11 +1,12 @@
-import { EventAdapter, GeMouseEvent, SelectionModelIf } from "@guiexpert/table";
+import { EventAdapter, GeModelChangeEvent, GeMouseEvent, SelectionModelIf } from "@guiexpert/table";
 
 // Episode 022/023 – react to table events: override only what you need.
 export class OrderEvents extends EventAdapter {
   constructor(
     private readonly show: (text: string) => void,
     private readonly onRowDoubleClick?: (rowIndex: number) => void,
-    private readonly onMenu?: (evt: GeMouseEvent) => void) {
+    private readonly onMenu?: (evt: GeMouseEvent) => void,
+    private readonly onEdited?: (rowIndex: number, columnIndex: number) => void) {
     super();
   }
 
@@ -15,6 +16,10 @@ export class OrderEvents extends EventAdapter {
 
   override onContextmenu(evt: GeMouseEvent): void {           // episode 023
     if (evt.areaIdent === "body" && evt.rowIndex > -1) this.onMenu?.(evt);
+  }
+
+  override onModelChanged(evt: GeModelChangeEvent): void {    // episode 031: a cell was edited
+    for (const cell of evt.cells) this.onEdited?.(cell.rowIndex, cell.columnIndex);
   }
 
   override onSelectionChanged(model: SelectionModelIf): void {

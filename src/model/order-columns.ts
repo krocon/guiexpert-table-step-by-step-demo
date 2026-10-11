@@ -4,6 +4,7 @@ import {
 } from "@guiexpert/table";
 import { Order } from "../data/orders";
 import { applyOrderRenderers } from "./order-renderers";
+import { applyOrderEditing } from "./order-editing";
 
 // Episode 020 – own comparators: names by locale ("Müller" before "Nordlicht"), status by workflow.
 const STATUS_ORDER: Order["status"][] = ["open", "paid", "shipped", "cancelled"];
@@ -39,3 +40,6 @@ for (const column of ORDER_COLUMNS) column.sortable ??= TrueFn;
 
 // Episode 025 – how the cells look
 applyOrderRenderers(ORDER_COLUMNS);
+
+// Episode 031 – editable cells
+applyOrderEditing(ORDER_COLUMNS);

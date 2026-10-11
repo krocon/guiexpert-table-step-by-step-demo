@@ -829,3 +829,35 @@ class TreeEvents extends EventAdapter {
 ```bash
 npm run dev   # → http://localhost:5173/tree/
 ```
+
+---
+
+## Folge 031 – Inline-Editing
+
+Menge und Status direkt in der Tabelle ändern – Doppelklick oder F2 auf der fokussierten Zelle
+(`src/model/order-editing.ts`):
+
+```ts
+quantity.editable = TrueFn;
+quantity.editInputPipe = editInputPipeForNumber;            // Eingabetext → Zahl
+
+status.editable = TrueFn;
+status.getEditRenderer = () => new SelectCellRenderer(       // <select> statt Textfeld
+  ["open", "paid", "shipped", "cancelled"].map(s => new ValueLabel(s, s)));
+```
+
+Nach jeder Änderung kommt `onModelChanged` (`src/order-events.ts`) – hier wird der abgeleitete Wert neu
+berechnet und der Footer aus Folge 016 aktualisiert:
+
+```ts
+recalcOrder(order);                                           // total = quantity × price
+(tableModel.getAreaModel("footer") as OrderTotalsFooterModel).invalidate();
+tableApi.repaint();
+```
+
+Braucht `@guiexpert/table@1.1.89` (Editor auf Zellen mit Renderer, Fokus, Tastenkürzel im Editor).
+Die Zeile bleibt an ihrer Position – neu sortieren mit `tableApi.reSort()`.
+
+```bash
+npm run dev   # → http://localhost:5173/   (Doppelklick auf eine Menge)
+```

@@ -30,6 +30,11 @@ export class OrderTotalsFooterModel extends AreaModel {
     return "";
   }
 
+  /** Episode 031 – values changed (editing, live data): sum again on the next repaint. */
+  invalidate(): void {
+    this.cache = undefined;
+  }
+
   // sum once per filter result, not once per repaint
   private totals() {
     const rows = this.getBody().getFilteredRows();
