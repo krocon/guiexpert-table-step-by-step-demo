@@ -772,3 +772,33 @@ Alle Variablen: `node_modules/@guiexpert/table/css/table-color-vars.css`.
 ```bash
 npm run dev   # → http://localhost:5173/?theme=dark
 ```
+
+---
+
+## Folge 029 – Rowspan und Colspan: ein Stundenplan
+
+Verbundene Zellen kommen aus dem Modell (`src/model/timetable-model.ts`):
+
+```ts
+export class TimetableModel extends AreaModelArrayOfArrays<string> {
+  override getColspanAt(rowIndex: number, columnIndex: number): number {     // Pause über alle Tage
+    return this.isBreak(rowIndex) && columnIndex === 1 ? DAYS.length : 1;
+  }
+  override getRowspanAt(rowIndex: number, columnIndex: number): number {     // Doppelstunde
+    const at = (row: number) => this.getValueAt(row, columnIndex);
+    if (rowIndex > 0 && at(rowIndex) === at(rowIndex - 1)) return 1;        // überdeckt
+    let span = 1;
+    while (rowIndex + span < this.getRowCount() && at(rowIndex + span) === at(rowIndex)) span++;
+    return span;
+  }
+}
+```
+
+- Nur die **erste** Zelle eines Blocks liefert den Span, die überdeckten geben 1 zurück.
+- Verbundene Zellen zeichnet die Tabelle am Ende separat – nichts wird halb abgeschnitten, auch beim Scrollen.
+- Farben pro Fach über `getCustomClassesAt` (`timetable/timetable.css`).
+- Header und Footer können genauso spannen (z. B. Gruppen-Überschriften, Folge 015).
+
+```bash
+npm run dev   # → http://localhost:5173/timetable/
+```
