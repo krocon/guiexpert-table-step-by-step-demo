@@ -124,3 +124,39 @@ $ npm ls --all --omit=dev
 `-- @guiexpert/table@1.1.86
   `-- tslib@2.8.1
 ```
+
+---
+
+## Folge 005 – Die erste Tabelle in Plain TypeScript
+
+Vier Bausteine: Host-`<div>`, Tabellenmodell, Optionen, `TableScope` (`src/main.ts`).
+
+```ts
+import { EventAdapter, SimpleDomService, TableFactory, TableOptions, TableScope } from "@guiexpert/table";
+import { createOrders } from "./data/orders";
+
+const orders = createOrders(100_000);
+const host = document.querySelector<HTMLDivElement>(".table-div")!;
+const tableModel = TableFactory.createTableModel({ rows: orders });
+const options = { ...new TableOptions() };
+const tableScope = new TableScope(
+  host, tableModel, new SimpleDomService(), options, new EventAdapter());
+tableScope.firstInit();
+tableScope.getApi().scrollToIndex(0, 50_000);   // Spalte 0, Zeile 50.000
+```
+
+Ohne `columnDefs` werden die Keys der ersten Zeile zu Spalten, die Überschrift ist der Key in Großbuchstaben
+(eigene Spalten: Folge 012/013).
+
+```bash
+npm run dev   # → http://localhost:5173/   ·  /?rows=1000000   ·  /?scrollTo=50000
+```
+
+| | Naive Tabelle (Folge 001) | GuiExpert Table |
+|---|---:|---:|
+| 100.000 Zeilen – DOM-Elemente | 1.200.014 | ≈ 1.150 |
+| 100.000 Zeilen – bis zur ersten Anzeige | > 2 min | 0,16 s |
+| 1.000.000 Zeilen – bis zur ersten Anzeige | – | 1,6 s (davon das meiste: Testdaten erzeugen) |
+
+(Chromium headless, Linux-VM.) Nur sichtbare Zeilen **und** Spalten landen im DOM – von 11 Spalten sind bei
+1.400 px Breite 7 gerendert.
