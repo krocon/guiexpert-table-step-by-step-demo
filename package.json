@@ -12,7 +12,8 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "dev:react": "npm run dev -w frameworks/react",
-    "dev:vue": "npm run dev -w frameworks/vue"
+    "dev:vue": "npm run dev -w frameworks/vue",
+    "dev:angular": "npm run dev -w frameworks/angular"
   },
   "devDependencies": {
     "typescript": "5.9.3",

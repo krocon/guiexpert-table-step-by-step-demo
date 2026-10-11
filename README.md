@@ -233,3 +233,27 @@ npm run dev:vue       # → http://localhost:5173/
 - Events sind Vue-Events (`@tableReady`, `@mouseClicked`, `@selectionChanged` …), Nutzlast direkt als Argument.
 - `mouseClicked` ist um `debounceMouseClickDelay` (Standard 150 ms) entprellt, damit ein Doppelklick nicht zwei Klicks meldet.
 - Global registrieren statt importieren: `app.use(GuiexpertTablePlugin)` (Default-Export von `@guiexpert/vue3-table`).
+
+---
+
+## Folge 009 – GuiExpert Table in Angular 14 bis 22
+
+```bash
+npm run dev:angular   # → http://localhost:4200/   (Angular CLI 22 braucht Node ≥ 22.22.3)
+```
+
+```ts
+// frameworks/angular/src/app/app.ts
+readonly rows = signal(100_000);
+readonly model = computed(() => createOrderTableModel(this.rows()));
+```
+```html
+<guiexpert-table class="table-div" [tableModel]="model()" [tableOptions]="options"
+                 (tableReady)="onReady($event)" (mouseClicked)="onClick($event)" />
+```
+
+- Paket-Major = Angular-Major: `npm i @guiexpert/angular-table@22` (für Angular 17: `@17` bzw. Dist-Tag `a17`).
+  Ein Quellcode, neun Builds (Angular 14–22).
+- `TableComponent` ist standalone, `OnPush`, rendert außerhalb der Angular-Zone; das Tabellen-CSS ist eingebaut.
+- Ein neues Modell (hier per `computed()` aus einem Signal) baut die Tabelle neu auf (`ngOnChanges`, ab 1.1.86).
+- Das Element braucht `display: block` und eine Höhe (`src/styles.css`).
