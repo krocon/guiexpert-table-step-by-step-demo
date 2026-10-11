@@ -917,3 +917,69 @@ verschachtelte Knoten, zugeklappt startende Bäume, blockierter Speicher im Priv
 ```bash
 npm run dev   # → http://localhost:5173/   (sortieren, scrollen, neu laden)
 ```
+
+---
+
+## Folge 034 – Finale: Wann GuiExpert Table – und wann nicht
+
+### Checkliste für deine Tabelle
+
+1. **Modell wählen** – `Array<T>` → `TableFactory.createTableModel({ rows })` (012), Zeilen/Spalten-Daten (014),
+   eigenes `AreaModel` für Millionen Zeilen oder Server-Daten (017), Baum (030).
+2. **Spalten** – `ColumnDef` für Überschrift, Breite, Ausrichtung (013), fixieren im Modell (018).
+3. **Header & Footer** – Gruppen (015), Summen über die gefilterten Zeilen (016).
+4. **Options** – `{ ...new TableOptions(), … }` (019), Auswahl (022), Zustand merken (033).
+5. **Daten bändigen** – Sortieren (020), Filtern (021), Kopieren (022), Excel (024).
+6. **Darstellung** – Renderer (025), Framework-Komponenten (026), Heatmap (027), Theming (028), Spans (029).
+7. **Interaktion** – Events + eigenes Kontextmenü (023), Editing (031), Live-Daten (032).
+
+### Gut geeignet
+
+- Große Datenmengen im Browser: virtuelles Scrollen vertikal **und** horizontal, Millionen Zeilen.
+- Ein Core für alle Frameworks (Angular 14–22, React, Vue 3, Svelte 4/5, Solid, Preact, Web Component, Plain JS).
+- Volle Kontrolle über HTML und CSS, keine Runtime-Abhängigkeiten, MIT-lizenziert – auch kommerziell kostenlos.
+
+### Ehrlich: Hier lieber etwas anderes
+
+- **Pivot-Tabellen**, **Row Grouping mit Aggregation per Klick** oder ein fertiges **Server-Side Row Model** gibt es
+  nicht von der Stange – das baust du mit eigenen Modellen selbst (Baum: 030, eigenes AreaModel: 017).
+- Eingebaute Filter-Zeilen, Spaltenmenüs oder Kontextmenüs gibt es bewusst nicht – die UI gehört dir (021, 023).
+
+### Alle Folgen
+
+| Folge | Thema | Stand |
+|---|---|---|
+| 001 | Warum große Tabellen den Browser lahmlegen | `git checkout ep-001` |
+| 002 | Virtual Scrolling: nur zeichnen, was man sieht | `git checkout ep-002` |
+| 003 | Selbst bauen, ag-Grid oder GuiExpert Table? | `git checkout ep-003` |
+| 004 | Installation in zwei Minuten | `git checkout ep-004` |
+| 005 | Die erste Tabelle in Plain TypeScript | `git checkout ep-005` |
+| 006 | Ohne Framework: Web Component und CDN | `git checkout ep-006` |
+| 007 | GuiExpert Table in React | `git checkout ep-007` |
+| 008 | GuiExpert Table in Vue 3 | `git checkout ep-008` |
+| 009 | GuiExpert Table in Angular 14 bis 22 | `git checkout ep-009` |
+| 010 | Ein Modell, jedes Framework | `git checkout ep-010` |
+| 011 | Das TableModel: drei mal drei Bereiche | `git checkout ep-011` |
+| 012 | Array<T> → TableModel | `git checkout ep-012` |
+| 013 | Spalten definieren mit ColumnDef | `git checkout ep-013` |
+| 014 | Array of Arrays: Header, Body und Footer als Daten | `git checkout ep-014` |
+| 015 | Header-Modelle: mehrzeilig und gruppiert | `git checkout ep-015` |
+| 016 | Footer-Modelle: Summen und Kennzahlen | `git checkout ep-016` |
+| 017 | Eigenes AreaModel: zwei Millionen Zeilen ohne Array | `git checkout ep-017` |
+| 018 | Spalten links und rechts fixieren | `git checkout ep-018` |
+| 019 | TableOptions: Verhalten und Optik | `git checkout ep-019` |
+| 020 | Sortieren per Doppelklick und mit eigenem Comparator | `git checkout ep-020` |
+| 021 | Filtern mit einer Live-Suche | `git checkout ep-021` |
+| 022 | Zellen, Zeilen, Bereiche auswählen und kopieren | `git checkout ep-022` |
+| 023 | Events und ein eigenes Kontextmenü | `git checkout ep-023` |
+| 024 | Excel-Export ohne Library | `git checkout ep-024` |
+| 025 | Zellen gestalten mit Cell-Renderern | `git checkout ep-025` |
+| 026 | Framework-Komponenten als Zelle | `git checkout ep-026` |
+| 027 | Heatmap und bedingte Formatierung | `git checkout ep-027` |
+| 028 | Theming und Dark Mode mit CSS-Variablen | `git checkout ep-028` |
+| 029 | Rowspan und Colspan: ein Stundenplan | `git checkout ep-029` |
+| 030 | Baumtabelle mit Checkboxen | `git checkout ep-030` |
+| 031 | Inline-Editing | `git checkout ep-031` |
+| 032 | Live-Daten ohne Neuaufbau | `git checkout ep-032` |
+| 033 | Zustand merken: Sortierung, Scroll-Position, aufgeklappte Knoten | `git checkout ep-033` |
+| 034 | Finale: Wann GuiExpert Table – und wann nicht | `git checkout ep-034` |
