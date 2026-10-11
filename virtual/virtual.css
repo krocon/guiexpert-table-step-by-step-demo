@@ -1,0 +1,8 @@
+body { margin: 0; font: 14px/1.4 system-ui, sans-serif; }
+header { padding: 8px 12px; background: #111827; color: #f9fafb; display: flex; gap: 24px; }
+#stats { color: #f472b6; font-family: ui-monospace, monospace; }
+.viewport { position: relative; height: calc(100vh - 40px); overflow: auto; }
+.spacer { width: 1px; }                                   /* height = all rows → native scrollbar */
+.rows { position: absolute; top: 0; left: 0; right: 0; }  /* holds only the visible rows */
+.row { display: flex; height: 30px; align-items: center; border-bottom: 1px solid #e5e7eb; }
+.row span { flex: 0 0 120px; padding: 0 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Episode 002 – virtual scrolling in 20 lines</title>
+  <link rel="stylesheet" href="./virtual.css" />
+</head>
+<body>
+  <header>
+    <span><b>Virtual scrolling (DIY)</b> – <span id="count"></span> orders · only visible rows are in the DOM</span>
+    <span id="stats"></span>
+  </header>
+  <div class="viewport">
+    <div class="spacer"></div>
+    <div class="rows"></div>
+  </div>
+  <script type="module" src="./virtual-scroll.ts"></script>
+</body>
+</html>
