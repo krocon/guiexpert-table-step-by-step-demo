@@ -425,3 +425,30 @@ Spalten-Index = Position in `ORDER_COLUMNS` (versteckte Spalten zählen mit).
 ```bash
 npm run dev   # → http://localhost:5173/
 ```
+
+---
+
+## Folge 017 – Eigenes AreaModel: zwei Millionen Zeilen ohne Array
+
+Ein `AreaModel` muss nur Fragen beantworten. `TwoMillionRows` (`src/model/large-model.ts`) hat kein Array –
+jeder Wert wird erst berechnet, wenn die Tabelle ihn für eine **sichtbare** Zelle braucht:
+
+```ts
+export class TwoMillionRows extends AreaModel {
+  override getRowCount() { return 2_000_000; }
+  override getRowHeight() { return 34; }
+  override getConstantRowHeight() { return 34; }     // alle Zeilen gleich hoch → O(1) beim Scrollen
+  override getValueAt(row: number, col: number) {
+    if (col === 0) return row + 1;
+    …
+  }
+}
+const tableModel = TableFactory.createTableModel({ bodyAreaModel: new TwoMillionRows(), columnDefs });
+```
+
+Genauso lassen sich Daten seitenweise vom Server holen: `getValueAt()` liefert aus einem Cache und lädt fehlende
+Seiten nach. `getConstantRowHeight()` gibt es ab `@guiexpert/table@1.1.85`.
+
+```bash
+npm run dev   # → http://localhost:5173/two-million/   (?rows=10000000 für 10 Mio.)
+```
