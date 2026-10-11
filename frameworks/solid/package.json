@@ -7,8 +7,8 @@
     "build": "tsc --noEmit && vite build"
   },
   "dependencies": {
-    "@guiexpert/solid-table": "1.1.88",
-    "@guiexpert/table": "1.1.88",
+    "@guiexpert/solid-table": "1.1.90",
+    "@guiexpert/table": "1.1.90",
     "solid-js": "1.9.15"
   },
   "devDependencies": {

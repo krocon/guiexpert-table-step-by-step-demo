@@ -7,8 +7,8 @@
     "build": "tsc --noEmit && vite build"
   },
   "dependencies": {
-    "@guiexpert/preact-table": "10.1.88",
-    "@guiexpert/table": "1.1.88",
+    "@guiexpert/preact-table": "10.1.90",
+    "@guiexpert/table": "1.1.90",
     "preact": "10.29.8"
   },
   "devDependencies": {

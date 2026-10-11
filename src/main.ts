@@ -1,7 +1,7 @@
 import "@guiexpert/table/css/main.css";   // styles of the table (CSS variables --ge-table-*)
 import "./style.css";
 import { EventAdapter, SimpleDomService, TableOptions, TableScope } from "@guiexpert/table";
-import { createOrders } from "./data/orders";
+import { createOrders, Order } from "./data/orders";
 import { describeModel } from "./model/describe-model";
 import { createOrderTableOptions } from "./model/order-table-options";
 import { createOrdersModel } from "./model/order-table-model";
@@ -23,6 +23,15 @@ tableScope.firstInit();
 
 const tableApi = tableScope.getApi();
 document.querySelector("#autosize")?.addEventListener("click", () => tableApi.autoResizeColumns());  // episode 019
+// Episode 020 – sort from your own button: same as a double click on the header (icon included)
+document.querySelector("#by-status")?.addEventListener("click", () => tableApi.sortByColumn("status"));
+// Episode 020 – sort from code: newest orders first
+document.querySelector("#newest")?.addEventListener("click", () => {
+  const t = performance.now();
+  tableApi.sort((a: Order, b: Order) => b.date.localeCompare(a.date));
+  const ms = Math.round(performance.now() - t);
+  document.querySelector("#info")!.textContent = `${rowCount.toLocaleString("en")} orders sorted in ${ms} ms`;
+});
 if (params.has("scrollTo")) tableApi.scrollToIndex(0, Number(params.get("scrollTo")));
 
 // (only for the demo) show what it cost

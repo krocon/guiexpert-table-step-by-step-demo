@@ -506,3 +506,30 @@ Methode den echten Text (inkl. Header und Footer) – vorher wurden Datum und Su
 npm run dev   # → http://localhost:5173/            (mit Options)
               # → http://localhost:5173/?defaults   (vorher: nur Standardwerte)
 ```
+
+---
+
+## Folge 020 – Sortieren per Doppelklick und mit eigenem Comparator
+
+Sortiert wird per **Doppelklick** auf den Spaltenkopf (asc → desc → asc …). Pro Spalte (`src/model/order-columns.ts`):
+
+```ts
+const STATUS_ORDER = ["open", "paid", "shipped", "cancelled"];
+ColumnDef.create({ property: "customer", …, sortable: TrueFn,
+  sortComparator: (a, b) => a.localeCompare(b, "de") });          // „Müller“ vor „Nordlicht“
+ColumnDef.create({ property: "status", …, sortable: TrueFn,
+  sortComparator: (a, b) => STATUS_ORDER.indexOf(a) - STATUS_ORDER.indexOf(b) });
+ColumnDef.create({ property: "total", …, sortable: TrueFn, sortState: "desc" });
+```
+
+- `sortState` setzt nur das Symbol – einmal passend sortieren: `tableModel.doSort([new SortItem(index, "desc")])`.
+- `ColumnDef.create()` braucht `sortable` direkt in den Parametern, sonst bleibt das Sortier-Symbol unsichtbar.
+- Per eigenem Button: `tableApi.sortByColumn("status")` – wie ein Doppelklick auf den Kopf (mit Symbol,
+  ohne Richtung wird umgeschaltet; `sortByColumn("total", "desc")` setzt sie fest). Ab 1.1.90.
+- Aus dem Code: `tableApi.sort((a, b) => b.date.localeCompare(a.date))` (Button „newest first“, mit Zeitmessung);
+  nach Datenänderungen `tableApi.reSort()`.
+- Die Sortierung ist stabil: erst Kunde, dann Status → innerhalb eines Status bleiben die Kunden sortiert.
+
+```bash
+npm run dev   # → http://localhost:5173/   (Doppelklick auf „Status“)
+```

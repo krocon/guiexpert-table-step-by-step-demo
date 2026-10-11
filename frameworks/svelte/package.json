@@ -7,8 +7,8 @@
     "build": "vite build"
   },
   "dependencies": {
-    "@guiexpert/svelte-table": "5.1.88",
-    "@guiexpert/table": "1.1.88",
+    "@guiexpert/svelte-table": "5.1.90",
+    "@guiexpert/table": "1.1.90",
     "svelte": "5.57.1"
   },
   "devDependencies": {
