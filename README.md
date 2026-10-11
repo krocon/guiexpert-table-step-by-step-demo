@@ -257,3 +257,27 @@ readonly model = computed(() => createOrderTableModel(this.rows()));
 - `TableComponent` ist standalone, `OnPush`, rendert außerhalb der Angular-Zone; das Tabellen-CSS ist eingebaut.
 - Ein neues Modell (hier per `computed()` aus einem Signal) baut die Tabelle neu auf (`ngOnChanges`, ab 1.1.86).
 - Das Element braucht `display: block` und eine Höhe (`src/styles.css`).
+
+---
+
+## Folge 010 – Ein Modell, jedes Framework
+
+Alle Demos unter `frameworks/` zeigen **dasselbe** Modell (`src/model/order-table.ts`) – nur die Event-Syntax unterscheidet sich:
+
+| Framework | Paket | Events |
+|---|---|---|
+| Plain TS | `@guiexpert/table` | `EventAdapter` / eigener `EventListenerIf` |
+| Web Component | `@guiexpert/webcomponent-table` | `addEventListener("tableReady", e => e.detail)` |
+| React / Preact / Solid | `@guiexpert/react-table` / `preact-table` / `solid-table` | Props `tableReady={api => …}` |
+| Vue 3 | `@guiexpert/vue3-table` | `@tableReady="onReady"` |
+| Svelte 4 / 5 | `@guiexpert/svelte-table` | `on:tableReady` bzw. Svelte 5: `onTableReady={api => …}` |
+| Angular 14–22 | `@guiexpert/angular-table@NN` | `(tableReady)="onReady($event)"` |
+
+```bash
+npm run dev:svelte   # Svelte 5 (Runes)
+npm run dev:solid
+npm run dev:preact
+```
+
+Solid: `resolve.dedupe: ["solid-js"]` in `vite.config.ts` – sonst landen zwei Solid-Laufzeiten im Bundle
+(App und Wrapper), und die Tabelle startet nicht.

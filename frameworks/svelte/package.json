@@ -1,0 +1,19 @@
+{
+  "name": "demo-svelte",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@guiexpert/svelte-table": "5.1.88",
+    "@guiexpert/table": "1.1.88",
+    "svelte": "5.57.1"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "5.1.1",
+    "typescript": "5.9.3",
+    "vite": "6.4.4"
+  }
+}
