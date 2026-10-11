@@ -366,3 +366,30 @@ const tableModel = TableFactory.createTableModel({
 ```bash
 npm run dev   # → http://localhost:5173/csv/
 ```
+
+---
+
+## Folge 015 – Header-Modelle: mehrzeilig und gruppiert
+
+Der Header ist ein eigenes Area-Modell. `AreaModelCellGroups` baut aus einer Gruppen-Beschreibung einen
+mehrzeiligen Header; Gruppen mit `toggle: true` lassen sich per ❯ auf- und zuklappen (`header-groups/header-groups.ts`):
+
+```ts
+const groups: CellGroupIf[] = [
+  { data: "Customer", toggle: true, children: [
+    { data: "Customer", property: "customer", visibility: "always" },   // bleibt beim Zuklappen
+    { data: "Country", property: "country" },
+    { data: "City", property: "city" }] },
+  …
+];
+const columnDefs = CellgroupFactory.buildColumnDefs(CellgroupFactory.buildGroupExts(groups));
+const header = new AreaModelCellGroups("header", groups, columnDefs, 34);
+const body = new AreaModelObjectArrayWithColumndefs<Order>("body", orders, columnDefs, 34);
+```
+
+Einfacher ohne Gruppen: mehrere Zeilen per `headerData: [[…], […]]` (Folge 014).
+Beim Auf-/Zuklappen bleiben die Spaltenbreiten erst ab `@guiexpert/table@1.1.88` erhalten.
+
+```bash
+npm run dev   # → http://localhost:5173/header-groups/
+```
