@@ -325,3 +325,20 @@ export function createOrdersModel(orders: Order[]): TableModelIf {
 4. Überschrift = Property in Großbuchstaben – eigene Überschriften, Breiten und Ausrichtung: Folge 013 (`ColumnDef`).
 
 Weitere Fabrik-Methoden: `TableFactory.buildByTypedRows<T>(rows, columnDefs, options)`, `createByObjectArray`, `createByAreaModels`.
+
+---
+
+## Folge 013 – Spalten definieren mit ColumnDef
+
+```ts
+// src/model/order-columns.ts
+new ColumnDef("customer", "Customer", px180, bodyLeft),           // property, Überschrift, Breite, CSS-Klassen
+new ColumnDef("total", "Total", px120, allRight),                 // Zahlen rechtsbündig (Header + Body + Footer)
+ColumnDef.create({ property: "category", headerLabel: "Category", isVisible: FalseFn }),   // ausgeblendet
+ColumnDef.create({ property: "price", headerLabel: "Price", width: px100, minWidth: px80, maxWidth: px200, … }),
+```
+
+- Breiten als Konstanten `px0` … `px500`, Ausrichtung mit `bodyLeft`, `bodyRight`, `allRight` …
+- `ColumnDef.create({ … })` mit benannten Parametern für alles Weitere (Renderer, Sortierung, Editieren …).
+- Spalte ausblenden: `isVisible: FalseFn` (die API-Methode `setColumnVisible` ist noch ein leerer Stub).
+- Mit eigenen Spalten: `TableFactory.buildByTypedRows<Order>(orders, ORDER_COLUMNS)`.
