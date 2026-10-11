@@ -1,0 +1,8 @@
+html, body { margin: 0; font: 14px/1.4 system-ui, sans-serif; }
+.app-header { height: 40px; box-sizing: border-box; padding: 8px 12px; background: #111827; color: #f9fafb; display: flex; gap: 24px; }
+#info { color: #f472b6; font-family: ui-monospace, monospace; }
+
+/* The table fills its container – without a fixed height you only see the header row. */
+.table-div {
+  height: calc(100vh - 40px);
+}

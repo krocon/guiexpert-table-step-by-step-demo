@@ -95,3 +95,32 @@ und [Licensing](https://www.ag-grid.com/javascript-data-grid/licensing/) – vor
 **Faustregel:** Brauchst du Pivot, Row Grouping oder ein Server-Side Row Model von der Stange, ist ag-Grid Enterprise
 heute weiter. Brauchst du große Datenmengen, Export, Auswahl und volle Kontrolle über HTML/CSS – ohne Lizenzkosten und
 in jedem Framework –, ist die GuiExpert Table eine schlanke Alternative.
+
+---
+
+## Folge 004 – Installation in zwei Minuten
+
+```bash
+npm create vite@latest my-table -- --template vanilla-ts   # oder ein bestehendes Projekt
+npm i @guiexpert/table
+```
+
+```ts
+// src/main.ts
+import "@guiexpert/table/css/main.css";   // Styles der Tabelle (ab 1.1.85 als Bare Import)
+```
+
+```css
+/* src/style.css – der Container braucht eine feste Höhe: ohne sie zeigt die Tabelle nur die Kopfzeile */
+.table-div { height: calc(100vh - 40px); }
+```
+
+Ohne Build-Tool: Stylesheet per CDN `https://cdn.jsdelivr.net/npm/@guiexpert/table/css/main.css`.
+
+Null Laufzeit-Abhängigkeiten:
+
+```text
+$ npm ls --all --omit=dev
+`-- @guiexpert/table@1.1.86
+  `-- tslib@2.8.1
+```
