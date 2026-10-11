@@ -160,3 +160,29 @@ npm run dev   # → http://localhost:5173/   ·  /?rows=1000000   ·  /?scrollTo
 
 (Chromium headless, Linux-VM.) Nur sichtbare Zeilen **und** Spalten landen im DOM – von 11 Spalten sind bei
 1.400 px Breite 7 gerendert.
+
+---
+
+## Folge 006 – Ohne Framework: Web Component und CDN
+
+`@guiexpert/webcomponent-table` macht die Tabelle zum Custom Element – nutzbar in jeder HTML-Seite und in jedem Framework.
+
+```ts
+// web-component/main.ts
+import { GuiexpertTable } from "@guiexpert/webcomponent-table";
+
+customElements.define("guiexpert-table", GuiexpertTable);   // das Paket registriert sich nicht selbst
+const table = document.querySelector<GuiexpertTable>("guiexpert-table")!;
+table.addEventListener("tableReady", (e) => console.log((e as CustomEvent<TableApi>).detail));
+table.data = { tableModel: createOrderTableModel(), tableOptions: { ...new TableOptions() } };
+```
+
+- Das Element braucht `display: block` und eine Höhe.
+- Events (`tableReady`, `mouseClicked`, `selectionChanged` …) kommen als **bubbling `CustomEvent`**, Nutzlast in `detail`.
+- Erst den Listener registrieren, dann `data` setzen – `tableReady` feuert sofort.
+
+**Ganz ohne npm und Build:** `public/cdn/index.html` lädt Stylesheet und Module per Import-Map von jsDelivr.
+
+```bash
+npm run dev   # → http://localhost:5173/web-component/   und   http://localhost:5173/cdn/
+```

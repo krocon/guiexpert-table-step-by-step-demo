@@ -1,0 +1,28 @@
+<!doctype html>
+<!-- Episode 006 – no npm, no build: the table straight from a CDN (open this file via any web server). -->
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <title>Episode 006 – GuiExpert Table from a CDN</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@guiexpert/table@1.1.86/css/main.css" />
+  <script type="importmap">
+    { "imports": {
+      "@guiexpert/table": "https://cdn.jsdelivr.net/npm/@guiexpert/table@1.1.86/index.js",
+      "@guiexpert/webcomponent-table": "https://cdn.jsdelivr.net/npm/@guiexpert/webcomponent-table@1.1.86/index.js"
+    } }
+  </script>
+  <style>body { margin: 0; font: 14px system-ui, sans-serif; } guiexpert-table { display: block; height: 100vh; }</style>
+</head>
+<body>
+  <guiexpert-table></guiexpert-table>
+  <script type="module">
+    import { GuiexpertTable } from "@guiexpert/webcomponent-table";
+    import { TableFactory, TableOptions } from "@guiexpert/table";
+    customElements.define("guiexpert-table", GuiexpertTable);
+    const rows = [{ id: 1, city: "Berlin" }, { id: 2, city: "Paris" }];
+    const tableModel = TableFactory.createTableModel({ rows });
+    const table = document.querySelector("guiexpert-table");
+    table.data = { tableModel, tableOptions: { ...new TableOptions() } };
+  </script>
+</body>
+</html>

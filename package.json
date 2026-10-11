@@ -14,6 +14,7 @@
     "vite": "6.4.4"
   },
   "dependencies": {
-    "@guiexpert/table": "1.1.86"
+    "@guiexpert/table": "1.1.86",
+    "@guiexpert/webcomponent-table": "1.1.86"
   }
 }
