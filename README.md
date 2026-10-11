@@ -281,3 +281,26 @@ npm run dev:preact
 
 Solid: `resolve.dedupe: ["solid-js"]` in `vite.config.ts` – sonst landen zwei Solid-Laufzeiten im Bundle
 (App und Wrapper), und die Tabelle startet nicht.
+
+---
+
+## Folge 011 – Das TableModel: drei mal drei Bereiche
+
+Ein `TableModel` besteht aus **drei Area-Modellen** – `header`, `body`, `footer` – und den Spalten.
+Jede Zeile ist zusätzlich in **west** (links fixiert), **center** (scrollt) und **east** (rechts fixiert) geteilt → 9 Bereiche.
+
+```
+           west      center (scrollt)      east
+header   ┌───────┬────────────────────────┬───────┐
+body     │       │                        │       │
+footer   └───────┴────────────────────────┴───────┘
+```
+
+Ein Area-Modell beantwortet nur Fragen – `getRowCount()`, `getValueAt(row, col)`, `getRowHeight(row)` –
+darum kann die Tabelle nur die sichtbaren Zellen abfragen (`src/model/describe-model.ts`, Ausgabe oben in der Leiste):
+
+```ts
+const body = tableModel.getAreaModel("body");
+body.getRowCount();       // 100000
+body.getValueAt(0, 2);    // "Dupont SA"
+```

@@ -2,6 +2,7 @@ import "@guiexpert/table/css/main.css";   // styles of the table (CSS variables 
 import "./style.css";
 import { EventAdapter, SimpleDomService, TableFactory, TableOptions, TableScope } from "@guiexpert/table";
 import { createOrders } from "./data/orders";
+import { describeModel } from "./model/describe-model";
 
 const params = new URLSearchParams(location.search);       // e.g. /?rows=1000000&scrollTo=50000
 const rowCount = Number(params.get("rows") ?? 100_000);
@@ -25,6 +26,7 @@ requestAnimationFrame(() => {
   const nodes = host.getElementsByTagName("*").length;
   document.querySelector("#info")!.textContent =
     `${rowCount.toLocaleString("en")} orders · ${ms} ms · ${nodes.toLocaleString("en")} DOM elements`;
+  document.querySelector("#model")!.textContent = describeModel(tableModel);   // episode 011
   (window as any).__stats = { ms, nodes };
   (window as any).tableApi = tableApi;
 });
