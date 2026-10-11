@@ -680,3 +680,41 @@ column("total").rendererMap.footer = new EuroRenderer();                        
 ```bash
 npm run dev   # → http://localhost:5173/
 ```
+
+---
+
+## Folge 026 – Framework-Komponenten als Zelle
+
+Statt HTML von Hand: eine echte React- oder Angular-Komponente pro Zelle. Das gemeinsame Modell
+(`src/model/order-table.ts`) nimmt dafür optional Renderer pro Property an.
+
+**React** (`frameworks/react/src/StatusChip.tsx` – Hooks funktionieren):
+
+```tsx
+export function StatusChip({ cellValue }: { cellValue: string }) {
+  const [hover, setHover] = useState(false);
+  return <span className={`status-badge status-${cellValue}`} …>{cellValue}</span>;
+}
+const model = useMemo(() => createOrderTableModel(rows, {
+  status: new ComponentRendererWrapper(StatusChip)
+}), [rows]);
+```
+
+**Angular** (`frameworks/angular/src/app/status-chip.ts` – `ComponentRendererIf.setData()`):
+
+```ts
+export class StatusChip implements ComponentRendererIf<StatusChip> {
+  readonly status = signal("");
+  setData(rowIndex, columnIndex, areaIdent, areaModel, cellValue) { this.status.set(cellValue); return undefined; }
+}
+private readonly statusRenderer = inject(RenderWrapperFactory).create(StatusChip, inject(ChangeDetectorRef));
+readonly model = computed(() => createOrderTableModel(this.rows(), { status: this.statusRenderer }));
+```
+
+Komponenten entstehen nur für **sichtbare** Zellen und werden beim Wegscrollen wieder abgebaut
+(getestet: nach 20 Scroll-Schritten weiterhin 19 Komponenten im DOM). Vue, Svelte, Solid und Preact haben je einen
+`ComponentRendererWrapper` im Wrapper-Paket.
+
+```bash
+npm run dev:react     # bzw. npm run dev:angular
+```

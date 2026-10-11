@@ -1,8 +1,9 @@
 // Episode 009 – the same orders model, rendered by the Angular wrapper (Angular 14–22, here 22).
-import { Component, computed, signal } from "@angular/core";
-import { TableComponent } from "@guiexpert/angular-table";
+import { ChangeDetectorRef, Component, computed, inject, signal } from "@angular/core";
+import { RenderWrapperFactory, TableComponent } from "@guiexpert/angular-table";
 import { GeMouseEvent, TableApi, TableOptions } from "@guiexpert/table";
 import { createOrderTableModel } from "../../../../src/model/order-table";
+import { StatusChip } from "./status-chip";
 
 @Component({
   selector: "app-root",
@@ -19,9 +20,14 @@ import { createOrderTableModel } from "../../../../src/model/order-table";
   `
 })
 export class App {
+  private readonly rwf = inject(RenderWrapperFactory);
+  private readonly cdr = inject(ChangeDetectorRef);
+  // episode 026: an Angular component per visible status cell
+  private readonly statusRenderer = this.rwf.create(StatusChip, this.cdr);
+
   readonly rows = signal(100_000);
   // a new model object → the table is rebuilt
-  readonly model = computed(() => createOrderTableModel(this.rows()));
+  readonly model = computed(() => createOrderTableModel(this.rows(), { status: this.statusRenderer }));
   readonly options = { ...new TableOptions() };
   readonly info = signal("");
 

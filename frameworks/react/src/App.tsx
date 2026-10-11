@@ -1,15 +1,18 @@
 // Episode 007 – the same orders model, rendered by the React wrapper.
-import { GuiexpertTable } from "@guiexpert/react-table";
+import { ComponentRendererWrapper, GuiexpertTable } from "@guiexpert/react-table";
 import { GeMouseEvent, TableApi, TableOptions } from "@guiexpert/table";
 import { useMemo, useState } from "react";
 import { createOrderTableModel } from "../../../src/model/order-table";
+import { StatusChip } from "./StatusChip";
 
 export function App() {
   const [rows, setRows] = useState(100_000);
   const [info, setInfo] = useState("");
 
   // a NEW model object rebuilds the table → keep model and options stable
-  const model = useMemo(() => createOrderTableModel(rows), [rows]);
+  const model = useMemo(() => createOrderTableModel(rows, {
+    status: new ComponentRendererWrapper(StatusChip)            // episode 026: React component per cell
+  }), [rows]);
   const options = useMemo(() => ({ ...new TableOptions() }), []);
 
   const onReady = (api: TableApi) =>
