@@ -71,3 +71,27 @@ npm run dev   # → http://localhost:5173/virtual/   (oder /virtual/?rows=100000
 Kopieren, Export – und Browser-Grenzen: Bei 1 Mio. Zeilen à 30 px ist der Spacer schon 30 Mio. Pixel hoch, Chrome
 erlaubt etwa 33 Mio., Firefox deutlich weniger. Die GuiExpert Table macht beides virtuell (Zeilen **und** Spalten)
 und deckelt die Scrollhöhe, damit auch 2 Mio. Zeilen sauber laufen.
+
+---
+
+## Folge 003 – Selbst bauen, ag-Grid oder GuiExpert Table?
+
+Kein neuer Code – eine Entscheidungshilfe. Stand Oktober 2026, Angaben zu ag-Grid laut
+[ag-grid.com: Community vs. Enterprise](https://www.ag-grid.com/javascript-data-grid/community-vs-enterprise/)
+und [Licensing](https://www.ag-grid.com/javascript-data-grid/licensing/) – vor einer Entscheidung dort selbst prüfen.
+
+| | Selbst bauen | ag-Grid Community | ag-Grid Enterprise | GuiExpert Table |
+|---|---|---|---|---|
+| Lizenz | deine | MIT, kostenlos | kommerziell, pro Entwickler; ohne Key Wasserzeichen | MIT, kostenlos – auch kommerziell |
+| Virtual Scrolling | selbst (Folge 002) | ✔ | ✔ | ✔ Zeilen **und** Spalten |
+| Excel-Export | selbst | – | ✔ | ✔ ohne Zusatz-Library |
+| Bereichsauswahl & Clipboard | selbst | – | ✔ | ✔ |
+| Server-Side Row Model | selbst | – | ✔ | – (eigenes Area-Modell, Folge 017) |
+| Row Grouping / Pivot | selbst | – | ✔ | – (Baumtabelle, Folge 030) |
+| Filter-UI | selbst | ✔ | ✔ | – (Filterfunktion, UI gehört dir – Folge 021) |
+| Frameworks | – | React, Angular, Vue, JS | React, Angular, Vue, JS | Angular 14–22, React, Vue, Svelte 4/5, Solid, Preact, Web Component, JS |
+| Laufzeit-Abhängigkeiten | – | – | – | keine |
+
+**Faustregel:** Brauchst du Pivot, Row Grouping oder ein Server-Side Row Model von der Stange, ist ag-Grid Enterprise
+heute weiter. Brauchst du große Datenmengen, Export, Auswahl und volle Kontrolle über HTML/CSS – ohne Lizenzkosten und
+in jedem Framework –, ist die GuiExpert Table eine schlanke Alternative.
