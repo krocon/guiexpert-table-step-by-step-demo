@@ -6,6 +6,7 @@ import { describeModel } from "./model/describe-model";
 import { createOrderTableOptions } from "./model/order-table-options";
 import { matchesOrder, orderFilter } from "./order-filter";
 import { OrderEvents } from "./order-events";
+import { showContextMenu } from "./context-menu";
 import { createOrdersModel } from "./model/order-table-model";
 
 const params = new URLSearchParams(location.search);       // e.g. /?rows=1000000&scrollTo=50000
@@ -21,8 +22,20 @@ const options = params.has("defaults")                        // episode 019: /?
   : createOrderTableOptions();
 options.externalFilterFunction = matchesOrder;                // episode 021
 const tableModel = createOrdersModel(orders, options);        // episode 012
-const tableScope = new TableScope(
-  host, tableModel, new SimpleDomService(), options, new OrderEvents(showInfo));
+// Episode 023 – events: double-click shows the order, right-click opens our own menu
+const orderAt = (rowIndex: number) => tableModel.getBodyModel().getRowByIndex(rowIndex) as Order;
+const showOrder = (o: Order) =>
+  showInfo(`#${o.id} · ${o.date} · ${o.customer}, ${o.city} · ${o.quantity} × ${o.product} = ${o.total}`);
+const events = new OrderEvents(showInfo, row => showOrder(orderAt(row)), evt => {
+  const order = orderAt(evt.rowIndex);
+  showContextMenu(evt.originalEvent!, [
+    { label: `Show order #${order.id}`, action: () => showOrder(order) },
+    { label: "Copy selection", action: () => tableApi.copyToClipboard() },
+    { label: `Only ${order.customer}`, action: () => { search.value = order.customer; filterChanged(); } },
+    { label: "Export view as Excel", action: () => tableApi.downloadExcel("orders.xlsx", "GuiExpert") }
+  ]);
+});
+const tableScope = new TableScope(host, tableModel, new SimpleDomService(), options, events);
 tableScope.firstInit();
 
 const tableApi = tableScope.getApi();

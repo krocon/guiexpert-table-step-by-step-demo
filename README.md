@@ -584,3 +584,39 @@ return { ...new TableOptions(), getSelectionModel: () => selectionModel };
 ```bash
 npm run dev   # → http://localhost:5173/   (Bereich ziehen, dann „copy“)
 ```
+
+---
+
+## Folge 023 – Events und ein eigenes Kontextmenü
+
+Events kommen über einen `EventAdapter` – nur überschreiben, was du brauchst (`src/order-events.ts`):
+
+```ts
+export class OrderEvents extends EventAdapter {
+  override onMouseClicked(evt: GeMouseEvent) {           // rowIndex, columnIndex, areaIdent, clickCount
+    if (evt.areaIdent === "body" && evt.clickCount === 2) this.onRowDoubleClick?.(evt.rowIndex);
+  }
+  override onContextmenu(evt: GeMouseEvent) {
+    if (evt.areaIdent === "body" && evt.rowIndex > -1) this.onMenu?.(evt);
+  }
+}
+```
+
+Ein Kontextmenü ist nicht eingebaut – das eigene (`src/context-menu.ts`, ~30 Zeilen) sieht aus und arbeitet, wie du willst.
+Die Aktionen nutzen die API:
+
+```ts
+showContextMenu(evt.originalEvent!, [
+  { label: `Show order #${order.id}`, action: () => showOrder(order) },
+  { label: "Copy selection", action: () => tableApi.copyToClipboard() },
+  { label: `Only ${order.customer}`, action: () => { search.value = order.customer; filterChanged(); } },
+  { label: "Export view as Excel", action: () => tableApi.downloadExcel("orders.xlsx", "GuiExpert") }
+]);
+```
+
+`rowIndex` ist die **angezeigte** Zeile (nach Filter und Sortierung) → `tableModel.getBodyModel().getRowByIndex(rowIndex)`.
+In den Framework-Wrappern heißen die Events `mouseClicked`, `contextmenu` … (Props bzw. Outputs).
+
+```bash
+npm run dev   # → http://localhost:5173/   (Doppelklick auf eine Zeile, Rechtsklick)
+```
