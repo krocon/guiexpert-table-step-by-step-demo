@@ -1,0 +1,1001 @@
+id,date,customer,country,city,product,category,quantity,price,total,status
+1,2025-04-22,Dupont SA,Spain,Madrid,Docking Station,Accessories,18,230.15,4142.7,paid
+2,2026-07-19,Kowalski Sp.,Spain,Madrid,Support Plan,Services,10,915.73,9157.3,paid
+3,2025-01-03,Rossi S.p.A.,Germany,Munich,Office License,Software,14,133.28,1865.92,cancelled
+4,2025-02-09,Nordlicht AG,Germany,Hamburg,Office License,Software,1,119.98,119.98,paid
+5,2025-11-09,Novák s.r.o.,Italy,Milan,Laptop,Hardware,4,1432.55,5730.2,paid
+6,2026-01-17,Nordlicht AG,France,Paris,Laptop,Hardware,2,1321.06,2642.12,shipped
+7,2025-11-22,Nordlicht AG,Germany,Munich,Mouse,Accessories,15,43.2,648,paid
+8,2026-03-20,García SL,Austria,Vienna,Laptop,Hardware,14,1369.45,19172.3,open
+9,2025-03-13,Müller GmbH,Czechia,Prague,Docking Station,Accessories,19,195.17,3708.23,shipped
+10,2026-04-06,García SL,France,Paris,IDE License,Software,18,217.45,3914.1,paid
+11,2025-03-19,García SL,Poland,Warsaw,Monitor,Hardware,11,382.7,4209.7,shipped
+12,2026-01-17,Becker KG,United Kingdom,London,Docking Station,Accessories,12,208.29,2499.48,paid
+13,2026-09-29,Jensen ApS,Austria,Vienna,Docking Station,Accessories,17,231.82,3940.94,shipped
+14,2025-07-20,Novák s.r.o.,Italy,Milan,Keyboard,Accessories,3,94.25,282.75,cancelled
+15,2026-09-15,Nordlicht AG,Germany,Berlin,Docking Station,Accessories,17,194.69,3309.73,paid
+16,2026-02-23,Hansen Logistik,Poland,Warsaw,Keyboard,Accessories,9,80.01,720.09,paid
+17,2025-09-09,Schmidt & Co,Spain,Madrid,Support Plan,Services,7,1076.85,7537.95,cancelled
+18,2026-07-15,Jensen ApS,Switzerland,Zurich,Laptop,Hardware,15,1351.71,20275.65,paid
+19,2026-03-28,Kowalski Sp.,Spain,Madrid,Docking Station,Accessories,4,189.27,757.08,paid
+20,2026-09-28,Dupont SA,Austria,Vienna,Mouse,Accessories,1,35.73,35.73,cancelled
+21,2025-09-10,Rossi S.p.A.,Germany,Berlin,Monitor,Hardware,12,327.28,3927.36,shipped
+22,2025-07-29,Rossi S.p.A.,Poland,Warsaw,Mouse,Accessories,7,43.63,305.41,shipped
+23,2025-07-11,Becker KG,Italy,Milan,Office License,Software,5,122.24,611.2,paid
+24,2025-03-21,Becker KG,Germany,Munich,Monitor,Hardware,14,329.55,4613.7,open
+25,2026-04-01,Jensen ApS,Italy,Milan,Keyboard,Accessories,10,85.79,857.9,paid
+26,2026-06-22,Jensen ApS,France,Paris,Monitor,Hardware,18,351.69,6330.42,shipped
+27,2025-09-07,Dupont SA,Germany,Berlin,IDE License,Software,17,227.22,3862.74,cancelled
+28,2025-02-04,Müller GmbH,France,Paris,Support Plan,Services,17,1062.36,18060.12,paid
+29,2026-06-07,Smith Ltd,Italy,Milan,IDE License,Software,16,285.71,4571.36,cancelled
+30,2026-07-17,Kowalski Sp.,United Kingdom,London,Office License,Software,8,126.95,1015.6,shipped
+31,2025-04-08,Hansen Logistik,Czechia,Prague,IDE License,Software,7,274.75,1923.25,open
+32,2026-07-17,Rossi S.p.A.,Germany,Berlin,IDE License,Software,15,283.06,4245.9,paid
+33,2025-07-06,Rossi S.p.A.,Germany,Berlin,Keyboard,Accessories,3,76.92,230.76,shipped
+34,2026-03-03,Dupont SA,Poland,Warsaw,Cloud Credits,Services,16,454.39,7270.24,shipped
+35,2025-07-16,Schmidt & Co,France,Paris,Docking Station,Accessories,9,207.96,1871.64,shipped
+36,2025-10-07,Schmidt & Co,Austria,Vienna,Office License,Software,11,134.7,1481.7,open
+37,2025-10-03,Dupont SA,Germany,Berlin,Headset,Accessories,2,165.57,331.14,open
+38,2026-03-26,Dupont SA,Denmark,Copenhagen,Laptop,Hardware,8,1193.67,9549.36,open
+39,2025-12-18,Novák s.r.o.,Czechia,Prague,Cloud Credits,Services,14,544.46,7622.44,shipped
+40,2025-06-18,Kowalski Sp.,Germany,Munich,Laptop,Hardware,2,1127.37,2254.74,paid
+41,2025-08-05,Becker KG,Italy,Milan,Headset,Accessories,1,144.39,144.39,paid
+42,2025-06-20,Dupont SA,Italy,Milan,Keyboard,Accessories,19,101.07,1920.33,cancelled
+43,2025-07-19,Rossi S.p.A.,Czechia,Prague,IDE License,Software,12,272.15,3265.8,paid
+44,2026-09-11,García SL,Italy,Milan,IDE License,Software,12,252.44,3029.28,paid
+45,2025-09-05,Jensen ApS,Austria,Vienna,IDE License,Software,14,276.24,3867.36,paid
+46,2026-06-20,Smith Ltd,United Kingdom,London,Docking Station,Accessories,7,221.16,1548.12,cancelled
+47,2025-11-08,Becker KG,Poland,Warsaw,Monitor,Hardware,6,397.31,2383.86,shipped
+48,2026-06-26,Jensen ApS,Denmark,Copenhagen,Cloud Credits,Services,15,452.88,6793.2,shipped
+49,2026-03-09,Rossi S.p.A.,France,Paris,Laptop,Hardware,10,1452.24,14522.4,shipped
+50,2025-04-18,Schmidt & Co,Spain,Madrid,Cloud Credits,Services,11,431.5,4746.5,open
+51,2025-02-24,Müller GmbH,Switzerland,Zurich,Support Plan,Services,17,1044.45,17755.65,paid
+52,2026-08-05,Jensen ApS,Poland,Warsaw,Keyboard,Accessories,18,92.37,1662.66,shipped
+53,2025-06-28,Becker KG,Germany,Berlin,IDE License,Software,5,247.52,1237.6,paid
+54,2026-05-16,Kowalski Sp.,Italy,Milan,Docking Station,Accessories,12,193.32,2319.84,cancelled
+55,2025-06-03,Nordlicht AG,Germany,Berlin,Laptop,Hardware,1,1236.85,1236.85,cancelled
+56,2025-01-21,Kowalski Sp.,Italy,Milan,Support Plan,Services,7,1034.3,7240.1,paid
+57,2025-03-30,Müller GmbH,Switzerland,Zurich,Keyboard,Accessories,16,89.14,1426.24,paid
+58,2026-09-02,Nordlicht AG,France,Paris,Support Plan,Services,16,988.08,15809.28,open
+59,2025-06-04,Schmidt & Co,Italy,Milan,IDE License,Software,5,269.18,1345.9,shipped
+60,2025-11-30,Kowalski Sp.,Spain,Madrid,Office License,Software,5,145.33,726.65,open
+61,2025-07-28,Kowalski Sp.,Czechia,Prague,Office License,Software,6,111.47,668.82,paid
+62,2026-02-16,Dupont SA,Austria,Vienna,Support Plan,Services,10,895.75,8957.5,paid
+63,2025-05-16,Rossi S.p.A.,United Kingdom,London,Laptop,Hardware,3,1491.9,4475.7,shipped
+64,2026-09-19,Novák s.r.o.,Spain,Madrid,Docking Station,Accessories,14,196.55,2751.7,shipped
+65,2025-11-07,Becker KG,Germany,Munich,Office License,Software,16,126.91,2030.56,shipped
+66,2025-06-10,Dupont SA,Germany,Hamburg,Support Plan,Services,8,968.03,7744.24,open
+67,2026-02-26,Novák s.r.o.,Spain,Madrid,Laptop,Hardware,19,1401.56,26629.64,open
+68,2025-11-01,Rossi S.p.A.,Spain,Madrid,Office License,Software,10,129.48,1294.8,shipped
+69,2025-04-28,Hansen Logistik,Germany,Hamburg,Cloud Credits,Services,1,528.67,528.67,paid
+70,2025-10-23,Müller GmbH,Czechia,Prague,Keyboard,Accessories,13,99.75,1296.75,shipped
+71,2025-03-19,Kowalski Sp.,France,Paris,Docking Station,Accessories,10,235.68,2356.8,shipped
+72,2026-08-06,Müller GmbH,Czechia,Prague,Support Plan,Services,10,843.95,8439.5,shipped
+73,2026-06-30,Smith Ltd,France,Paris,IDE License,Software,12,257.23,3086.76,cancelled
+74,2026-06-04,Schmidt & Co,Czechia,Prague,Headset,Accessories,17,169.45,2880.65,open
+75,2026-03-11,Novák s.r.o.,Czechia,Prague,Laptop,Hardware,10,1444.86,14448.6,paid
+76,2025-06-10,Schmidt & Co,United Kingdom,London,Docking Station,Accessories,19,229.23,4355.37,shipped
+77,2026-02-02,Hansen Logistik,Poland,Warsaw,Laptop,Hardware,3,1197.44,3592.32,shipped
+78,2025-01-11,Kowalski Sp.,Czechia,Prague,Docking Station,Accessories,16,234.73,3755.68,cancelled
+79,2025-09-02,Jensen ApS,Austria,Vienna,Office License,Software,18,127.72,2298.96,shipped
+80,2025-04-21,Smith Ltd,Austria,Vienna,Docking Station,Accessories,11,251.58,2767.38,open
+81,2026-06-19,Hansen Logistik,Spain,Madrid,Cloud Credits,Services,9,514.45,4630.05,shipped
+82,2026-03-30,Dupont SA,Germany,Munich,Headset,Accessories,4,157.02,628.08,shipped
+83,2025-02-08,Schmidt & Co,Spain,Madrid,Support Plan,Services,16,841.54,13464.64,cancelled
+84,2026-04-22,Smith Ltd,Germany,Hamburg,Laptop,Hardware,11,1126.55,12392.05,open
+85,2026-04-21,Smith Ltd,Switzerland,Zurich,Support Plan,Services,7,900.38,6302.66,open
+86,2025-09-23,Smith Ltd,Spain,Madrid,Office License,Software,18,132.1,2377.8,shipped
+87,2026-04-14,Becker KG,Spain,Madrid,Monitor,Hardware,3,370.7,1112.1,cancelled
+88,2026-03-03,García SL,Czechia,Prague,Docking Station,Accessories,12,208.37,2500.44,cancelled
+89,2026-08-11,Nordlicht AG,Poland,Warsaw,Mouse,Accessories,19,39.1,742.9,open
+90,2025-01-14,Smith Ltd,Austria,Vienna,Headset,Accessories,11,170.28,1873.08,shipped
+91,2026-08-29,Becker KG,Czechia,Prague,Keyboard,Accessories,20,81.63,1632.6,shipped
+92,2026-02-06,Becker KG,Switzerland,Zurich,Keyboard,Accessories,6,100.86,605.16,shipped
+93,2026-07-30,Smith Ltd,Switzerland,Zurich,Docking Station,Accessories,4,223.62,894.48,shipped
+94,2026-02-08,Rossi S.p.A.,United Kingdom,London,Office License,Software,18,126.82,2282.76,shipped
+95,2025-01-04,Kowalski Sp.,Spain,Madrid,IDE License,Software,9,224.58,2021.22,shipped
+96,2025-06-29,Müller GmbH,Austria,Vienna,Laptop,Hardware,3,1357.08,4071.24,shipped
+97,2025-06-28,Smith Ltd,Poland,Warsaw,Monitor,Hardware,15,319.18,4787.7,shipped
+98,2025-02-23,Nordlicht AG,Switzerland,Zurich,IDE License,Software,10,272.6,2726,shipped
+99,2025-04-22,Smith Ltd,United Kingdom,London,Support Plan,Services,20,979.84,19596.8,shipped
+100,2025-04-14,Jensen ApS,Denmark,Copenhagen,Headset,Accessories,9,143.46,1291.14,shipped
+101,2025-12-09,Dupont SA,Germany,Munich,Laptop,Hardware,18,1141.17,20541.06,shipped
+102,2026-07-31,Jensen ApS,Czechia,Prague,Office License,Software,14,129.94,1819.16,open
+103,2025-12-10,Rossi S.p.A.,Germany,Munich,Headset,Accessories,8,158.09,1264.72,paid
+104,2026-07-19,Nordlicht AG,Switzerland,Zurich,Mouse,Accessories,13,43.35,563.55,shipped
+105,2025-09-19,García SL,France,Paris,Office License,Software,15,131.77,1976.55,paid
+106,2025-03-19,Hansen Logistik,France,Paris,Laptop,Hardware,4,1123,4492,paid
+107,2026-04-10,Rossi S.p.A.,Italy,Milan,Docking Station,Accessories,8,251.66,2013.28,shipped
+108,2025-03-14,Jensen ApS,Poland,Warsaw,Keyboard,Accessories,12,82.7,992.4,shipped
+109,2026-01-04,Müller GmbH,Germany,Berlin,Headset,Accessories,1,160.28,160.28,shipped
+110,2026-09-15,Rossi S.p.A.,United Kingdom,London,Monitor,Hardware,17,319.64,5433.88,shipped
+111,2025-11-05,Hansen Logistik,Germany,Hamburg,Mouse,Accessories,2,37.63,75.26,open
+112,2025-05-02,Kowalski Sp.,Czechia,Prague,Cloud Credits,Services,5,443.67,2218.35,paid
+113,2026-03-29,Dupont SA,Czechia,Prague,Support Plan,Services,18,914.54,16461.72,paid
+114,2026-08-20,Nordlicht AG,Germany,Munich,Laptop,Hardware,17,1458.03,24786.51,open
+115,2025-02-28,Smith Ltd,Germany,Hamburg,Headset,Accessories,14,154.94,2169.16,paid
+116,2025-12-03,Hansen Logistik,Denmark,Copenhagen,Laptop,Hardware,17,1192.36,20270.12,open
+117,2025-05-12,Müller GmbH,Austria,Vienna,Headset,Accessories,20,151.54,3030.8,paid
+118,2026-08-31,Novák s.r.o.,Germany,Hamburg,Headset,Accessories,7,169.22,1184.54,open
+119,2025-12-15,Smith Ltd,Switzerland,Zurich,Keyboard,Accessories,2,92.68,185.36,shipped
+120,2026-02-04,Rossi S.p.A.,Spain,Madrid,Laptop,Hardware,18,1370.95,24677.1,paid
+121,2025-05-08,Nordlicht AG,Germany,Munich,Docking Station,Accessories,3,247.82,743.46,shipped
+122,2025-08-14,Rossi S.p.A.,Spain,Madrid,Office License,Software,9,125.34,1128.06,paid
+123,2026-07-16,Jensen ApS,Germany,Hamburg,IDE License,Software,13,260.09,3381.17,shipped
+124,2025-09-14,Nordlicht AG,Denmark,Copenhagen,Monitor,Hardware,10,365.03,3650.3,cancelled
+125,2025-03-03,Rossi S.p.A.,Czechia,Prague,Docking Station,Accessories,19,245.66,4667.54,cancelled
+126,2026-04-09,Hansen Logistik,Austria,Vienna,Docking Station,Accessories,16,208.74,3339.84,cancelled
+127,2025-07-09,Becker KG,Germany,Hamburg,Headset,Accessories,15,147.21,2208.15,shipped
+128,2025-04-10,Becker KG,Austria,Vienna,Keyboard,Accessories,1,94.59,94.59,open
+129,2025-10-17,Hansen Logistik,Denmark,Copenhagen,Laptop,Hardware,15,1318.3,19774.5,shipped
+130,2026-04-19,Smith Ltd,Spain,Madrid,Mouse,Accessories,16,43.36,693.76,shipped
+131,2025-09-21,Hansen Logistik,Switzerland,Zurich,Office License,Software,20,121.21,2424.2,paid
+132,2026-05-22,Dupont SA,Poland,Warsaw,Mouse,Accessories,4,40.69,162.76,cancelled
+133,2025-09-06,Jensen ApS,United Kingdom,London,Headset,Accessories,12,149.38,1792.56,paid
+134,2026-04-11,Nordlicht AG,Germany,Hamburg,IDE License,Software,1,221.34,221.34,paid
+135,2026-04-04,Jensen ApS,Germany,Munich,Mouse,Accessories,20,38.78,775.6,paid
+136,2025-02-07,Kowalski Sp.,Austria,Vienna,Support Plan,Services,8,917.45,7339.6,paid
+137,2026-02-11,Becker KG,United Kingdom,London,Docking Station,Accessories,6,226.64,1359.84,cancelled
+138,2026-08-08,Hansen Logistik,Denmark,Copenhagen,IDE License,Software,13,249.93,3249.09,cancelled
+139,2026-06-19,Nordlicht AG,Denmark,Copenhagen,Laptop,Hardware,18,1384.2,24915.6,open
+140,2025-09-20,Hansen Logistik,United Kingdom,London,Mouse,Accessories,12,43.28,519.36,shipped
+141,2025-12-30,Dupont SA,Germany,Hamburg,Keyboard,Accessories,20,101.3,2026,paid
+142,2026-09-30,Smith Ltd,Germany,Berlin,Support Plan,Services,6,926.94,5561.64,paid
+143,2026-09-25,Smith Ltd,Austria,Vienna,Keyboard,Accessories,5,99.56,497.8,shipped
+144,2026-01-15,Hansen Logistik,Denmark,Copenhagen,Monitor,Hardware,12,344.9,4138.8,shipped
+145,2026-03-14,Novák s.r.o.,France,Paris,Docking Station,Accessories,14,200.41,2805.74,shipped
+146,2025-03-05,Dupont SA,Germany,Berlin,Mouse,Accessories,4,43.37,173.48,paid
+147,2026-05-22,Rossi S.p.A.,Austria,Vienna,Laptop,Hardware,10,1131.43,11314.3,paid
+148,2026-09-19,Nordlicht AG,Spain,Madrid,Office License,Software,11,142.13,1563.43,open
+149,2025-06-24,Nordlicht AG,Denmark,Copenhagen,Cloud Credits,Services,11,437.13,4808.43,paid
+150,2026-04-13,Kowalski Sp.,France,Paris,Monitor,Hardware,6,361.89,2171.34,cancelled
+151,2026-07-01,Hansen Logistik,France,Paris,Support Plan,Services,19,1050.46,19958.74,paid
+152,2026-09-13,García SL,Germany,Hamburg,Office License,Software,13,120.4,1565.2,paid
+153,2025-07-12,Dupont SA,Czechia,Prague,Keyboard,Accessories,16,77.52,1240.32,shipped
+154,2026-09-29,Novák s.r.o.,Czechia,Prague,Cloud Credits,Services,15,546.79,8201.85,cancelled
+155,2025-01-27,Hansen Logistik,Spain,Madrid,Headset,Accessories,8,151.53,1212.24,paid
+156,2026-05-14,Becker KG,Poland,Warsaw,Keyboard,Accessories,14,81.56,1141.84,open
+157,2025-08-08,Becker KG,Germany,Berlin,Monitor,Hardware,19,398.16,7565.04,cancelled
+158,2026-01-07,Jensen ApS,Poland,Warsaw,Keyboard,Accessories,7,80.19,561.33,paid
+159,2025-06-06,Becker KG,Denmark,Copenhagen,Support Plan,Services,14,1055.09,14771.26,shipped
+160,2026-06-11,Hansen Logistik,Germany,Munich,Headset,Accessories,4,151.79,607.16,cancelled
+161,2025-11-22,Jensen ApS,Czechia,Prague,Cloud Credits,Services,4,454.73,1818.92,shipped
+162,2025-09-05,Schmidt & Co,Denmark,Copenhagen,Laptop,Hardware,1,1344.26,1344.26,shipped
+163,2025-05-05,Nordlicht AG,United Kingdom,London,Keyboard,Accessories,2,76.57,153.14,cancelled
+164,2025-11-20,Nordlicht AG,United Kingdom,London,Mouse,Accessories,10,37.05,370.5,paid
+165,2025-12-09,Müller GmbH,Poland,Warsaw,Docking Station,Accessories,10,250.15,2501.5,cancelled
+166,2025-12-18,García SL,Italy,Milan,IDE License,Software,3,222.53,667.59,paid
+167,2025-08-06,Dupont SA,Germany,Munich,Keyboard,Accessories,10,86.42,864.2,shipped
+168,2025-01-16,Becker KG,Germany,Hamburg,Docking Station,Accessories,15,194.91,2923.65,paid
+169,2025-09-24,Smith Ltd,France,Paris,Headset,Accessories,18,154.81,2786.58,paid
+170,2025-11-26,Smith Ltd,Czechia,Prague,Monitor,Hardware,14,383,5362,shipped
+171,2025-05-26,Hansen Logistik,Spain,Madrid,Office License,Software,6,128.63,771.78,shipped
+172,2025-08-22,Becker KG,Germany,Berlin,Docking Station,Accessories,7,201.85,1412.95,paid
+173,2026-02-28,Rossi S.p.A.,Denmark,Copenhagen,Laptop,Hardware,9,1425.31,12827.79,open
+174,2025-05-23,Dupont SA,Italy,Milan,Monitor,Hardware,4,383.19,1532.76,shipped
+175,2026-02-03,Hansen Logistik,Denmark,Copenhagen,Office License,Software,10,141.56,1415.6,paid
+176,2026-05-28,Smith Ltd,Poland,Warsaw,Headset,Accessories,19,161.04,3059.76,paid
+177,2025-11-06,Dupont SA,Germany,Munich,Monitor,Hardware,19,371.43,7057.17,paid
+178,2026-09-29,Jensen ApS,Spain,Madrid,Support Plan,Services,7,965.09,6755.63,paid
+179,2025-03-10,Müller GmbH,Germany,Hamburg,Office License,Software,19,118.71,2255.49,shipped
+180,2025-02-05,García SL,Austria,Vienna,Support Plan,Services,18,1021.05,18378.9,shipped
+181,2026-04-14,Jensen ApS,Spain,Madrid,Mouse,Accessories,10,42.46,424.6,paid
+182,2026-05-12,Dupont SA,Germany,Munich,Monitor,Hardware,10,319.14,3191.4,shipped
+183,2025-04-12,Müller GmbH,Czechia,Prague,IDE License,Software,15,233.05,3495.75,open
+184,2025-07-04,Rossi S.p.A.,Denmark,Copenhagen,Laptop,Hardware,1,1134.26,1134.26,shipped
+185,2025-10-29,Hansen Logistik,Germany,Berlin,Cloud Credits,Services,20,496.95,9939,open
+186,2025-02-20,Müller GmbH,Czechia,Prague,Office License,Software,2,115.88,231.76,paid
+187,2025-09-17,Novák s.r.o.,Poland,Warsaw,Cloud Credits,Services,8,456.51,3652.08,open
+188,2025-02-12,Schmidt & Co,Germany,Berlin,Docking Station,Accessories,19,212.72,4041.68,cancelled
+189,2025-09-22,Schmidt & Co,Italy,Milan,Headset,Accessories,10,145.46,1454.6,paid
+190,2026-01-24,Rossi S.p.A.,Poland,Warsaw,Monitor,Hardware,19,394.93,7503.67,paid
+191,2026-08-17,Hansen Logistik,Poland,Warsaw,Keyboard,Accessories,4,93.37,373.48,cancelled
+192,2025-09-12,Hansen Logistik,Germany,Munich,Headset,Accessories,8,144.48,1155.84,shipped
+193,2025-04-07,Schmidt & Co,Czechia,Prague,Cloud Credits,Services,10,431.55,4315.5,paid
+194,2026-04-18,Rossi S.p.A.,Italy,Milan,Laptop,Hardware,16,1395.18,22322.88,shipped
+195,2025-10-03,Dupont SA,Poland,Warsaw,Support Plan,Services,4,1078.51,4314.04,cancelled
+196,2025-04-11,Jensen ApS,Denmark,Copenhagen,Office License,Software,4,127.11,508.44,cancelled
+197,2026-04-08,Dupont SA,Italy,Milan,Headset,Accessories,6,134.43,806.58,open
+198,2026-09-08,Dupont SA,Germany,Berlin,Office License,Software,3,148.17,444.51,paid
+199,2025-07-09,Schmidt & Co,France,Paris,Docking Station,Accessories,6,204.6,1227.6,cancelled
+200,2026-08-17,Rossi S.p.A.,Germany,Berlin,Docking Station,Accessories,2,197.18,394.36,shipped
+201,2025-12-18,Rossi S.p.A.,Spain,Madrid,Headset,Accessories,9,159.9,1439.1,open
+202,2026-05-03,Dupont SA,Austria,Vienna,Monitor,Hardware,19,378.21,7185.99,paid
+203,2026-08-27,García SL,Austria,Vienna,Office License,Software,15,116.8,1752,open
+204,2025-01-21,Novák s.r.o.,Switzerland,Zurich,Support Plan,Services,11,909.03,9999.33,cancelled
+205,2025-05-15,Becker KG,Denmark,Copenhagen,Monitor,Hardware,7,330.29,2312.03,cancelled
+206,2025-05-07,Nordlicht AG,Germany,Berlin,Mouse,Accessories,3,35.34,106.02,cancelled
+207,2026-07-26,Dupont SA,Austria,Vienna,Mouse,Accessories,15,35.59,533.85,paid
+208,2026-05-23,Smith Ltd,Germany,Berlin,Support Plan,Services,11,887,9757,open
+209,2025-08-26,Kowalski Sp.,Germany,Berlin,Laptop,Hardware,20,1374.63,27492.6,paid
+210,2025-07-14,Kowalski Sp.,Austria,Vienna,Monitor,Hardware,17,330.32,5615.44,shipped
+211,2026-04-01,Kowalski Sp.,Switzerland,Zurich,Monitor,Hardware,13,359.71,4676.23,open
+212,2026-07-15,Smith Ltd,Austria,Vienna,Docking Station,Accessories,14,192.21,2690.94,paid
+213,2025-01-05,Kowalski Sp.,Spain,Madrid,Office License,Software,19,116.94,2221.86,open
+214,2026-07-28,Jensen ApS,Czechia,Prague,Support Plan,Services,11,842.42,9266.62,paid
+215,2026-03-02,Hansen Logistik,Germany,Hamburg,Headset,Accessories,9,133.56,1202.04,shipped
+216,2026-07-18,Hansen Logistik,Germany,Munich,Headset,Accessories,18,128.2,2307.6,paid
+217,2025-04-23,Jensen ApS,Denmark,Copenhagen,Headset,Accessories,11,167.86,1846.46,cancelled
+218,2025-11-20,Dupont SA,Poland,Warsaw,Keyboard,Accessories,17,99.42,1690.14,paid
+219,2026-04-16,Smith Ltd,Germany,Berlin,Support Plan,Services,20,850.25,17005,shipped
+220,2026-02-13,Nordlicht AG,Poland,Warsaw,Monitor,Hardware,14,334.48,4682.72,open
+221,2026-06-03,Schmidt & Co,Germany,Berlin,Docking Station,Accessories,3,209.11,627.33,shipped
+222,2026-05-18,Nordlicht AG,Germany,Hamburg,Monitor,Hardware,19,301.24,5723.56,paid
+223,2026-03-06,Kowalski Sp.,Austria,Vienna,Office License,Software,11,147.87,1626.57,shipped
+224,2026-08-31,Nordlicht AG,Spain,Madrid,Docking Station,Accessories,2,227.57,455.14,open
+225,2025-12-20,Kowalski Sp.,Czechia,Prague,Support Plan,Services,5,858.12,4290.6,shipped
+226,2025-03-29,García SL,Denmark,Copenhagen,Laptop,Hardware,17,1273.94,21656.98,cancelled
+227,2025-01-17,Becker KG,Poland,Warsaw,Cloud Credits,Services,13,487.87,6342.31,paid
+228,2025-04-16,Jensen ApS,Germany,Munich,IDE License,Software,15,261.27,3919.05,shipped
+229,2026-01-06,Müller GmbH,Denmark,Copenhagen,Cloud Credits,Services,5,555.66,2778.3,paid
+230,2025-07-25,Smith Ltd,Spain,Madrid,Support Plan,Services,6,1006.95,6041.7,open
+231,2025-05-02,Novák s.r.o.,Austria,Vienna,Office License,Software,2,114.56,229.12,open
+232,2025-02-06,Smith Ltd,Germany,Munich,Cloud Credits,Services,9,472.88,4255.92,shipped
+233,2025-03-27,Novák s.r.o.,Poland,Warsaw,Monitor,Hardware,13,381.2,4955.6,open
+234,2025-02-11,Rossi S.p.A.,France,Paris,Mouse,Accessories,13,36.87,479.31,shipped
+235,2026-05-23,Dupont SA,Poland,Warsaw,Docking Station,Accessories,20,225.7,4514,cancelled
+236,2025-01-24,Hansen Logistik,Spain,Madrid,Monitor,Hardware,18,391.26,7042.68,cancelled
+237,2025-11-24,Hansen Logistik,France,Paris,Office License,Software,10,120.33,1203.3,cancelled
+238,2025-05-01,Kowalski Sp.,Austria,Vienna,Keyboard,Accessories,17,90.01,1530.17,paid
+239,2025-05-14,Hansen Logistik,Poland,Warsaw,IDE License,Software,19,242.74,4612.06,paid
+240,2025-06-13,Müller GmbH,Poland,Warsaw,Cloud Credits,Services,10,556.64,5566.4,shipped
+241,2026-02-22,Kowalski Sp.,United Kingdom,London,Office License,Software,14,141.41,1979.74,shipped
+242,2025-09-08,Kowalski Sp.,Switzerland,Zurich,Keyboard,Accessories,18,78.72,1416.96,open
+243,2025-03-15,Hansen Logistik,Denmark,Copenhagen,IDE License,Software,9,248.74,2238.66,paid
+244,2025-01-27,Jensen ApS,Czechia,Prague,Headset,Accessories,6,163.17,979.02,paid
+245,2025-02-08,Nordlicht AG,Spain,Madrid,Laptop,Hardware,20,1173.08,23461.6,paid
+246,2025-01-11,García SL,Czechia,Prague,Support Plan,Services,6,855.8,5134.8,paid
+247,2026-09-02,Kowalski Sp.,United Kingdom,London,Headset,Accessories,8,165.38,1323.04,paid
+248,2025-07-15,Dupont SA,Denmark,Copenhagen,Laptop,Hardware,12,1319.67,15836.04,paid
+249,2026-03-05,Kowalski Sp.,Switzerland,Zurich,Monitor,Hardware,15,382.87,5743.05,shipped
+250,2025-05-13,Schmidt & Co,Spain,Madrid,Office License,Software,12,113.34,1360.08,paid
+251,2025-09-12,Smith Ltd,Germany,Munich,Keyboard,Accessories,3,99.67,299.01,paid
+252,2026-08-26,García SL,France,Paris,Support Plan,Services,18,875.37,15756.66,cancelled
+253,2026-03-03,Dupont SA,Germany,Munich,Docking Station,Accessories,7,218.44,1529.08,paid
+254,2025-02-07,Nordlicht AG,Poland,Warsaw,Mouse,Accessories,9,34.74,312.66,shipped
+255,2026-01-06,Müller GmbH,Germany,Berlin,Headset,Accessories,7,137.44,962.08,paid
+256,2026-02-23,García SL,Germany,Berlin,Monitor,Hardware,6,372.2,2233.2,shipped
+257,2025-05-27,Schmidt & Co,Switzerland,Zurich,Docking Station,Accessories,3,240.19,720.57,open
+258,2025-05-24,Nordlicht AG,Austria,Vienna,Keyboard,Accessories,12,94.77,1137.24,shipped
+259,2025-04-27,Nordlicht AG,Austria,Vienna,Headset,Accessories,8,134.79,1078.32,paid
+260,2026-06-18,Kowalski Sp.,Austria,Vienna,Headset,Accessories,4,146.33,585.32,shipped
+261,2026-01-26,Kowalski Sp.,France,Paris,Headset,Accessories,1,155.48,155.48,cancelled
+262,2025-08-05,Becker KG,United Kingdom,London,Headset,Accessories,5,170.42,852.1,paid
+263,2026-03-17,Rossi S.p.A.,Germany,Hamburg,Headset,Accessories,10,132.68,1326.8,paid
+264,2026-07-17,Rossi S.p.A.,United Kingdom,London,IDE License,Software,4,273.19,1092.76,shipped
+265,2025-02-24,Smith Ltd,France,Paris,Monitor,Hardware,4,344.41,1377.64,shipped
+266,2026-08-19,Schmidt & Co,Germany,Hamburg,IDE License,Software,7,220.99,1546.93,paid
+267,2026-02-19,García SL,Germany,Berlin,Keyboard,Accessories,16,76.43,1222.88,cancelled
+268,2025-12-19,Müller GmbH,Italy,Milan,Keyboard,Accessories,13,81.97,1065.61,paid
+269,2026-02-06,Schmidt & Co,Switzerland,Zurich,Cloud Credits,Services,20,432.14,8642.8,open
+270,2026-03-27,Rossi S.p.A.,Spain,Madrid,Monitor,Hardware,12,297.23,3566.76,shipped
+271,2025-05-02,Jensen ApS,Czechia,Prague,Headset,Accessories,16,151.57,2425.12,paid
+272,2025-06-20,Rossi S.p.A.,Switzerland,Zurich,IDE License,Software,12,235.4,2824.8,cancelled
+273,2025-01-04,Schmidt & Co,Czechia,Prague,Docking Station,Accessories,11,234.31,2577.41,open
+274,2025-09-04,Nordlicht AG,Germany,Berlin,Support Plan,Services,11,1107.21,12179.31,paid
+275,2025-11-02,Müller GmbH,Germany,Hamburg,Docking Station,Accessories,6,239.35,1436.1,shipped
+276,2025-12-04,Kowalski Sp.,France,Paris,Keyboard,Accessories,3,97.35,292.05,cancelled
+277,2025-02-12,García SL,Switzerland,Zurich,Support Plan,Services,1,1062.99,1062.99,paid
+278,2026-07-21,García SL,Germany,Berlin,Cloud Credits,Services,12,473.83,5685.96,shipped
+279,2025-04-19,Rossi S.p.A.,Denmark,Copenhagen,Office License,Software,13,133.2,1731.6,paid
+280,2025-05-26,Novák s.r.o.,Germany,Hamburg,IDE License,Software,20,211.81,4236.2,open
+281,2026-09-20,Hansen Logistik,Czechia,Prague,Support Plan,Services,8,915.27,7322.16,cancelled
+282,2025-01-26,Jensen ApS,Germany,Hamburg,Mouse,Accessories,4,40.3,161.2,shipped
+283,2026-07-15,Kowalski Sp.,Italy,Milan,Mouse,Accessories,13,39.46,512.98,shipped
+284,2026-04-03,Dupont SA,France,Paris,Mouse,Accessories,2,38.81,77.62,cancelled
+285,2026-06-26,Müller GmbH,United Kingdom,London,Office License,Software,19,137.82,2618.58,paid
+286,2026-07-02,Rossi S.p.A.,Spain,Madrid,Office License,Software,14,127.66,1787.24,paid
+287,2026-02-10,Kowalski Sp.,France,Paris,Monitor,Hardware,20,301.23,6024.6,paid
+288,2025-02-07,Dupont SA,United Kingdom,London,Docking Station,Accessories,6,199.84,1199.04,paid
+289,2025-11-01,Schmidt & Co,Germany,Hamburg,Support Plan,Services,13,951.11,12364.43,open
+290,2025-03-11,Nordlicht AG,Spain,Madrid,Monitor,Hardware,4,300.25,1201,open
+291,2026-07-11,Schmidt & Co,Poland,Warsaw,Laptop,Hardware,18,1253.17,22557.06,open
+292,2026-07-11,Jensen ApS,Italy,Milan,Docking Station,Accessories,19,201.29,3824.51,paid
+293,2025-02-07,Becker KG,Germany,Hamburg,Docking Station,Accessories,3,250.71,752.13,shipped
+294,2025-12-11,Müller GmbH,Italy,Milan,Support Plan,Services,20,935.97,18719.4,cancelled
+295,2026-08-27,Dupont SA,Germany,Hamburg,IDE License,Software,16,256.62,4105.92,paid
+296,2025-08-18,Nordlicht AG,Denmark,Copenhagen,Office License,Software,2,115.49,230.98,shipped
+297,2025-04-05,Becker KG,France,Paris,IDE License,Software,5,234.72,1173.6,cancelled
+298,2025-10-27,Smith Ltd,France,Paris,Cloud Credits,Services,16,558.55,8936.8,paid
+299,2025-08-15,Smith Ltd,Italy,Milan,Keyboard,Accessories,4,97.76,391.04,shipped
+300,2026-07-09,Dupont SA,Czechia,Prague,IDE License,Software,1,281.28,281.28,paid
+301,2026-08-08,Hansen Logistik,France,Paris,Office License,Software,11,117.38,1291.18,cancelled
+302,2025-11-11,Nordlicht AG,United Kingdom,London,Cloud Credits,Services,20,435.56,8711.2,paid
+303,2026-01-27,Hansen Logistik,Denmark,Copenhagen,Keyboard,Accessories,17,83.6,1421.2,paid
+304,2026-03-03,Nordlicht AG,Czechia,Prague,Support Plan,Services,13,1047.01,13611.13,shipped
+305,2026-03-20,Smith Ltd,Poland,Warsaw,Headset,Accessories,2,140.23,280.46,shipped
+306,2026-09-26,Becker KG,Poland,Warsaw,Cloud Credits,Services,2,479.01,958.02,open
+307,2025-08-13,Dupont SA,Germany,Berlin,IDE License,Software,19,251.39,4776.41,open
+308,2026-07-29,Kowalski Sp.,Poland,Warsaw,IDE License,Software,18,284.25,5116.5,open
+309,2026-06-12,Hansen Logistik,Italy,Milan,Support Plan,Services,9,873.46,7861.14,shipped
+310,2026-03-18,Smith Ltd,Austria,Vienna,Cloud Credits,Services,2,436.22,872.44,shipped
+311,2026-03-22,Becker KG,Germany,Hamburg,Support Plan,Services,15,1035.7,15535.5,paid
+312,2025-03-23,García SL,Austria,Vienna,Monitor,Hardware,17,350.12,5952.04,shipped
+313,2025-04-08,Müller GmbH,Germany,Hamburg,Mouse,Accessories,2,37.84,75.68,shipped
+314,2025-12-31,Schmidt & Co,Denmark,Copenhagen,Laptop,Hardware,19,1450.44,27558.36,open
+315,2025-07-26,Smith Ltd,Austria,Vienna,Support Plan,Services,15,1018.27,15274.05,paid
+316,2025-07-20,García SL,Italy,Milan,Support Plan,Services,8,1047.7,8381.6,paid
+317,2025-01-19,Smith Ltd,United Kingdom,London,IDE License,Software,20,218.6,4372,cancelled
+318,2026-03-20,Rossi S.p.A.,Germany,Hamburg,IDE License,Software,3,283.57,850.71,paid
+319,2025-03-19,Hansen Logistik,Poland,Warsaw,Support Plan,Services,10,1122.12,11221.2,paid
+320,2025-03-06,Novák s.r.o.,Denmark,Copenhagen,Office License,Software,16,135.71,2171.36,cancelled
+321,2025-08-02,Smith Ltd,Spain,Madrid,Headset,Accessories,3,133.11,399.33,paid
+322,2026-04-05,Becker KG,France,Paris,Laptop,Hardware,20,1318.4,26368,open
+323,2025-02-16,Jensen ApS,United Kingdom,London,Office License,Software,5,111.03,555.15,shipped
+324,2026-01-08,Nordlicht AG,France,Paris,Docking Station,Accessories,7,213.54,1494.78,shipped
+325,2025-04-29,Hansen Logistik,Germany,Berlin,Monitor,Hardware,5,327.51,1637.55,paid
+326,2026-09-23,Schmidt & Co,Germany,Munich,Mouse,Accessories,6,36.73,220.38,paid
+327,2026-01-11,Rossi S.p.A.,Germany,Munich,Docking Station,Accessories,6,203.94,1223.64,paid
+328,2026-06-04,Kowalski Sp.,Spain,Madrid,Support Plan,Services,2,912.25,1824.5,paid
+329,2026-07-08,Becker KG,Germany,Munich,IDE License,Software,18,241.91,4354.38,paid
+330,2026-07-06,Novák s.r.o.,Poland,Warsaw,Office License,Software,2,121.65,243.3,paid
+331,2025-11-18,Dupont SA,Spain,Madrid,Headset,Accessories,8,147.45,1179.6,cancelled
+332,2026-04-18,Novák s.r.o.,Denmark,Copenhagen,Support Plan,Services,2,855.81,1711.62,cancelled
+333,2025-08-18,Kowalski Sp.,Spain,Madrid,Monitor,Hardware,5,380.92,1904.6,open
+334,2026-04-05,Hansen Logistik,Switzerland,Zurich,Docking Station,Accessories,2,189.59,379.18,shipped
+335,2025-02-27,Dupont SA,Germany,Hamburg,IDE License,Software,8,253.88,2031.04,paid
+336,2025-07-24,Rossi S.p.A.,United Kingdom,London,Office License,Software,3,138.37,415.11,paid
+337,2026-08-04,Kowalski Sp.,Germany,Hamburg,Mouse,Accessories,13,33.8,439.4,shipped
+338,2025-07-15,Müller GmbH,Germany,Munich,Headset,Accessories,3,136.93,410.79,paid
+339,2025-04-22,Novák s.r.o.,Germany,Munich,Cloud Credits,Services,9,503.76,4533.84,paid
+340,2025-07-01,Dupont SA,United Kingdom,London,Headset,Accessories,18,132.74,2389.32,shipped
+341,2026-01-01,García SL,Germany,Munich,Laptop,Hardware,10,1428.52,14285.2,open
+342,2025-07-20,Becker KG,United Kingdom,London,Office License,Software,4,124.5,498,shipped
+343,2025-07-11,Müller GmbH,Spain,Madrid,Monitor,Hardware,20,332.44,6648.8,paid
+344,2025-02-08,Jensen ApS,United Kingdom,London,Mouse,Accessories,8,41.78,334.24,paid
+345,2025-08-26,García SL,Switzerland,Zurich,Laptop,Hardware,12,1400.07,16800.84,paid
+346,2026-05-20,Dupont SA,Italy,Milan,Support Plan,Services,15,929.17,13937.55,cancelled
+347,2026-07-08,Hansen Logistik,United Kingdom,London,Cloud Credits,Services,5,459.89,2299.45,shipped
+348,2025-05-05,Hansen Logistik,Germany,Hamburg,Headset,Accessories,6,144.79,868.74,paid
+349,2026-01-27,Jensen ApS,Poland,Warsaw,IDE License,Software,7,259.11,1813.77,paid
+350,2025-06-15,Novák s.r.o.,Denmark,Copenhagen,Laptop,Hardware,17,1302.88,22148.96,paid
+351,2025-08-13,Dupont SA,Spain,Madrid,Laptop,Hardware,5,1371.63,6858.15,cancelled
+352,2025-09-12,Dupont SA,France,Paris,Docking Station,Accessories,18,213.22,3837.96,paid
+353,2026-06-18,Nordlicht AG,Denmark,Copenhagen,Laptop,Hardware,2,1308.71,2617.42,paid
+354,2025-02-11,Becker KG,Denmark,Copenhagen,Laptop,Hardware,10,1486.44,14864.4,paid
+355,2025-12-08,Novák s.r.o.,Germany,Munich,IDE License,Software,19,274.27,5211.13,open
+356,2026-04-06,Müller GmbH,Germany,Berlin,Mouse,Accessories,5,43.4,217,shipped
+357,2026-05-07,Hansen Logistik,Italy,Milan,Keyboard,Accessories,4,80.84,323.36,shipped
+358,2025-04-11,Novák s.r.o.,Czechia,Prague,Laptop,Hardware,4,1357.89,5431.56,cancelled
+359,2026-06-20,García SL,Denmark,Copenhagen,Laptop,Hardware,2,1357.36,2714.72,open
+360,2025-02-26,Rossi S.p.A.,Austria,Vienna,Cloud Credits,Services,4,488.33,1953.32,paid
+361,2025-08-03,García SL,Poland,Warsaw,Monitor,Hardware,18,308.23,5548.14,shipped
+362,2025-03-31,Schmidt & Co,Italy,Milan,Monitor,Hardware,14,381.03,5334.42,shipped
+363,2025-07-30,Jensen ApS,Austria,Vienna,Cloud Credits,Services,17,461.21,7840.57,paid
+364,2026-05-06,Nordlicht AG,Czechia,Prague,Headset,Accessories,5,171.07,855.35,paid
+365,2026-09-10,Schmidt & Co,Germany,Munich,Laptop,Hardware,1,1142.41,1142.41,shipped
+366,2025-03-15,Smith Ltd,United Kingdom,London,Cloud Credits,Services,19,504.76,9590.44,shipped
+367,2025-02-15,Dupont SA,United Kingdom,London,Office License,Software,7,134.79,943.53,open
+368,2026-07-04,Nordlicht AG,Austria,Vienna,Cloud Credits,Services,8,449.87,3598.96,cancelled
+369,2025-02-03,Novák s.r.o.,Germany,Hamburg,IDE License,Software,2,213.66,427.32,paid
+370,2026-03-01,Novák s.r.o.,Germany,Hamburg,Headset,Accessories,15,154.09,2311.35,paid
+371,2026-08-29,García SL,Germany,Hamburg,Keyboard,Accessories,13,97.63,1269.19,shipped
+372,2025-11-30,Novák s.r.o.,Germany,Munich,IDE License,Software,11,265.16,2916.76,cancelled
+373,2025-09-09,Schmidt & Co,Germany,Berlin,Monitor,Hardware,13,400.98,5212.74,paid
+374,2026-02-15,Nordlicht AG,Germany,Berlin,Laptop,Hardware,5,1130.9,5654.5,paid
+375,2025-10-13,Kowalski Sp.,Italy,Milan,Cloud Credits,Services,11,535.15,5886.65,cancelled
+376,2026-03-27,Smith Ltd,Switzerland,Zurich,Cloud Credits,Services,12,480.29,5763.48,open
+377,2025-10-19,Dupont SA,United Kingdom,London,Keyboard,Accessories,15,100.53,1507.95,paid
+378,2025-11-21,Hansen Logistik,Czechia,Prague,Mouse,Accessories,7,41.06,287.42,cancelled
+379,2026-04-20,Smith Ltd,Poland,Warsaw,Keyboard,Accessories,19,92.14,1750.66,shipped
+380,2026-03-11,Becker KG,Germany,Hamburg,Mouse,Accessories,6,33.68,202.08,cancelled
+381,2026-07-23,Nordlicht AG,France,Paris,Keyboard,Accessories,16,98.59,1577.44,paid
+382,2026-09-19,García SL,Denmark,Copenhagen,Mouse,Accessories,14,35.97,503.58,shipped
+383,2026-01-12,Novák s.r.o.,Spain,Madrid,Support Plan,Services,5,989.11,4945.55,open
+384,2025-07-28,Becker KG,Germany,Hamburg,IDE License,Software,9,256.73,2310.57,paid
+385,2026-07-12,Müller GmbH,Germany,Berlin,Keyboard,Accessories,7,88.52,619.64,paid
+386,2026-01-05,Novák s.r.o.,Austria,Vienna,Keyboard,Accessories,9,91.34,822.06,open
+387,2026-05-09,Becker KG,United Kingdom,London,Mouse,Accessories,2,36.35,72.7,paid
+388,2026-08-06,Rossi S.p.A.,Germany,Munich,Docking Station,Accessories,18,227.52,4095.36,shipped
+389,2025-03-26,Müller GmbH,Denmark,Copenhagen,IDE License,Software,19,221.63,4210.97,shipped
+390,2025-01-20,Smith Ltd,Poland,Warsaw,Mouse,Accessories,20,43.36,867.2,open
+391,2025-11-21,Jensen ApS,Austria,Vienna,Mouse,Accessories,2,39.29,78.58,shipped
+392,2026-05-24,Novák s.r.o.,Austria,Vienna,Mouse,Accessories,19,42.65,810.35,paid
+393,2026-04-20,Rossi S.p.A.,Poland,Warsaw,Office License,Software,6,140.63,843.78,paid
+394,2025-10-23,Hansen Logistik,Denmark,Copenhagen,Office License,Software,16,134.08,2145.28,paid
+395,2026-04-11,Hansen Logistik,Denmark,Copenhagen,Office License,Software,13,125.33,1629.29,shipped
+396,2025-03-16,Schmidt & Co,Switzerland,Zurich,Monitor,Hardware,9,340.82,3067.38,cancelled
+397,2026-05-10,Hansen Logistik,Italy,Milan,Docking Station,Accessories,14,186.47,2610.58,cancelled
+398,2026-03-01,Becker KG,Poland,Warsaw,Headset,Accessories,13,165.23,2147.99,shipped
+399,2026-06-30,García SL,Austria,Vienna,Keyboard,Accessories,10,88.68,886.8,open
+400,2025-01-09,Smith Ltd,Austria,Vienna,Mouse,Accessories,17,42.59,724.03,shipped
+401,2026-09-11,Nordlicht AG,Poland,Warsaw,Docking Station,Accessories,19,202.63,3849.97,shipped
+402,2025-07-16,Novák s.r.o.,France,Paris,Docking Station,Accessories,9,218.58,1967.22,paid
+403,2026-02-05,Nordlicht AG,Austria,Vienna,Cloud Credits,Services,1,452.59,452.59,shipped
+404,2026-04-17,Novák s.r.o.,Switzerland,Zurich,Monitor,Hardware,2,301.21,602.42,cancelled
+405,2025-12-02,García SL,Germany,Berlin,Office License,Software,19,146.53,2784.07,cancelled
+406,2026-01-05,García SL,United Kingdom,London,Docking Station,Accessories,18,199.56,3592.08,shipped
+407,2026-02-04,Jensen ApS,Czechia,Prague,Cloud Credits,Services,2,467.87,935.74,cancelled
+408,2026-04-20,García SL,Germany,Hamburg,Docking Station,Accessories,19,194.5,3695.5,shipped
+409,2026-09-07,Kowalski Sp.,Germany,Hamburg,Cloud Credits,Services,6,530.75,3184.5,shipped
+410,2026-01-12,Smith Ltd,Switzerland,Zurich,Mouse,Accessories,3,40.32,120.96,shipped
+411,2026-08-25,Rossi S.p.A.,Germany,Munich,Keyboard,Accessories,13,89.71,1166.23,paid
+412,2025-10-05,Novák s.r.o.,Denmark,Copenhagen,Headset,Accessories,3,137.59,412.77,shipped
+413,2025-07-24,Novák s.r.o.,Italy,Milan,Mouse,Accessories,9,37.25,335.25,cancelled
+414,2026-01-23,Smith Ltd,Germany,Berlin,Cloud Credits,Services,10,504.85,5048.5,open
+415,2026-06-24,Rossi S.p.A.,Austria,Vienna,Support Plan,Services,12,1116.18,13394.16,shipped
+416,2025-08-09,Hansen Logistik,Denmark,Copenhagen,Headset,Accessories,13,145.23,1887.99,shipped
+417,2025-07-03,Novák s.r.o.,Italy,Milan,Office License,Software,8,125.45,1003.6,open
+418,2026-07-30,Nordlicht AG,Austria,Vienna,Monitor,Hardware,5,302.65,1513.25,cancelled
+419,2025-07-25,Hansen Logistik,Czechia,Prague,Cloud Credits,Services,19,473.32,8993.08,open
+420,2025-04-13,Rossi S.p.A.,Denmark,Copenhagen,Docking Station,Accessories,17,188.82,3209.94,paid
+421,2026-02-09,Becker KG,Spain,Madrid,Headset,Accessories,13,148.86,1935.18,cancelled
+422,2026-08-12,Jensen ApS,Germany,Munich,Docking Station,Accessories,2,189.63,379.26,shipped
+423,2025-02-15,Smith Ltd,Czechia,Prague,Keyboard,Accessories,17,98.73,1678.41,cancelled
+424,2026-07-04,Dupont SA,Germany,Hamburg,IDE License,Software,16,252.01,4032.16,shipped
+425,2025-01-15,Jensen ApS,France,Paris,IDE License,Software,6,271.34,1628.04,shipped
+426,2026-05-08,Nordlicht AG,Switzerland,Zurich,Mouse,Accessories,16,36.67,586.72,shipped
+427,2025-04-03,Müller GmbH,France,Paris,Office License,Software,5,121.41,607.05,open
+428,2026-02-01,Hansen Logistik,Germany,Berlin,Monitor,Hardware,15,381.56,5723.4,cancelled
+429,2025-03-19,Rossi S.p.A.,Denmark,Copenhagen,Monitor,Hardware,11,323.41,3557.51,shipped
+430,2025-06-08,Müller GmbH,France,Paris,Cloud Credits,Services,2,514.44,1028.88,cancelled
+431,2025-02-18,Jensen ApS,United Kingdom,London,Keyboard,Accessories,16,87.94,1407.04,paid
+432,2025-11-28,Novák s.r.o.,France,Paris,IDE License,Software,16,238,3808,paid
+433,2025-08-28,Smith Ltd,Austria,Vienna,IDE License,Software,16,257.09,4113.44,shipped
+434,2025-11-25,Rossi S.p.A.,Austria,Vienna,Mouse,Accessories,9,44.25,398.25,open
+435,2026-06-05,Nordlicht AG,Poland,Warsaw,Mouse,Accessories,1,41.58,41.58,open
+436,2026-08-24,Rossi S.p.A.,Poland,Warsaw,Laptop,Hardware,2,1467.63,2935.26,cancelled
+437,2025-09-08,Dupont SA,Austria,Vienna,Laptop,Hardware,4,1172.57,4690.28,cancelled
+438,2025-10-09,Müller GmbH,Poland,Warsaw,Mouse,Accessories,2,44.23,88.46,cancelled
+439,2026-01-28,García SL,Austria,Vienna,Laptop,Hardware,14,1433.98,20075.72,paid
+440,2026-06-28,Rossi S.p.A.,Spain,Madrid,IDE License,Software,8,213.54,1708.32,paid
+441,2026-01-10,Nordlicht AG,Germany,Berlin,IDE License,Software,6,223.99,1343.94,shipped
+442,2026-04-19,Kowalski Sp.,Denmark,Copenhagen,Mouse,Accessories,3,44.74,134.22,shipped
+443,2026-07-21,Müller GmbH,Switzerland,Zurich,Monitor,Hardware,11,369.43,4063.73,shipped
+444,2026-08-14,Novák s.r.o.,Denmark,Copenhagen,IDE License,Software,17,266.36,4528.12,open
+445,2025-04-26,Dupont SA,France,Paris,Docking Station,Accessories,5,250.17,1250.85,cancelled
+446,2025-03-03,Becker KG,Austria,Vienna,Office License,Software,14,136.21,1906.94,cancelled
+447,2025-02-28,Novák s.r.o.,France,Paris,Monitor,Hardware,10,339.93,3399.3,shipped
+448,2026-07-26,Schmidt & Co,Spain,Madrid,IDE License,Software,6,238.45,1430.7,shipped
+449,2025-03-25,Smith Ltd,Italy,Milan,Docking Station,Accessories,7,204.99,1434.93,shipped
+450,2026-09-09,Nordlicht AG,Italy,Milan,Office License,Software,12,116.4,1396.8,paid
+451,2025-11-04,Becker KG,Switzerland,Zurich,Headset,Accessories,19,152.98,2906.62,shipped
+452,2025-06-04,Nordlicht AG,Switzerland,Zurich,Docking Station,Accessories,16,208.9,3342.4,shipped
+453,2025-11-18,Müller GmbH,Poland,Warsaw,Docking Station,Accessories,11,212.15,2333.65,shipped
+454,2025-10-05,Müller GmbH,Spain,Madrid,Laptop,Hardware,7,1237.01,8659.07,shipped
+455,2025-08-27,Müller GmbH,Poland,Warsaw,Office License,Software,15,112.75,1691.25,cancelled
+456,2026-05-08,Jensen ApS,France,Paris,Headset,Accessories,19,143.62,2728.78,shipped
+457,2026-04-27,Rossi S.p.A.,Germany,Munich,Headset,Accessories,12,136.56,1638.72,paid
+458,2025-09-14,Becker KG,Germany,Hamburg,Mouse,Accessories,15,33.31,499.65,cancelled
+459,2026-07-19,Jensen ApS,Germany,Munich,Docking Station,Accessories,1,237,237,paid
+460,2025-07-07,Becker KG,United Kingdom,London,Office License,Software,20,144.31,2886.2,shipped
+461,2025-11-29,Novák s.r.o.,Austria,Vienna,Laptop,Hardware,16,1231.36,19701.76,cancelled
+462,2026-01-17,Dupont SA,Austria,Vienna,Cloud Credits,Services,7,475.53,3328.71,open
+463,2025-03-01,Dupont SA,Spain,Madrid,Mouse,Accessories,19,40.89,776.91,cancelled
+464,2025-04-10,Kowalski Sp.,Switzerland,Zurich,Headset,Accessories,10,137.2,1372,paid
+465,2025-07-24,Jensen ApS,Germany,Hamburg,Keyboard,Accessories,5,100.48,502.4,paid
+466,2026-01-20,Becker KG,Austria,Vienna,Mouse,Accessories,4,37.23,148.92,paid
+467,2025-01-26,Novák s.r.o.,Italy,Milan,Support Plan,Services,17,915.17,15557.89,shipped
+468,2026-01-25,Novák s.r.o.,Spain,Madrid,Office License,Software,14,144.61,2024.54,shipped
+469,2026-07-17,Nordlicht AG,Italy,Milan,Cloud Credits,Services,1,508.13,508.13,shipped
+470,2025-11-17,Becker KG,Germany,Munich,IDE License,Software,10,224.5,2245,paid
+471,2025-08-21,Novák s.r.o.,United Kingdom,London,IDE License,Software,3,279.55,838.65,paid
+472,2025-04-04,Hansen Logistik,Italy,Milan,Headset,Accessories,20,151.93,3038.6,paid
+473,2025-07-12,Müller GmbH,Poland,Warsaw,Docking Station,Accessories,2,241.49,482.98,open
+474,2026-09-28,Smith Ltd,Switzerland,Zurich,IDE License,Software,5,279.25,1396.25,paid
+475,2026-08-11,Novák s.r.o.,Germany,Munich,Monitor,Hardware,1,364.42,364.42,open
+476,2025-10-14,Dupont SA,Denmark,Copenhagen,Headset,Accessories,1,140.34,140.34,shipped
+477,2025-03-29,Becker KG,France,Paris,Headset,Accessories,10,160.36,1603.6,paid
+478,2025-05-11,Schmidt & Co,Germany,Hamburg,Laptop,Hardware,12,1118.66,13423.92,shipped
+479,2026-03-30,Becker KG,Czechia,Prague,Support Plan,Services,18,977.62,17597.16,cancelled
+480,2026-07-21,Becker KG,Spain,Madrid,Office License,Software,10,131.76,1317.6,cancelled
+481,2025-02-06,Jensen ApS,Italy,Milan,Cloud Credits,Services,19,431.41,8196.79,paid
+482,2025-04-03,Smith Ltd,Spain,Madrid,Office License,Software,18,110.15,1982.7,shipped
+483,2026-03-18,Kowalski Sp.,France,Paris,Keyboard,Accessories,5,84.65,423.25,open
+484,2025-07-14,Schmidt & Co,Italy,Milan,Cloud Credits,Services,18,534.05,9612.9,open
+485,2025-12-17,Hansen Logistik,Germany,Munich,Monitor,Hardware,6,324.03,1944.18,cancelled
+486,2025-11-23,García SL,Poland,Warsaw,Support Plan,Services,14,983.65,13771.1,open
+487,2025-09-08,Rossi S.p.A.,France,Paris,Office License,Software,19,137.58,2614.02,shipped
+488,2025-05-13,Hansen Logistik,Germany,Berlin,Cloud Credits,Services,8,440.37,3522.96,cancelled
+489,2026-01-21,Kowalski Sp.,Germany,Berlin,Docking Station,Accessories,13,218.27,2837.51,shipped
+490,2026-09-05,Schmidt & Co,United Kingdom,London,IDE License,Software,8,279.12,2232.96,paid
+491,2025-08-04,Nordlicht AG,Germany,Munich,Office License,Software,6,142.18,853.08,paid
+492,2025-12-18,Novák s.r.o.,Czechia,Prague,Keyboard,Accessories,10,80.01,800.1,open
+493,2025-05-09,Kowalski Sp.,Austria,Vienna,Laptop,Hardware,3,1420.75,4262.25,open
+494,2026-06-22,Becker KG,Spain,Madrid,Docking Station,Accessories,8,207.67,1661.36,paid
+495,2025-01-22,Becker KG,Poland,Warsaw,IDE License,Software,17,277.78,4722.26,open
+496,2025-12-31,Jensen ApS,Poland,Warsaw,Support Plan,Services,17,903.55,15360.35,shipped
+497,2025-01-16,Dupont SA,Czechia,Prague,Keyboard,Accessories,8,85.08,680.64,paid
+498,2025-08-20,Dupont SA,Austria,Vienna,Laptop,Hardware,3,1404.69,4214.07,paid
+499,2026-04-06,García SL,Germany,Berlin,Monitor,Hardware,12,330.1,3961.2,cancelled
+500,2025-04-09,Novák s.r.o.,Denmark,Copenhagen,Monitor,Hardware,6,346.1,2076.6,shipped
+501,2025-12-17,Jensen ApS,Poland,Warsaw,Mouse,Accessories,16,41.31,660.96,cancelled
+502,2025-07-01,Schmidt & Co,Poland,Warsaw,Monitor,Hardware,17,380.36,6466.12,shipped
+503,2026-09-15,Becker KG,Spain,Madrid,Support Plan,Services,19,1104.76,20990.44,shipped
+504,2026-08-06,Rossi S.p.A.,Italy,Milan,Laptop,Hardware,20,1126.61,22532.2,paid
+505,2025-09-26,García SL,Austria,Vienna,Support Plan,Services,4,1082.8,4331.2,shipped
+506,2025-02-15,Schmidt & Co,Germany,Hamburg,Cloud Credits,Services,18,473.01,8514.18,paid
+507,2025-06-24,García SL,Poland,Warsaw,Keyboard,Accessories,8,93.17,745.36,cancelled
+508,2026-01-28,Hansen Logistik,Austria,Vienna,Docking Station,Accessories,4,211.27,845.08,shipped
+509,2025-08-28,Dupont SA,Italy,Milan,Docking Station,Accessories,16,192.5,3080,shipped
+510,2026-03-07,Rossi S.p.A.,Czechia,Prague,Headset,Accessories,8,162.96,1303.68,cancelled
+511,2025-04-07,Rossi S.p.A.,France,Paris,Office License,Software,2,145.54,291.08,cancelled
+512,2025-05-16,Nordlicht AG,Denmark,Copenhagen,Office License,Software,19,138.66,2634.54,paid
+513,2026-03-29,Rossi S.p.A.,France,Paris,Docking Station,Accessories,10,240.21,2402.1,paid
+514,2026-03-05,Jensen ApS,Denmark,Copenhagen,Docking Station,Accessories,13,192.17,2498.21,open
+515,2026-03-09,Schmidt & Co,Poland,Warsaw,Headset,Accessories,14,160.23,2243.22,shipped
+516,2025-09-25,Rossi S.p.A.,Germany,Berlin,Cloud Credits,Services,19,511.85,9725.15,cancelled
+517,2026-02-10,Nordlicht AG,Austria,Vienna,Keyboard,Accessories,13,91.08,1184.04,paid
+518,2026-01-02,Nordlicht AG,Austria,Vienna,Mouse,Accessories,8,44.68,357.44,shipped
+519,2026-07-20,Jensen ApS,Germany,Munich,Office License,Software,14,147.42,2063.88,open
+520,2025-05-12,Dupont SA,Germany,Berlin,Office License,Software,12,127.62,1531.44,shipped
+521,2025-01-07,Jensen ApS,Germany,Munich,Support Plan,Services,5,1000.88,5004.4,paid
+522,2025-06-11,Novák s.r.o.,Spain,Madrid,Keyboard,Accessories,20,81.77,1635.4,shipped
+523,2025-03-25,Jensen ApS,France,Paris,Monitor,Hardware,12,344.23,4130.76,cancelled
+524,2025-06-12,Jensen ApS,Czechia,Prague,Laptop,Hardware,15,1485.34,22280.1,shipped
+525,2025-03-06,Hansen Logistik,Austria,Vienna,Headset,Accessories,4,139.85,559.4,shipped
+526,2026-09-21,Hansen Logistik,Germany,Munich,Headset,Accessories,18,140.53,2529.54,shipped
+527,2026-02-01,Smith Ltd,Germany,Munich,Docking Station,Accessories,9,234.68,2112.12,cancelled
+528,2026-04-09,Kowalski Sp.,United Kingdom,London,Docking Station,Accessories,11,235.92,2595.12,paid
+529,2025-12-11,Novák s.r.o.,Poland,Warsaw,Support Plan,Services,10,1110.56,11105.6,shipped
+530,2026-05-06,Smith Ltd,Germany,Munich,IDE License,Software,9,215.82,1942.38,paid
+531,2025-03-20,García SL,Switzerland,Zurich,IDE License,Software,12,243.68,2924.16,cancelled
+532,2025-04-16,Smith Ltd,Germany,Munich,IDE License,Software,6,223.4,1340.4,shipped
+533,2026-01-19,García SL,Germany,Munich,Docking Station,Accessories,11,218.95,2408.45,open
+534,2025-09-18,Nordlicht AG,Austria,Vienna,Mouse,Accessories,8,37.67,301.36,shipped
+535,2025-03-03,Schmidt & Co,Italy,Milan,Mouse,Accessories,16,38.96,623.36,paid
+536,2025-12-27,Novák s.r.o.,Denmark,Copenhagen,IDE License,Software,2,279.26,558.52,open
+537,2025-10-02,Müller GmbH,Spain,Madrid,Headset,Accessories,11,140.83,1549.13,open
+538,2026-02-12,Schmidt & Co,Czechia,Prague,Support Plan,Services,2,933.32,1866.64,shipped
+539,2025-08-27,Hansen Logistik,Germany,Munich,Support Plan,Services,10,987.9,9879,shipped
+540,2026-01-10,Kowalski Sp.,Germany,Berlin,Mouse,Accessories,8,33.7,269.6,shipped
+541,2025-04-07,Nordlicht AG,Czechia,Prague,Docking Station,Accessories,7,218.23,1527.61,open
+542,2025-02-22,Hansen Logistik,Germany,Munich,Headset,Accessories,6,128.04,768.24,paid
+543,2025-07-01,Smith Ltd,United Kingdom,London,Mouse,Accessories,6,34.32,205.92,paid
+544,2025-03-21,Becker KG,Germany,Berlin,Mouse,Accessories,16,44.54,712.64,paid
+545,2026-03-01,Rossi S.p.A.,Spain,Madrid,Keyboard,Accessories,5,79.59,397.95,paid
+546,2025-08-09,Müller GmbH,Spain,Madrid,Docking Station,Accessories,8,245.57,1964.56,shipped
+547,2025-04-12,Kowalski Sp.,Spain,Madrid,Docking Station,Accessories,8,219.34,1754.72,paid
+548,2025-10-08,Kowalski Sp.,United Kingdom,London,Support Plan,Services,7,966.74,6767.18,paid
+549,2025-01-17,Kowalski Sp.,Germany,Hamburg,Laptop,Hardware,19,1174.13,22308.47,open
+550,2025-05-06,Hansen Logistik,United Kingdom,London,Cloud Credits,Services,5,438.84,2194.2,paid
+551,2026-05-01,Becker KG,United Kingdom,London,Headset,Accessories,14,141.72,1984.08,shipped
+552,2025-04-29,Smith Ltd,France,Paris,Office License,Software,14,122.3,1712.2,paid
+553,2025-02-25,Rossi S.p.A.,Spain,Madrid,IDE License,Software,9,212.95,1916.55,paid
+554,2025-12-12,Jensen ApS,Denmark,Copenhagen,Support Plan,Services,12,906.85,10882.2,shipped
+555,2026-09-22,Jensen ApS,Denmark,Copenhagen,Keyboard,Accessories,20,91.92,1838.4,shipped
+556,2025-03-31,Hansen Logistik,Germany,Munich,Keyboard,Accessories,20,90.29,1805.8,shipped
+557,2025-06-18,Müller GmbH,Italy,Milan,IDE License,Software,6,225.95,1355.7,open
+558,2026-01-08,Dupont SA,France,Paris,Keyboard,Accessories,18,99.15,1784.7,shipped
+559,2026-09-03,Novák s.r.o.,Austria,Vienna,Keyboard,Accessories,8,79.77,638.16,shipped
+560,2025-03-08,Becker KG,Italy,Milan,Laptop,Hardware,6,1189.71,7138.26,paid
+561,2025-04-20,Rossi S.p.A.,Poland,Warsaw,Laptop,Hardware,3,1393.67,4181.01,open
+562,2025-10-15,Novák s.r.o.,Germany,Hamburg,Office License,Software,17,126.26,2146.42,open
+563,2026-03-25,Smith Ltd,Spain,Madrid,Laptop,Hardware,15,1401.43,21021.45,cancelled
+564,2025-11-09,Kowalski Sp.,Switzerland,Zurich,Monitor,Hardware,18,363.88,6549.84,shipped
+565,2026-01-07,Jensen ApS,Germany,Hamburg,Headset,Accessories,14,167.77,2348.78,cancelled
+566,2026-02-24,García SL,Germany,Berlin,Keyboard,Accessories,20,83.33,1666.6,paid
+567,2025-11-05,Dupont SA,Czechia,Prague,Office License,Software,7,142.6,998.2,paid
+568,2026-04-27,Nordlicht AG,Italy,Milan,Monitor,Hardware,19,318.55,6052.45,open
+569,2026-06-26,Novák s.r.o.,Germany,Munich,Monitor,Hardware,15,335.76,5036.4,shipped
+570,2025-07-04,Kowalski Sp.,Germany,Berlin,Office License,Software,14,132.27,1851.78,shipped
+571,2026-08-11,Novák s.r.o.,Poland,Warsaw,Monitor,Hardware,5,332.77,1663.85,shipped
+572,2025-09-04,Rossi S.p.A.,Austria,Vienna,Support Plan,Services,16,1063.32,17013.12,paid
+573,2025-02-20,Rossi S.p.A.,Denmark,Copenhagen,IDE License,Software,7,218.33,1528.31,paid
+574,2025-11-15,García SL,Austria,Vienna,Laptop,Hardware,19,1485.57,28225.83,paid
+575,2026-05-30,Becker KG,United Kingdom,London,Laptop,Hardware,1,1292.14,1292.14,cancelled
+576,2025-12-09,Schmidt & Co,Spain,Madrid,Office License,Software,19,133.72,2540.68,shipped
+577,2025-02-01,Jensen ApS,France,Paris,Cloud Credits,Services,4,522.1,2088.4,shipped
+578,2025-01-08,Jensen ApS,Switzerland,Zurich,Keyboard,Accessories,11,88.91,978.01,open
+579,2026-08-31,Schmidt & Co,Poland,Warsaw,Office License,Software,20,111.84,2236.8,paid
+580,2026-05-03,Novák s.r.o.,France,Paris,Docking Station,Accessories,6,188.61,1131.66,cancelled
+581,2025-06-22,Rossi S.p.A.,Italy,Milan,Laptop,Hardware,13,1151.97,14975.61,open
+582,2026-08-24,Nordlicht AG,France,Paris,Headset,Accessories,2,139.25,278.5,open
+583,2025-12-17,Schmidt & Co,Switzerland,Zurich,Office License,Software,14,142.49,1994.86,cancelled
+584,2026-02-18,García SL,United Kingdom,London,Headset,Accessories,11,136.97,1506.67,cancelled
+585,2025-03-15,García SL,Switzerland,Zurich,Cloud Credits,Services,19,465.58,8846.02,shipped
+586,2025-07-22,Schmidt & Co,Germany,Berlin,Cloud Credits,Services,1,462.24,462.24,paid
+587,2026-01-21,Nordlicht AG,Denmark,Copenhagen,Monitor,Hardware,18,371.82,6692.76,shipped
+588,2025-07-20,García SL,Denmark,Copenhagen,Support Plan,Services,13,926.08,12039.04,shipped
+589,2026-09-26,Dupont SA,Germany,Munich,Cloud Credits,Services,6,480.03,2880.18,cancelled
+590,2025-04-18,Kowalski Sp.,Denmark,Copenhagen,Cloud Credits,Services,2,430.96,861.92,cancelled
+591,2025-08-04,Dupont SA,Austria,Vienna,Laptop,Hardware,17,1221.73,20769.41,paid
+592,2025-11-20,Becker KG,Austria,Vienna,Office License,Software,14,140.58,1968.12,cancelled
+593,2025-10-06,Novák s.r.o.,Germany,Hamburg,Monitor,Hardware,16,334.96,5359.36,paid
+594,2025-04-07,García SL,France,Paris,IDE License,Software,8,230.43,1843.44,open
+595,2025-05-22,Kowalski Sp.,Germany,Hamburg,Headset,Accessories,5,135.26,676.3,open
+596,2026-01-01,Jensen ApS,Italy,Milan,Keyboard,Accessories,17,101.54,1726.18,shipped
+597,2025-10-04,Kowalski Sp.,Switzerland,Zurich,Headset,Accessories,17,135.32,2300.44,cancelled
+598,2026-06-19,Kowalski Sp.,France,Paris,Mouse,Accessories,3,39.34,118.02,shipped
+599,2025-09-05,Jensen ApS,Spain,Madrid,Docking Station,Accessories,6,219.87,1319.22,open
+600,2026-03-08,Novák s.r.o.,Germany,Munich,Keyboard,Accessories,17,98.01,1666.17,shipped
+601,2025-06-19,Becker KG,Spain,Madrid,Monitor,Hardware,8,356.57,2852.56,paid
+602,2026-06-03,García SL,Germany,Hamburg,Support Plan,Services,10,972.6,9726,paid
+603,2025-04-05,Rossi S.p.A.,Spain,Madrid,Mouse,Accessories,3,38.04,114.12,paid
+604,2026-09-03,Nordlicht AG,Poland,Warsaw,Headset,Accessories,1,170.71,170.71,shipped
+605,2025-11-27,Schmidt & Co,France,Paris,Keyboard,Accessories,18,101.84,1833.12,paid
+606,2025-04-22,Smith Ltd,Czechia,Prague,Docking Station,Accessories,19,231.96,4407.24,paid
+607,2026-09-04,Novák s.r.o.,Austria,Vienna,Docking Station,Accessories,1,198.5,198.5,shipped
+608,2026-03-20,García SL,Czechia,Prague,Headset,Accessories,6,161.03,966.18,paid
+609,2025-10-04,Schmidt & Co,Austria,Vienna,Cloud Credits,Services,6,484.35,2906.1,shipped
+610,2025-12-21,Smith Ltd,Italy,Milan,Docking Station,Accessories,8,235.26,1882.08,shipped
+611,2026-09-09,Hansen Logistik,Poland,Warsaw,Support Plan,Services,19,949.49,18040.31,shipped
+612,2025-03-19,Hansen Logistik,France,Paris,Laptop,Hardware,18,1326.93,23884.74,shipped
+613,2025-04-25,Jensen ApS,Spain,Madrid,Mouse,Accessories,16,41.08,657.28,paid
+614,2026-03-29,Nordlicht AG,France,Paris,IDE License,Software,8,232.8,1862.4,open
+615,2025-06-10,Novák s.r.o.,Italy,Milan,Mouse,Accessories,9,43.31,389.79,shipped
+616,2025-11-10,Nordlicht AG,Germany,Berlin,IDE License,Software,3,267.59,802.77,shipped
+617,2025-02-09,Kowalski Sp.,Austria,Vienna,Docking Station,Accessories,15,209.59,3143.85,shipped
+618,2026-08-07,Jensen ApS,United Kingdom,London,Laptop,Hardware,1,1440.03,1440.03,paid
+619,2025-08-21,Novák s.r.o.,Poland,Warsaw,Docking Station,Accessories,16,190.32,3045.12,paid
+620,2026-01-16,Müller GmbH,Germany,Berlin,Docking Station,Accessories,18,215.65,3881.7,open
+621,2025-05-27,Hansen Logistik,Denmark,Copenhagen,Keyboard,Accessories,18,75.78,1364.04,cancelled
+622,2026-07-23,Becker KG,Germany,Hamburg,Support Plan,Services,10,966.83,9668.3,shipped
+623,2026-05-17,Dupont SA,United Kingdom,London,Laptop,Hardware,14,1396.49,19550.86,open
+624,2026-04-05,Novák s.r.o.,Germany,Hamburg,Laptop,Hardware,16,1106.3,17700.8,shipped
+625,2026-09-07,Rossi S.p.A.,Italy,Milan,Support Plan,Services,8,1059.07,8472.56,shipped
+626,2025-02-20,Novák s.r.o.,United Kingdom,London,Support Plan,Services,2,935.29,1870.58,paid
+627,2025-11-14,Müller GmbH,Denmark,Copenhagen,Headset,Accessories,10,147.82,1478.2,open
+628,2026-02-28,Müller GmbH,Austria,Vienna,Support Plan,Services,13,1029.3,13380.9,cancelled
+629,2025-04-03,Jensen ApS,Germany,Munich,Mouse,Accessories,20,38.64,772.8,cancelled
+630,2026-08-15,Becker KG,Germany,Hamburg,Cloud Credits,Services,16,533.37,8533.92,paid
+631,2026-04-07,Schmidt & Co,Czechia,Prague,Office License,Software,18,114.02,2052.36,paid
+632,2026-02-28,Hansen Logistik,Germany,Hamburg,Headset,Accessories,19,165.21,3138.99,open
+633,2026-06-18,García SL,France,Paris,IDE License,Software,8,223,1784,cancelled
+634,2025-05-31,Schmidt & Co,Czechia,Prague,Mouse,Accessories,10,35.51,355.1,shipped
+635,2026-01-21,Kowalski Sp.,Austria,Vienna,Docking Station,Accessories,9,216.89,1952.01,cancelled
+636,2026-04-28,Becker KG,Czechia,Prague,Support Plan,Services,5,901.85,4509.25,shipped
+637,2025-05-15,Becker KG,Switzerland,Zurich,Headset,Accessories,6,162.52,975.12,cancelled
+638,2026-06-16,Müller GmbH,Germany,Munich,Cloud Credits,Services,2,456.71,913.42,shipped
+639,2026-07-06,Dupont SA,Austria,Vienna,Docking Station,Accessories,10,221.16,2211.6,shipped
+640,2026-07-18,Schmidt & Co,Austria,Vienna,Monitor,Hardware,1,378.37,378.37,open
+641,2025-12-01,Novák s.r.o.,Germany,Berlin,Support Plan,Services,11,870.32,9573.52,shipped
+642,2025-05-30,Smith Ltd,United Kingdom,London,Support Plan,Services,11,982.87,10811.57,paid
+643,2026-06-21,Kowalski Sp.,Austria,Vienna,Laptop,Hardware,10,1112.77,11127.7,shipped
+644,2026-09-01,Müller GmbH,Germany,Munich,Docking Station,Accessories,15,239.79,3596.85,cancelled
+645,2025-08-28,Kowalski Sp.,Italy,Milan,Laptop,Hardware,12,1379.17,16550.04,open
+646,2026-05-23,Dupont SA,Italy,Milan,Laptop,Hardware,5,1336.38,6681.9,shipped
+647,2025-12-06,Schmidt & Co,Poland,Warsaw,IDE License,Software,20,268.21,5364.2,open
+648,2026-02-04,Jensen ApS,Poland,Warsaw,Docking Station,Accessories,14,239.31,3350.34,shipped
+649,2025-09-19,Hansen Logistik,Poland,Warsaw,IDE License,Software,1,256.83,256.83,open
+650,2026-06-18,Schmidt & Co,Czechia,Prague,Headset,Accessories,16,146.15,2338.4,shipped
+651,2025-09-29,Müller GmbH,Czechia,Prague,IDE License,Software,5,260.23,1301.15,shipped
+652,2025-01-05,Smith Ltd,Germany,Hamburg,Laptop,Hardware,18,1172.8,21110.4,open
+653,2026-09-05,Kowalski Sp.,Germany,Berlin,Mouse,Accessories,3,34.03,102.09,paid
+654,2025-03-08,Becker KG,France,Paris,Mouse,Accessories,6,44.69,268.14,cancelled
+655,2025-01-28,Kowalski Sp.,Italy,Milan,Headset,Accessories,10,164.57,1645.7,shipped
+656,2026-03-14,Dupont SA,Germany,Hamburg,Office License,Software,7,122.11,854.77,paid
+657,2025-12-23,Dupont SA,Switzerland,Zurich,Office License,Software,8,121.13,969.04,open
+658,2025-12-01,Novák s.r.o.,Poland,Warsaw,Mouse,Accessories,4,42.77,171.08,open
+659,2025-03-19,Schmidt & Co,Germany,Berlin,IDE License,Software,19,215.77,4099.63,cancelled
+660,2025-03-17,Jensen ApS,Poland,Warsaw,Cloud Credits,Services,2,432.79,865.58,shipped
+661,2025-08-10,Jensen ApS,Poland,Warsaw,Laptop,Hardware,5,1453.4,7267,paid
+662,2025-08-25,Kowalski Sp.,United Kingdom,London,Support Plan,Services,8,1045.58,8364.64,shipped
+663,2026-05-12,Schmidt & Co,United Kingdom,London,Support Plan,Services,7,1102.46,7717.22,shipped
+664,2025-05-22,Dupont SA,Germany,Hamburg,Monitor,Hardware,7,320.95,2246.65,paid
+665,2025-05-06,Kowalski Sp.,Germany,Hamburg,Keyboard,Accessories,14,87.32,1222.48,open
+666,2025-12-02,Schmidt & Co,Poland,Warsaw,Mouse,Accessories,8,43.38,347.04,paid
+667,2025-10-30,Novák s.r.o.,Germany,Munich,Headset,Accessories,1,168.3,168.3,cancelled
+668,2026-09-07,Hansen Logistik,Germany,Berlin,Docking Station,Accessories,6,250.7,1504.2,paid
+669,2025-03-01,Hansen Logistik,Czechia,Prague,Mouse,Accessories,2,44.24,88.48,cancelled
+670,2026-09-28,Nordlicht AG,Poland,Warsaw,Laptop,Hardware,8,1370.69,10965.52,shipped
+671,2026-06-16,Kowalski Sp.,Germany,Munich,Monitor,Hardware,13,332.24,4319.12,paid
+672,2025-09-02,Hansen Logistik,Denmark,Copenhagen,Monitor,Hardware,16,317.55,5080.8,shipped
+673,2025-09-25,Kowalski Sp.,Spain,Madrid,Cloud Credits,Services,14,518.95,7265.3,shipped
+674,2026-08-25,Dupont SA,Germany,Munich,Laptop,Hardware,1,1318.16,1318.16,cancelled
+675,2026-01-04,Becker KG,Denmark,Copenhagen,Office License,Software,8,144.07,1152.56,paid
+676,2026-06-22,Müller GmbH,France,Paris,Cloud Credits,Services,4,478.27,1913.08,shipped
+677,2025-12-24,Müller GmbH,France,Paris,Keyboard,Accessories,7,87.59,613.13,cancelled
+678,2025-06-28,Kowalski Sp.,Czechia,Prague,Office License,Software,5,148.24,741.2,cancelled
+679,2026-06-15,Kowalski Sp.,Germany,Munich,Docking Station,Accessories,20,222.58,4451.6,paid
+680,2026-09-17,Rossi S.p.A.,Austria,Vienna,Mouse,Accessories,15,38.02,570.3,shipped
+681,2025-04-16,Hansen Logistik,Czechia,Prague,Office License,Software,7,115.41,807.87,cancelled
+682,2026-04-25,Hansen Logistik,Denmark,Copenhagen,Support Plan,Services,9,1096.06,9864.54,cancelled
+683,2025-01-17,Becker KG,Czechia,Prague,Monitor,Hardware,20,353.1,7062,open
+684,2026-09-06,Novák s.r.o.,Italy,Milan,Office License,Software,4,122.42,489.68,open
+685,2026-07-23,Smith Ltd,Austria,Vienna,Keyboard,Accessories,3,91.95,275.85,paid
+686,2026-04-22,Novák s.r.o.,Denmark,Copenhagen,Support Plan,Services,20,1007.92,20158.4,cancelled
+687,2026-02-03,García SL,Poland,Warsaw,Cloud Credits,Services,20,466.82,9336.4,paid
+688,2026-07-09,Jensen ApS,Germany,Munich,Support Plan,Services,5,848.03,4240.15,paid
+689,2026-07-05,Müller GmbH,Spain,Madrid,Office License,Software,1,131.19,131.19,shipped
+690,2026-09-27,Jensen ApS,United Kingdom,London,Cloud Credits,Services,13,494.68,6430.84,shipped
+691,2026-03-17,Becker KG,Czechia,Prague,Support Plan,Services,19,853.53,16217.07,paid
+692,2025-07-15,Kowalski Sp.,Poland,Warsaw,Laptop,Hardware,13,1343.91,17470.83,shipped
+693,2025-01-14,García SL,Denmark,Copenhagen,Support Plan,Services,20,1003.94,20078.8,cancelled
+694,2025-10-29,Smith Ltd,Germany,Berlin,Keyboard,Accessories,2,81.61,163.22,open
+695,2025-04-15,Schmidt & Co,Poland,Warsaw,Cloud Credits,Services,5,500.38,2501.9,paid
+696,2025-02-16,Jensen ApS,Italy,Milan,Mouse,Accessories,13,44.22,574.86,paid
+697,2026-03-05,Dupont SA,Spain,Madrid,Keyboard,Accessories,12,84.31,1011.72,cancelled
+698,2026-06-12,Müller GmbH,United Kingdom,London,Headset,Accessories,2,165.01,330.02,paid
+699,2026-05-16,Nordlicht AG,Austria,Vienna,Support Plan,Services,3,971.82,2915.46,paid
+700,2025-09-19,Rossi S.p.A.,Spain,Madrid,Docking Station,Accessories,19,233.05,4427.95,cancelled
+701,2025-04-03,Müller GmbH,Austria,Vienna,Docking Station,Accessories,11,201.47,2216.17,paid
+702,2026-09-19,Dupont SA,Germany,Hamburg,Cloud Credits,Services,16,523.94,8383.04,paid
+703,2026-09-20,Schmidt & Co,Germany,Munich,Cloud Credits,Services,2,538.41,1076.82,shipped
+704,2025-02-20,Nordlicht AG,United Kingdom,London,Cloud Credits,Services,14,436.19,6106.66,open
+705,2025-03-23,Novák s.r.o.,Germany,Munich,Keyboard,Accessories,18,75.91,1366.38,open
+706,2026-07-08,Hansen Logistik,France,Paris,Keyboard,Accessories,20,85.89,1717.8,shipped
+707,2025-12-13,Smith Ltd,Switzerland,Zurich,Keyboard,Accessories,15,91.02,1365.3,paid
+708,2025-08-28,García SL,Czechia,Prague,Monitor,Hardware,15,307.76,4616.4,paid
+709,2025-01-03,Smith Ltd,Spain,Madrid,Laptop,Hardware,18,1225.84,22065.12,paid
+710,2025-05-31,Müller GmbH,Austria,Vienna,Support Plan,Services,16,1078.6,17257.6,shipped
+711,2026-05-31,Kowalski Sp.,Spain,Madrid,Laptop,Hardware,7,1394.55,9761.85,paid
+712,2026-09-20,Müller GmbH,United Kingdom,London,Office License,Software,8,116.38,931.04,paid
+713,2025-10-20,Dupont SA,France,Paris,Monitor,Hardware,10,371.68,3716.8,cancelled
+714,2025-03-18,Nordlicht AG,Spain,Madrid,Office License,Software,12,143.34,1720.08,open
+715,2025-07-02,Rossi S.p.A.,Czechia,Prague,Cloud Credits,Services,3,534.04,1602.12,open
+716,2025-12-13,Kowalski Sp.,Czechia,Prague,Monitor,Hardware,4,354.37,1417.48,paid
+717,2025-08-25,Hansen Logistik,Germany,Hamburg,Mouse,Accessories,20,37.7,754,shipped
+718,2026-03-26,Kowalski Sp.,Germany,Hamburg,Monitor,Hardware,13,391.61,5090.93,shipped
+719,2026-06-24,Jensen ApS,Germany,Munich,Monitor,Hardware,18,366.73,6601.14,paid
+720,2026-07-01,Nordlicht AG,Germany,Munich,Office License,Software,4,128.46,513.84,shipped
+721,2025-07-03,Kowalski Sp.,Switzerland,Zurich,IDE License,Software,14,240.58,3368.12,paid
+722,2026-02-10,Müller GmbH,Austria,Vienna,Laptop,Hardware,5,1320.5,6602.5,paid
+723,2025-08-27,Novák s.r.o.,Switzerland,Zurich,Monitor,Hardware,12,394.75,4737,shipped
+724,2026-08-05,Smith Ltd,Germany,Hamburg,Headset,Accessories,18,147.99,2663.82,open
+725,2026-09-11,Nordlicht AG,Italy,Milan,Keyboard,Accessories,16,81.98,1311.68,cancelled
+726,2026-08-10,Hansen Logistik,Austria,Vienna,Headset,Accessories,14,168.03,2352.42,open
+727,2026-09-07,Novák s.r.o.,Denmark,Copenhagen,Support Plan,Services,3,1000.48,3001.44,paid
+728,2026-03-02,Novák s.r.o.,United Kingdom,London,Mouse,Accessories,3,41.18,123.54,cancelled
+729,2025-06-23,Hansen Logistik,United Kingdom,London,Mouse,Accessories,10,33.97,339.7,shipped
+730,2026-03-19,Hansen Logistik,Italy,Milan,Headset,Accessories,12,139,1668,cancelled
+731,2026-02-04,Hansen Logistik,France,Paris,Monitor,Hardware,13,383.61,4986.93,shipped
+732,2025-04-27,Jensen ApS,Germany,Hamburg,Support Plan,Services,17,1020.68,17351.56,shipped
+733,2025-09-16,Becker KG,Czechia,Prague,Laptop,Hardware,6,1108.32,6649.92,paid
+734,2026-02-28,Rossi S.p.A.,Switzerland,Zurich,Monitor,Hardware,8,327.69,2621.52,paid
+735,2026-02-18,Novák s.r.o.,Denmark,Copenhagen,Keyboard,Accessories,12,87.22,1046.64,cancelled
+736,2025-10-31,Rossi S.p.A.,Italy,Milan,Laptop,Hardware,12,1159.39,13912.68,shipped
+737,2025-11-16,Kowalski Sp.,Denmark,Copenhagen,Docking Station,Accessories,10,249.18,2491.8,open
+738,2026-03-18,Hansen Logistik,France,Paris,Support Plan,Services,13,1094.59,14229.67,paid
+739,2025-09-18,Schmidt & Co,Poland,Warsaw,Keyboard,Accessories,15,75.73,1135.95,paid
+740,2026-06-26,Kowalski Sp.,Germany,Hamburg,Laptop,Hardware,19,1412.87,26844.53,shipped
+741,2025-01-04,Smith Ltd,France,Paris,Mouse,Accessories,15,38.66,579.9,shipped
+742,2026-04-18,Kowalski Sp.,Italy,Milan,Mouse,Accessories,9,33.76,303.84,cancelled
+743,2026-09-28,Kowalski Sp.,Austria,Vienna,Laptop,Hardware,3,1340.6,4021.8,cancelled
+744,2026-09-09,Novák s.r.o.,Switzerland,Zurich,Monitor,Hardware,20,325.95,6519,open
+745,2026-02-14,Nordlicht AG,Italy,Milan,Docking Station,Accessories,14,242.92,3400.88,cancelled
+746,2025-12-08,Smith Ltd,Germany,Munich,IDE License,Software,6,227.79,1366.74,shipped
+747,2025-03-05,Jensen ApS,United Kingdom,London,Support Plan,Services,9,1005.36,9048.24,open
+748,2026-06-13,Kowalski Sp.,Italy,Milan,IDE License,Software,5,248.65,1243.25,shipped
+749,2026-05-24,Smith Ltd,Germany,Berlin,Docking Station,Accessories,2,220.23,440.46,cancelled
+750,2026-04-15,Kowalski Sp.,Germany,Hamburg,Office License,Software,5,148.06,740.3,shipped
+751,2025-06-01,Becker KG,Germany,Hamburg,Laptop,Hardware,9,1485.13,13366.17,paid
+752,2026-05-04,Jensen ApS,Spain,Madrid,Office License,Software,6,132.42,794.52,shipped
+753,2026-01-02,Novák s.r.o.,Czechia,Prague,Support Plan,Services,4,1117.04,4468.16,paid
+754,2026-08-10,Smith Ltd,Poland,Warsaw,Headset,Accessories,9,161.46,1453.14,shipped
+755,2025-07-23,Becker KG,Switzerland,Zurich,Monitor,Hardware,1,328.39,328.39,paid
+756,2026-06-11,Smith Ltd,Poland,Warsaw,Monitor,Hardware,7,345.34,2417.38,paid
+757,2025-12-24,Schmidt & Co,Poland,Warsaw,Keyboard,Accessories,5,90.37,451.85,shipped
+758,2025-10-04,Jensen ApS,Italy,Milan,Office License,Software,10,131.38,1313.8,open
+759,2025-12-29,Nordlicht AG,Germany,Munich,Laptop,Hardware,10,1116.42,11164.2,shipped
+760,2025-01-29,Nordlicht AG,France,Paris,Cloud Credits,Services,1,521.35,521.35,paid
+761,2025-03-06,Smith Ltd,Poland,Warsaw,Keyboard,Accessories,3,77.43,232.29,shipped
+762,2025-10-26,Smith Ltd,Germany,Berlin,Keyboard,Accessories,7,98.36,688.52,shipped
+763,2026-04-28,Novák s.r.o.,Poland,Warsaw,Office License,Software,17,126.01,2142.17,shipped
+764,2025-07-17,Smith Ltd,Spain,Madrid,Monitor,Hardware,11,298.48,3283.28,shipped
+765,2025-01-26,Novák s.r.o.,Austria,Vienna,Support Plan,Services,7,1029.81,7208.67,open
+766,2026-05-30,Jensen ApS,Spain,Madrid,Laptop,Hardware,5,1383.45,6917.25,cancelled
+767,2025-09-29,Becker KG,Denmark,Copenhagen,Keyboard,Accessories,17,101,1717,shipped
+768,2025-06-02,Nordlicht AG,Austria,Vienna,Office License,Software,2,123.17,246.34,shipped
+769,2025-08-18,Smith Ltd,Germany,Berlin,Headset,Accessories,9,149.4,1344.6,shipped
+770,2025-02-11,García SL,Denmark,Copenhagen,IDE License,Software,19,248.55,4722.45,cancelled
+771,2026-08-02,Schmidt & Co,Italy,Milan,Support Plan,Services,17,967.73,16451.41,open
+772,2026-06-25,Hansen Logistik,Czechia,Prague,Monitor,Hardware,8,308.92,2471.36,shipped
+773,2025-02-05,Novák s.r.o.,Poland,Warsaw,Headset,Accessories,13,155.34,2019.42,shipped
+774,2026-03-03,Novák s.r.o.,Denmark,Copenhagen,Support Plan,Services,17,1046.91,17797.47,open
+775,2026-08-07,Smith Ltd,Germany,Berlin,Keyboard,Accessories,11,83.92,923.12,open
+776,2026-07-15,García SL,Czechia,Prague,Docking Station,Accessories,8,199.18,1593.44,open
+777,2026-05-19,Nordlicht AG,United Kingdom,London,Docking Station,Accessories,4,192.07,768.28,paid
+778,2026-03-23,Kowalski Sp.,France,Paris,Headset,Accessories,3,148.48,445.44,cancelled
+779,2026-03-05,García SL,Italy,Milan,Monitor,Hardware,14,397.7,5567.8,open
+780,2025-07-18,Smith Ltd,Italy,Milan,Support Plan,Services,6,1040.33,6241.98,cancelled
+781,2025-06-03,Nordlicht AG,Italy,Milan,Headset,Accessories,7,153.73,1076.11,cancelled
+782,2026-07-31,Jensen ApS,Spain,Madrid,Laptop,Hardware,18,1397.26,25150.68,paid
+783,2026-05-10,Novák s.r.o.,Denmark,Copenhagen,Mouse,Accessories,13,38.99,506.87,shipped
+784,2025-08-19,Nordlicht AG,Czechia,Prague,Keyboard,Accessories,14,87.04,1218.56,shipped
+785,2025-01-15,Dupont SA,Poland,Warsaw,Mouse,Accessories,16,43.46,695.36,cancelled
+786,2025-01-07,Hansen Logistik,Switzerland,Zurich,IDE License,Software,1,228.55,228.55,paid
+787,2025-10-16,Rossi S.p.A.,Switzerland,Zurich,Office License,Software,3,141.56,424.68,paid
+788,2025-12-26,Becker KG,Austria,Vienna,Laptop,Hardware,6,1211.64,7269.84,paid
+789,2025-01-10,Novák s.r.o.,Czechia,Prague,Office License,Software,3,122.05,366.15,paid
+790,2025-04-07,Becker KG,Germany,Hamburg,Mouse,Accessories,14,43.1,603.4,cancelled
+791,2025-12-14,Kowalski Sp.,Germany,Munich,Cloud Credits,Services,7,562.72,3939.04,paid
+792,2025-04-03,Kowalski Sp.,Germany,Munich,Support Plan,Services,14,946.3,13248.2,shipped
+793,2025-04-19,Nordlicht AG,Spain,Madrid,Laptop,Hardware,3,1374.42,4123.26,open
+794,2025-12-05,Kowalski Sp.,Poland,Warsaw,Monitor,Hardware,15,387.73,5815.95,paid
+795,2025-11-30,Jensen ApS,Germany,Munich,Laptop,Hardware,4,1477.4,5909.6,open
+796,2025-02-17,Becker KG,Denmark,Copenhagen,Mouse,Accessories,16,42.49,679.84,paid
+797,2025-03-24,Schmidt & Co,Poland,Warsaw,Monitor,Hardware,12,311.5,3738,open
+798,2026-06-03,Nordlicht AG,Switzerland,Zurich,Cloud Credits,Services,9,468.38,4215.42,paid
+799,2026-06-12,Müller GmbH,Italy,Milan,Mouse,Accessories,14,36.91,516.74,shipped
+800,2025-09-06,Rossi S.p.A.,Germany,Hamburg,Laptop,Hardware,15,1153.47,17302.05,paid
+801,2026-07-13,Müller GmbH,Austria,Vienna,Support Plan,Services,19,922.56,17528.64,paid
+802,2025-04-15,Rossi S.p.A.,Italy,Milan,Cloud Credits,Services,11,512.44,5636.84,shipped
+803,2025-09-25,Novák s.r.o.,Poland,Warsaw,Keyboard,Accessories,6,89.63,537.78,open
+804,2026-09-01,Müller GmbH,Germany,Munich,Mouse,Accessories,20,34.02,680.4,shipped
+805,2026-04-06,Novák s.r.o.,Switzerland,Zurich,Mouse,Accessories,11,43.49,478.39,open
+806,2025-05-24,Dupont SA,Czechia,Prague,Laptop,Hardware,16,1165.51,18648.16,paid
+807,2025-03-26,Müller GmbH,Austria,Vienna,IDE License,Software,16,240.4,3846.4,cancelled
+808,2026-09-09,Nordlicht AG,Switzerland,Zurich,Mouse,Accessories,12,38.82,465.84,cancelled
+809,2025-02-13,Jensen ApS,Italy,Milan,Office License,Software,17,109.94,1868.98,shipped
+810,2025-11-10,Kowalski Sp.,Poland,Warsaw,Laptop,Hardware,19,1397.19,26546.61,open
+811,2025-07-22,Rossi S.p.A.,France,Paris,Mouse,Accessories,18,41.97,755.46,open
+812,2025-11-19,Novák s.r.o.,Italy,Milan,Office License,Software,19,121.13,2301.47,paid
+813,2026-09-12,Becker KG,Poland,Warsaw,Office License,Software,13,114.97,1494.61,open
+814,2026-06-03,Becker KG,Germany,Berlin,Monitor,Hardware,15,360.83,5412.45,paid
+815,2025-07-28,Jensen ApS,France,Paris,Docking Station,Accessories,15,238.2,3573,shipped
+816,2025-10-23,Schmidt & Co,Poland,Warsaw,IDE License,Software,3,260.31,780.93,open
+817,2026-09-07,Novák s.r.o.,Germany,Munich,Headset,Accessories,13,160.87,2091.31,cancelled
+818,2025-01-08,Becker KG,Austria,Vienna,Keyboard,Accessories,1,100,100,shipped
+819,2025-05-30,Nordlicht AG,Czechia,Prague,Docking Station,Accessories,10,195.77,1957.7,paid
+820,2026-04-27,Müller GmbH,Spain,Madrid,Office License,Software,6,115.2,691.2,shipped
+821,2025-06-11,Hansen Logistik,Germany,Hamburg,Headset,Accessories,20,136,2720,cancelled
+822,2025-03-10,Rossi S.p.A.,Poland,Warsaw,Office License,Software,17,134.81,2291.77,open
+823,2025-01-31,Rossi S.p.A.,Spain,Madrid,Laptop,Hardware,13,1480.39,19245.07,cancelled
+824,2026-04-01,Nordlicht AG,Czechia,Prague,Cloud Credits,Services,12,511.24,6134.88,shipped
+825,2025-04-23,García SL,Germany,Hamburg,IDE License,Software,3,256.12,768.36,cancelled
+826,2025-08-14,Hansen Logistik,France,Paris,Keyboard,Accessories,9,82.48,742.32,shipped
+827,2026-03-03,Rossi S.p.A.,United Kingdom,London,Keyboard,Accessories,16,85,1360,shipped
+828,2025-02-05,Müller GmbH,Czechia,Prague,Laptop,Hardware,17,1165.66,19816.22,shipped
+829,2025-08-26,Nordlicht AG,Poland,Warsaw,Office License,Software,5,123.09,615.45,cancelled
+830,2026-04-05,Dupont SA,Spain,Madrid,Keyboard,Accessories,1,92.89,92.89,shipped
+831,2025-02-15,Schmidt & Co,Germany,Berlin,Support Plan,Services,11,851.61,9367.71,open
+832,2025-10-04,Smith Ltd,Germany,Hamburg,Headset,Accessories,6,171.08,1026.48,shipped
+833,2025-05-14,Dupont SA,Poland,Warsaw,Monitor,Hardware,12,396.01,4752.12,shipped
+834,2025-11-03,Smith Ltd,Germany,Munich,IDE License,Software,7,277.57,1942.99,paid
+835,2025-02-17,Hansen Logistik,Poland,Warsaw,Laptop,Hardware,10,1206.07,12060.7,paid
+836,2025-12-10,Hansen Logistik,Italy,Milan,Docking Station,Accessories,14,187.35,2622.9,cancelled
+837,2025-04-12,Müller GmbH,Germany,Berlin,Support Plan,Services,9,965.12,8686.08,shipped
+838,2026-02-03,García SL,France,Paris,Headset,Accessories,9,170.02,1530.18,cancelled
+839,2026-04-09,Dupont SA,France,Paris,Headset,Accessories,8,147.42,1179.36,paid
+840,2025-12-28,Müller GmbH,Austria,Vienna,Docking Station,Accessories,13,226.21,2940.73,shipped
+841,2026-01-29,Müller GmbH,Poland,Warsaw,Keyboard,Accessories,6,95.86,575.16,shipped
+842,2026-01-12,Nordlicht AG,Germany,Munich,Laptop,Hardware,8,1461.26,11690.08,shipped
+843,2025-01-05,Schmidt & Co,Poland,Warsaw,Monitor,Hardware,13,388.17,5046.21,shipped
+844,2025-08-29,Jensen ApS,United Kingdom,London,Docking Station,Accessories,5,219.86,1099.3,paid
+845,2026-07-10,Hansen Logistik,Austria,Vienna,Laptop,Hardware,12,1254.84,15058.08,shipped
+846,2026-10-01,Jensen ApS,Poland,Warsaw,Laptop,Hardware,12,1114.74,13376.88,shipped
+847,2026-01-07,Kowalski Sp.,United Kingdom,London,Laptop,Hardware,17,1121.82,19070.94,paid
+848,2025-12-08,Hansen Logistik,Austria,Vienna,Docking Station,Accessories,10,249.94,2499.4,paid
+849,2026-02-28,Smith Ltd,Switzerland,Zurich,Laptop,Hardware,14,1435.86,20102.04,shipped
+850,2026-08-18,Schmidt & Co,United Kingdom,London,Monitor,Hardware,14,346.17,4846.38,paid
+851,2026-01-24,Rossi S.p.A.,Switzerland,Zurich,Laptop,Hardware,15,1360.58,20408.7,shipped
+852,2025-02-06,Rossi S.p.A.,Germany,Munich,Mouse,Accessories,17,44.59,758.03,paid
+853,2025-05-14,Smith Ltd,France,Paris,Docking Station,Accessories,12,238.92,2867.04,shipped
+854,2025-08-06,Dupont SA,Austria,Vienna,Laptop,Hardware,17,1210.8,20583.6,paid
+855,2025-12-13,Dupont SA,Germany,Munich,Monitor,Hardware,14,321.81,4505.34,open
+856,2026-03-02,Becker KG,Czechia,Prague,Laptop,Hardware,7,1226.01,8582.07,paid
+857,2026-01-19,Hansen Logistik,Denmark,Copenhagen,Keyboard,Accessories,18,92.44,1663.92,shipped
+858,2026-02-08,Müller GmbH,Austria,Vienna,Keyboard,Accessories,16,101.34,1621.44,open
+859,2025-11-06,Dupont SA,Spain,Madrid,Monitor,Hardware,17,301.08,5118.36,shipped
+860,2025-11-26,Dupont SA,Germany,Munich,Mouse,Accessories,4,40.57,162.28,open
+861,2026-08-28,García SL,Czechia,Prague,Keyboard,Accessories,2,90.22,180.44,paid
+862,2026-08-01,Schmidt & Co,Poland,Warsaw,Office License,Software,12,122.72,1472.64,paid
+863,2026-02-27,Jensen ApS,Austria,Vienna,Laptop,Hardware,1,1489.24,1489.24,paid
+864,2026-01-08,García SL,United Kingdom,London,Headset,Accessories,18,159.02,2862.36,cancelled
+865,2026-02-02,Novák s.r.o.,Germany,Berlin,Keyboard,Accessories,11,89.55,985.05,paid
+866,2026-05-10,Nordlicht AG,Austria,Vienna,IDE License,Software,16,284.92,4558.72,paid
+867,2025-03-24,Becker KG,France,Paris,Mouse,Accessories,13,36.43,473.59,open
+868,2025-12-15,Rossi S.p.A.,Poland,Warsaw,Cloud Credits,Services,11,528.5,5813.5,paid
+869,2025-07-13,García SL,Italy,Milan,Support Plan,Services,15,947.49,14212.35,cancelled
+870,2026-09-15,Becker KG,France,Paris,Docking Station,Accessories,2,207.51,415.02,open
+871,2025-05-12,Novák s.r.o.,Spain,Madrid,Keyboard,Accessories,17,78.04,1326.68,cancelled
+872,2025-01-04,García SL,Austria,Vienna,Docking Station,Accessories,10,235.05,2350.5,cancelled
+873,2025-09-22,Novák s.r.o.,Germany,Munich,IDE License,Software,15,279.26,4188.9,open
+874,2026-09-30,Schmidt & Co,Germany,Hamburg,Keyboard,Accessories,11,78.59,864.49,shipped
+875,2025-01-09,Dupont SA,Spain,Madrid,Mouse,Accessories,2,33.57,67.14,shipped
+876,2026-09-14,Becker KG,Germany,Berlin,Mouse,Accessories,18,43.53,783.54,shipped
+877,2025-12-19,Hansen Logistik,Germany,Munich,Docking Station,Accessories,11,250.07,2750.77,open
+878,2025-06-20,Nordlicht AG,France,Paris,IDE License,Software,4,234.53,938.12,paid
+879,2025-10-19,Smith Ltd,Austria,Vienna,Laptop,Hardware,17,1141.93,19412.81,cancelled
+880,2025-12-08,Hansen Logistik,Denmark,Copenhagen,Docking Station,Accessories,13,240.42,3125.46,cancelled
+881,2026-02-14,Smith Ltd,United Kingdom,London,Laptop,Hardware,15,1410.26,21153.9,shipped
+882,2025-03-06,Smith Ltd,United Kingdom,London,Docking Station,Accessories,1,215.08,215.08,paid
+883,2025-07-14,García SL,Italy,Milan,Mouse,Accessories,6,41.15,246.9,open
+884,2025-10-18,Becker KG,Switzerland,Zurich,Mouse,Accessories,4,44.83,179.32,paid
+885,2025-08-21,Kowalski Sp.,Austria,Vienna,Monitor,Hardware,14,359.17,5028.38,shipped
+886,2025-01-28,Dupont SA,Germany,Munich,Headset,Accessories,2,159.18,318.36,cancelled
+887,2025-02-18,Nordlicht AG,France,Paris,Docking Station,Accessories,12,218.38,2620.56,shipped
+888,2026-06-29,Hansen Logistik,France,Paris,Monitor,Hardware,12,321.16,3853.92,open
+889,2025-02-23,García SL,Poland,Warsaw,Office License,Software,15,125.43,1881.45,open
+890,2025-12-24,Dupont SA,Germany,Berlin,Docking Station,Accessories,16,228.54,3656.64,paid
+891,2025-05-02,Nordlicht AG,Austria,Vienna,Support Plan,Services,8,914.7,7317.6,paid
+892,2025-02-07,García SL,Germany,Berlin,IDE License,Software,3,254.69,764.07,open
+893,2025-06-12,Nordlicht AG,Czechia,Prague,Office License,Software,14,132.97,1861.58,shipped
+894,2026-01-29,Smith Ltd,Germany,Berlin,Monitor,Hardware,15,313.06,4695.9,paid
+895,2026-06-22,Nordlicht AG,Germany,Berlin,Docking Station,Accessories,19,251.45,4777.55,paid
+896,2025-01-08,Jensen ApS,Austria,Vienna,Monitor,Hardware,9,361.23,3251.07,paid
+897,2025-02-16,Hansen Logistik,Italy,Milan,Office License,Software,11,146.46,1611.06,paid
+898,2026-05-19,Smith Ltd,Spain,Madrid,Office License,Software,13,145.2,1887.6,shipped
+899,2025-11-04,Müller GmbH,Czechia,Prague,Mouse,Accessories,1,34.24,34.24,paid
+900,2026-06-07,Novák s.r.o.,Germany,Munich,Laptop,Hardware,9,1290.11,11610.99,shipped
+901,2025-04-05,Dupont SA,France,Paris,Cloud Credits,Services,1,479.11,479.11,open
+902,2025-03-14,Dupont SA,France,Paris,Monitor,Hardware,3,373.59,1120.77,shipped
+903,2026-05-16,Jensen ApS,Italy,Milan,Cloud Credits,Services,13,564.34,7336.42,shipped
+904,2026-06-04,García SL,Italy,Milan,Cloud Credits,Services,11,569.91,6269.01,paid
+905,2026-08-26,Rossi S.p.A.,United Kingdom,London,Office License,Software,16,144.54,2312.64,paid
+906,2026-01-31,Novák s.r.o.,Poland,Warsaw,Docking Station,Accessories,19,249.51,4740.69,shipped
+907,2025-09-01,Novák s.r.o.,Denmark,Copenhagen,Mouse,Accessories,2,33.71,67.42,paid
+908,2025-08-01,Novák s.r.o.,Germany,Berlin,Cloud Credits,Services,2,555.83,1111.66,paid
+909,2026-07-18,Rossi S.p.A.,Poland,Warsaw,Docking Station,Accessories,14,194.81,2727.34,shipped
+910,2026-10-01,Nordlicht AG,Denmark,Copenhagen,Mouse,Accessories,19,44.78,850.82,cancelled
+911,2025-10-06,Dupont SA,Italy,Milan,Office License,Software,9,142.07,1278.63,paid
+912,2025-04-21,Kowalski Sp.,Switzerland,Zurich,Monitor,Hardware,8,382.39,3059.12,cancelled
+913,2026-09-26,García SL,Italy,Milan,Docking Station,Accessories,18,206.07,3709.26,shipped
+914,2026-03-29,Dupont SA,Italy,Milan,Cloud Credits,Services,15,516.82,7752.3,open
+915,2026-08-16,Rossi S.p.A.,United Kingdom,London,Office License,Software,4,117.71,470.84,shipped
+916,2025-03-31,Müller GmbH,France,Paris,Mouse,Accessories,18,37.32,671.76,open
+917,2025-07-22,Rossi S.p.A.,Austria,Vienna,Support Plan,Services,5,1010.43,5052.15,shipped
+918,2026-06-25,Rossi S.p.A.,Czechia,Prague,Keyboard,Accessories,8,76.54,612.32,shipped
+919,2025-01-14,García SL,Czechia,Prague,Headset,Accessories,7,134.37,940.59,paid
+920,2025-05-14,García SL,Austria,Vienna,Laptop,Hardware,8,1272.09,10176.72,paid
+921,2026-01-12,Hansen Logistik,Germany,Munich,Monitor,Hardware,8,372.79,2982.32,paid
+922,2026-09-29,Jensen ApS,Austria,Vienna,Mouse,Accessories,3,44.2,132.6,paid
+923,2025-07-05,García SL,Spain,Madrid,Docking Station,Accessories,13,206.24,2681.12,paid
+924,2026-08-10,García SL,Spain,Madrid,Support Plan,Services,14,1130.92,15832.88,shipped
+925,2026-05-06,Kowalski Sp.,Austria,Vienna,IDE License,Software,8,268.08,2144.64,shipped
+926,2025-02-13,Smith Ltd,Switzerland,Zurich,Mouse,Accessories,5,37.2,186,shipped
+927,2025-06-23,Smith Ltd,Italy,Milan,Docking Station,Accessories,13,210.81,2740.53,shipped
+928,2026-05-18,Smith Ltd,Germany,Munich,Keyboard,Accessories,19,87.13,1655.47,shipped
+929,2026-05-03,Becker KG,Switzerland,Zurich,Cloud Credits,Services,8,487.26,3898.08,shipped
+930,2026-05-11,Hansen Logistik,Switzerland,Zurich,Keyboard,Accessories,3,99.28,297.84,shipped
+931,2025-11-18,Smith Ltd,Italy,Milan,Office License,Software,13,110.11,1431.43,shipped
+932,2025-03-28,Müller GmbH,Germany,Berlin,Cloud Credits,Services,13,558.26,7257.38,paid
+933,2025-08-08,Kowalski Sp.,Austria,Vienna,Laptop,Hardware,6,1166.2,6997.2,paid
+934,2025-12-07,Rossi S.p.A.,Switzerland,Zurich,Docking Station,Accessories,16,213.75,3420,paid
+935,2025-12-03,Novák s.r.o.,Czechia,Prague,Docking Station,Accessories,13,192.15,2497.95,paid
+936,2025-11-29,Jensen ApS,Germany,Berlin,Headset,Accessories,12,128.25,1539,paid
+937,2025-06-21,Becker KG,Germany,Berlin,Keyboard,Accessories,7,78.12,546.84,shipped
+938,2025-02-02,Novák s.r.o.,Austria,Vienna,Laptop,Hardware,1,1340.01,1340.01,open
+939,2026-07-20,Novák s.r.o.,Austria,Vienna,Headset,Accessories,1,166.56,166.56,open
+940,2026-02-13,Kowalski Sp.,Germany,Hamburg,Monitor,Hardware,10,395.42,3954.2,open
+941,2026-02-19,Dupont SA,Spain,Madrid,Mouse,Accessories,12,40.52,486.24,cancelled
+942,2026-07-19,Schmidt & Co,Germany,Berlin,IDE License,Software,12,251.01,3012.12,paid
+943,2026-06-20,Schmidt & Co,Germany,Berlin,Office License,Software,1,145.64,145.64,cancelled
+944,2026-08-29,Schmidt & Co,Austria,Vienna,Docking Station,Accessories,20,216.25,4325,paid
+945,2026-08-20,Hansen Logistik,Denmark,Copenhagen,Headset,Accessories,17,130.49,2218.33,shipped
+946,2026-01-26,Rossi S.p.A.,Spain,Madrid,IDE License,Software,15,252.41,3786.15,shipped
+947,2026-01-04,Smith Ltd,Spain,Madrid,Laptop,Hardware,2,1126.79,2253.58,open
+948,2025-02-07,Smith Ltd,Poland,Warsaw,Mouse,Accessories,18,42.8,770.4,cancelled
+949,2026-08-12,Becker KG,Germany,Berlin,Laptop,Hardware,2,1242.02,2484.04,paid
+950,2025-06-14,Smith Ltd,Italy,Milan,Docking Station,Accessories,9,214.62,1931.58,cancelled
+951,2026-01-05,Jensen ApS,Austria,Vienna,Keyboard,Accessories,10,86.62,866.2,open
+952,2025-06-06,Novák s.r.o.,Poland,Warsaw,Office License,Software,7,133.89,937.23,paid
+953,2026-09-22,Nordlicht AG,Spain,Madrid,Keyboard,Accessories,2,76.56,153.12,cancelled
+954,2025-11-15,Nordlicht AG,Czechia,Prague,Mouse,Accessories,20,41.53,830.6,open
+955,2025-02-22,Schmidt & Co,Germany,Munich,Keyboard,Accessories,8,96.41,771.28,open
+956,2025-10-17,Müller GmbH,Switzerland,Zurich,Cloud Credits,Services,14,506.12,7085.68,shipped
+957,2025-02-09,Kowalski Sp.,Austria,Vienna,Docking Station,Accessories,13,213.08,2770.04,paid
+958,2025-01-29,Nordlicht AG,Czechia,Prague,Office License,Software,8,127.49,1019.92,shipped
+959,2025-09-10,Smith Ltd,Germany,Hamburg,Laptop,Hardware,5,1350.54,6752.7,cancelled
+960,2026-03-30,Nordlicht AG,Austria,Vienna,Cloud Credits,Services,13,569.21,7399.73,paid
+961,2025-10-13,Müller GmbH,Germany,Munich,Cloud Credits,Services,16,518.86,8301.76,paid
+962,2025-09-03,Smith Ltd,Denmark,Copenhagen,Mouse,Accessories,2,37.01,74.02,cancelled
+963,2026-08-31,Müller GmbH,Poland,Warsaw,Monitor,Hardware,6,340.33,2041.98,shipped
+964,2025-06-04,Novák s.r.o.,Germany,Berlin,Cloud Credits,Services,11,561.4,6175.4,open
+965,2026-08-11,Kowalski Sp.,Spain,Madrid,Headset,Accessories,7,145.43,1018.01,shipped
+966,2026-09-22,Rossi S.p.A.,France,Paris,Keyboard,Accessories,9,75.96,683.64,open
+967,2025-06-09,Hansen Logistik,Germany,Hamburg,Keyboard,Accessories,14,97.7,1367.8,cancelled
+968,2026-01-25,Schmidt & Co,Germany,Hamburg,Docking Station,Accessories,20,235.05,4701,shipped
+969,2026-04-13,Müller GmbH,France,Paris,Office License,Software,20,120.36,2407.2,open
+970,2025-11-29,Dupont SA,France,Paris,Mouse,Accessories,8,38.42,307.36,cancelled
+971,2026-03-18,Becker KG,Spain,Madrid,Laptop,Hardware,5,1256.16,6280.8,cancelled
+972,2026-04-03,Schmidt & Co,Spain,Madrid,Laptop,Hardware,6,1242.69,7456.14,shipped
+973,2025-06-24,Becker KG,Czechia,Prague,IDE License,Software,18,240.3,4325.4,open
+974,2026-04-06,Novák s.r.o.,Switzerland,Zurich,Monitor,Hardware,10,334.37,3343.7,shipped
+975,2026-03-01,Müller GmbH,Germany,Hamburg,Office License,Software,4,138.9,555.6,paid
+976,2026-06-27,Nordlicht AG,France,Paris,Cloud Credits,Services,11,526.33,5789.63,cancelled
+977,2025-07-14,Becker KG,Poland,Warsaw,IDE License,Software,9,257.52,2317.68,shipped
+978,2026-02-07,Schmidt & Co,Germany,Berlin,IDE License,Software,4,213.46,853.84,paid
+979,2026-01-02,Schmidt & Co,Italy,Milan,Cloud Credits,Services,8,550.03,4400.24,paid
+980,2025-01-05,Nordlicht AG,Germany,Berlin,IDE License,Software,4,261.19,1044.76,open
+981,2026-01-01,Schmidt & Co,Italy,Milan,Mouse,Accessories,16,43.18,690.88,paid
+982,2025-01-09,Hansen Logistik,Switzerland,Zurich,Docking Station,Accessories,6,202.2,1213.2,paid
+983,2026-07-12,Schmidt & Co,France,Paris,Mouse,Accessories,19,37.76,717.44,shipped
+984,2025-02-17,Jensen ApS,Austria,Vienna,IDE License,Software,13,279,3627,paid
+985,2026-09-19,Becker KG,Switzerland,Zurich,Headset,Accessories,2,148.76,297.52,open
+986,2025-11-02,Dupont SA,United Kingdom,London,Monitor,Hardware,16,326.21,5219.36,paid
+987,2026-07-21,Smith Ltd,Poland,Warsaw,Keyboard,Accessories,20,91.22,1824.4,paid
+988,2026-06-17,Jensen ApS,Spain,Madrid,IDE License,Software,11,259.28,2852.08,shipped
+989,2025-03-07,Dupont SA,Germany,Munich,Office License,Software,16,130.37,2085.92,paid
+990,2026-07-15,Novák s.r.o.,Austria,Vienna,Support Plan,Services,7,1080.48,7563.36,paid
+991,2025-02-09,Nordlicht AG,Germany,Berlin,Support Plan,Services,9,1028.97,9260.73,shipped
+992,2025-08-11,García SL,Germany,Munich,Monitor,Hardware,3,359.15,1077.45,shipped
+993,2025-07-01,Smith Ltd,Spain,Madrid,Monitor,Hardware,13,335.87,4366.31,shipped
+994,2025-12-13,Kowalski Sp.,France,Paris,Laptop,Hardware,14,1365.97,19123.58,paid
+995,2025-01-05,Dupont SA,Germany,Munich,Laptop,Hardware,4,1439.13,5756.52,paid
+996,2025-01-09,Müller GmbH,United Kingdom,London,Cloud Credits,Services,9,457.75,4119.75,shipped
+997,2025-07-07,García SL,United Kingdom,London,Laptop,Hardware,6,1291.64,7749.84,shipped
+998,2025-01-10,Schmidt & Co,Germany,Hamburg,Office License,Software,16,129.91,2078.56,open
+999,2025-08-08,Dupont SA,Germany,Berlin,Keyboard,Accessories,2,77.91,155.82,shipped
+1000,2026-06-24,Jensen ApS,Germany,Hamburg,Monitor,Hardware,9,393.44,3540.96,open

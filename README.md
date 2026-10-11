@@ -342,3 +342,27 @@ ColumnDef.create({ property: "price", headerLabel: "Price", width: px100, minWid
 - `ColumnDef.create({ … })` mit benannten Parametern für alles Weitere (Renderer, Sortierung, Editieren …).
 - Spalte ausblenden: `isVisible: FalseFn` (die API-Methode `setColumnVisible` ist noch ein leerer Stub).
 - Mit eigenen Spalten: `TableFactory.buildByTypedRows<Order>(orders, ORDER_COLUMNS)`.
+
+---
+
+## Folge 014 – Array of Arrays: Header, Body und Footer als Daten
+
+Keine Objekte nötig – jeder Bereich ist ein zweidimensionales Array (hier aus `public/data/orders.csv`):
+
+```ts
+// csv/csv-table.ts
+const [header, ...rows] = await loadCsv("/data/orders.csv");
+const tableModel = TableFactory.createTableModel({
+  headerData: [header],
+  bodyData: rows,
+  footerData: [totalsRow(rows)],
+  columnSizes: [70, 110, 160, 120, 110, 150, 110, 70, 90, 100, 100]
+});
+```
+
+- `headerData` / `footerData` dürfen mehrere Zeilen haben (Folge 015/016), Werte sind Strings.
+- `columnSizes` statt `ColumnDef`s, wenn nur die Breiten zählen.
+
+```bash
+npm run dev   # → http://localhost:5173/csv/
+```
