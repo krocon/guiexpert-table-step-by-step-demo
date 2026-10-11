@@ -211,3 +211,25 @@ const options = useMemo(() => ({ ...new TableOptions() }), []);
   Der Knopf oben schaltet zwischen 100.000 und 1.000 Zeilen um: neues Modell → neue Tabelle, `tableReady` feuert erneut.
 - Callbacks als Props: `tableReady`, `mouseClicked`, `selectionChanged`, `contextmenu`, `modelChanged` …
 - Typen der Callbacks (`(evt) => void`) ab `@guiexpert/react-table@18.1.88`.
+
+---
+
+## Folge 008 – GuiExpert Table in Vue 3
+
+```bash
+npm run dev:vue       # → http://localhost:5173/
+```
+
+```vue
+<!-- frameworks/vue/src/App.vue -->
+<GuiexpertTable
+  :tableModel="tableModel"
+  :tableOptions="tableOptions"
+  @tableReady="onReady"
+  @mouseClicked="onClick" />
+```
+
+- Modell und Optionen sind normale Objekte – kein `ref()` nötig (die Tabelle hält ihren Zustand selbst).
+- Events sind Vue-Events (`@tableReady`, `@mouseClicked`, `@selectionChanged` …), Nutzlast direkt als Argument.
+- `mouseClicked` ist um `debounceMouseClickDelay` (Standard 150 ms) entprellt, damit ein Doppelklick nicht zwei Klicks meldet.
+- Global registrieren statt importieren: `app.use(GuiexpertTablePlugin)` (Default-Export von `@guiexpert/vue3-table`).
