@@ -4,6 +4,7 @@ import { EventAdapter, SimpleDomService, TableOptions, TableScope } from "@guiex
 import { createOrders, Order } from "./data/orders";
 import { describeModel } from "./model/describe-model";
 import { createOrderTableOptions } from "./model/order-table-options";
+import { matchesOrder, orderFilter } from "./order-filter";
 import { createOrdersModel } from "./model/order-table-model";
 
 const params = new URLSearchParams(location.search);       // e.g. /?rows=1000000&scrollTo=50000
@@ -16,6 +17,7 @@ const host = document.querySelector<HTMLDivElement>(".table-div")!;
 const options = params.has("defaults")                        // episode 019: /?defaults → before
   ? { ...new TableOptions() }
   : createOrderTableOptions();
+options.externalFilterFunction = matchesOrder;                // episode 021
 const tableModel = createOrdersModel(orders, options);        // episode 012
 const tableScope = new TableScope(
   host, tableModel, new SimpleDomService(), options, new EventAdapter());
@@ -32,6 +34,22 @@ document.querySelector("#newest")?.addEventListener("click", () => {
   const ms = Math.round(performance.now() - t);
   document.querySelector("#info")!.textContent = `${rowCount.toLocaleString("en")} orders sorted in ${ms} ms`;
 });
+// Episode 021 – live search + minimum total
+const search = document.querySelector<HTMLInputElement>("#search")!;
+const minTotal = document.querySelector<HTMLInputElement>("#min-total")!;
+function filterChanged(): void {
+  orderFilter.text = search.value;
+  orderFilter.minTotal = Number(minTotal.value);
+  const t = performance.now();
+  tableApi.externalFilterChanged();
+  const ms = Math.round(performance.now() - t);
+  const shown = tableApi.getBodyModel().getRowCount();
+  document.querySelector("#info")!.textContent =
+    `${shown.toLocaleString("en")} of ${rowCount.toLocaleString("en")} orders · ≥ ${orderFilter.minTotal} · ${ms} ms`;
+}
+search.addEventListener("input", filterChanged);
+minTotal.addEventListener("input", filterChanged);
+if (params.has("q")) { search.value = params.get("q")!; filterChanged(); }
 if (params.has("scrollTo")) tableApi.scrollToIndex(0, Number(params.get("scrollTo")));
 
 // (only for the demo) show what it cost

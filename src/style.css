@@ -12,3 +12,6 @@ html, body { margin: 0; font: 14px/1.4 system-ui, sans-serif; }
 .app-header button:hover { border-color: #f472b6; }
 #fps { color: #a5b4fc; font-family: ui-monospace, monospace; }
 .app-header { white-space: nowrap; overflow: hidden; }
+.app-header input[type=search] { font: inherit; font-size: 12px; padding: 3px 8px; width: 180px; border: 1px solid #4b5563; border-radius: 6px; background: #1f2937; color: #f9fafb; }
+.app-header input[type=search]:focus { outline: none; border-color: #f472b6; }
+.app-header input[type=range] { width: 120px; accent-color: #f472b6; }

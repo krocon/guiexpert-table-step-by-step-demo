@@ -533,3 +533,33 @@ ColumnDef.create({ property: "total", …, sortable: TrueFn, sortState: "desc" }
 ```bash
 npm run dev   # → http://localhost:5173/   (Doppelklick auf „Status“)
 ```
+
+---
+
+## Folge 021 – Filtern mit einer Live-Suche
+
+Die Filter-UI gehört dir, die Tabelle fragt nur: „Diese Zeile zeigen?“ (`src/order-filter.ts`):
+
+```ts
+export const orderFilter = { text: "", minTotal: 0 };
+export function matchesOrder(order: Order): boolean {
+  if (order.total < orderFilter.minTotal) return false;
+  const query = orderFilter.text.trim().toLowerCase();
+  return !query || `${order.customer} ${order.country} ${order.city} ${order.product}`
+    .toLowerCase().includes(query);
+}
+
+options.externalFilterFunction = matchesOrder;               // vor dem Start
+search.addEventListener("input", () => {                     // bei jeder Eingabe
+  orderFilter.text = search.value;
+  tableApi.externalFilterChanged();
+});
+```
+
+- Der Footer aus Folge 016 rechnet automatisch mit (`getFilteredRows()`).
+- Ab `@guiexpert/table@1.1.88` bleibt beim Filtern die Sortierung erhalten (vorher fiel die Tabelle auf die
+  Originalreihenfolge zurück, das Sortier-Symbol blieb aber stehen).
+
+```bash
+npm run dev   # → http://localhost:5173/?q=berlin
+```
