@@ -5,12 +5,13 @@ import { Order } from "../data/orders";
 export class OrderTotalsFooterModel extends AreaModel {
   constructor(
     private readonly getBody: () => AreaModelObjectArray<Order>,
-    private readonly columnDefs: ColumnDefIf[]) {
+    private readonly columnDefs: ColumnDefIf[],
+    private readonly rowHeight = 34) {
     super();
     this.areaIdent = "footer";
   }
   override getRowCount(): number { return 1; }
-  override getRowHeight(_rowIndex: number): number { return 34; }
+  override getRowHeight(_rowIndex: number): number { return this.rowHeight; }
 
   private cache?: { rows: Order[]; length: number; qty: number; total: number };
 

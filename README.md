@@ -477,3 +477,32 @@ Der Footer aus Folge 016 sucht seine Spalten jetzt über die Property statt übe
 ```bash
 npm run dev   # → http://localhost:5173/fixed-columns/
 ```
+
+---
+
+## Folge 019 – TableOptions: Verhalten und Optik
+
+Optionen sind ein einfaches Objekt. Muster: alle Standardwerte übernehmen, nur Abweichungen setzen
+(`src/model/order-table-options.ts`):
+
+```ts
+export function createOrderTableOptions(): TableOptionsIf {
+  return {
+    ...new TableOptions(),
+    hoverColumnVisible: false,
+    verticalBorderVisible: false,
+    defaultRowHeights: { header: 40, body: 30, footer: 36 }
+  };
+}
+const options = createOrderTableOptions();
+const tableModel = createOrdersModel(orders, options);   // Zeilenhöhen gehen ins Modell
+new TableScope(host, tableModel, new SimpleDomService(), options, new EventAdapter()).firstInit();
+```
+
+Der Button „auto-size columns“ ruft `tableApi.autoResizeColumns()`. Ab `@guiexpert/table@1.1.88` misst die
+Methode den echten Text (inkl. Header und Footer) – vorher wurden Datum und Summen abgeschnitten.
+
+```bash
+npm run dev   # → http://localhost:5173/            (mit Options)
+              # → http://localhost:5173/?defaults   (vorher: nur Standardwerte)
+```
