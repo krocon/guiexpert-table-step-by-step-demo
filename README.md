@@ -393,3 +393,35 @@ Beim Auf-/Zuklappen bleiben die Spaltenbreiten erst ab `@guiexpert/table@1.1.88`
 ```bash
 npm run dev   # → http://localhost:5173/header-groups/
 ```
+
+---
+
+## Folge 016 – Footer-Modelle: Summen und Kennzahlen
+
+Der Footer ist ein eigenes `AreaModel`. `OrderTotalsFooterModel` (`src/model/order-totals-footer.ts`) liest
+die Zeilen, die der Body **gerade zeigt** (`getFilteredRows()`), und summiert Menge und Gesamtbetrag –
+der Footer folgt also Filter und Sortierung (Folge 021):
+
+```ts
+export class OrderTotalsFooterModel extends AreaModel {
+  override getRowCount() { return 1; }
+  override getValueAt(_row: number, col: number) {
+    const t = this.totals();                 // einmal pro Filterergebnis gerechnet
+    if (col === 2) return `${t.length} orders`;
+    if (col === 7) return t.qty;
+    if (col === 10) return Math.round(t.total * 100) / 100;
+    return "";
+  }
+}
+
+const tableModel = TableFactory.createTableModel({
+  rows: orders, columnDefs: ORDER_COLUMNS,
+  footerAreaModel: new OrderTotalsFooterModel(() => tableModel.getBodyModel() as AreaModelObjectArray<Order>)
+});
+```
+
+Spalten-Index = Position in `ORDER_COLUMNS` (versteckte Spalten zählen mit).
+
+```bash
+npm run dev   # → http://localhost:5173/
+```
