@@ -885,3 +885,35 @@ api.updateCells(events);       // Wert ins Modell schreiben, nur diese Zellen ne
 ```bash
 npm run dev   # → http://localhost:5173/live/
 ```
+
+---
+
+## Folge 033 – Zustand merken: Sortierung, Scroll-Position, aufgeklappte Knoten
+
+Nach einem Reload sieht alles aus wie vorher – ein Schlüssel pro Tabelle in `localStorage`
+(`src/model/order-table-options.ts`, `tree/tree.ts`):
+
+```ts
+autoRestoreOptions: {
+  ...new AutoRestoreOptions<Order>(),
+  getStorageKeyFn: () => "ge-demo-orders",
+  autoRestoreSortingState: true,
+  autoRestoreScrollPosition: true
+}
+
+// Baum: zusätzlich aufgeklappte Knoten – braucht eine eindeutige Id pro Knoten
+autoRestoreOptions: {
+  ...new AutoRestoreOptions<OrderNode>(),
+  getStorageKeyFn: () => "ge-demo-order-tree",
+  getRowId: node => node.id,                 // "Czechia", "Czechia/Becker KG", "4711"
+  autoRestoreCollapsedExpandedState: true,
+  autoRestoreScrollPosition: true
+}
+```
+
+Braucht `@guiexpert/table@1.1.89` (Sortier-Symbol nach dem Laden, Scroll-Position zuverlässig gespeichert,
+verschachtelte Knoten, zugeklappt startende Bäume, blockierter Speicher im Private Mode).
+
+```bash
+npm run dev   # → http://localhost:5173/   (sortieren, scrollen, neu laden)
+```

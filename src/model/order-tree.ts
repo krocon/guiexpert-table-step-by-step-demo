@@ -5,6 +5,7 @@ import { EuroRenderer, StatusBadgeRenderer } from "./order-renderers";
 // Episode 030 – orders as a tree: country → customer → order.
 
 export interface OrderNode {
+  id: string;                    // unique per node – needed to remember expanded rows (episode 033)
   label: string;
   orders: number;
   total: number;
@@ -23,11 +24,11 @@ const sum = (orders: Order[]) => Math.round(orders.reduce((s, o) => s + o.total,
 
 export function buildOrderTree(orders: Order[]): OrderNode[] {
   return [...group(orders, o => o.country)].map(([country, byCountry]) => ({
-    label: country, orders: byCountry.length, total: sum(byCountry),
+    id: country, label: country, orders: byCountry.length, total: sum(byCountry),
     children: [...group(byCountry, o => o.customer)].map(([customer, byCustomer]) => ({
-      label: customer, orders: byCustomer.length, total: sum(byCustomer),
+      id: `${country}/${customer}`, label: customer, orders: byCustomer.length, total: sum(byCustomer),
       children: byCustomer.map(o => ({
-        label: `#${o.id} · ${o.product}`, orders: 1, total: o.total, date: o.date, status: o.status
+        id: String(o.id), label: `#${o.id} · ${o.product}`, orders: 1, total: o.total, date: o.date, status: o.status
       }))
     }))
   }));

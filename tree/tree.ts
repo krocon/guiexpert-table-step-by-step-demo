@@ -2,14 +2,21 @@
 import "@guiexpert/table/css/main.css";
 import "../src/style.css";
 import "../src/theme.css";
-import { EventAdapter, SimpleDomService, TableOptions, TableOptionsIf, TableScope } from "@guiexpert/table";
+import { AutoRestoreOptions, EventAdapter, SimpleDomService, TableOptions, TableOptionsIf, TableScope } from "@guiexpert/table";
 import { createOrders } from "../src/data/orders";
-import { createOrderTreeModel } from "../src/model/order-tree";
+import { OrderNode, createOrderTreeModel } from "../src/model/order-tree";
 
 const tableOptions: TableOptionsIf = {
   ...new TableOptions(),
   hoverColumnVisible: false,
-  showCheckboxWihoutExtraColumn: true        // checkbox inside the tree column, after the arrow
+  showCheckboxWihoutExtraColumn: true,       // checkbox inside the tree column, after the arrow
+  autoRestoreOptions: {                      // episode 033: remember which nodes are open
+    ...new AutoRestoreOptions<OrderNode>(),
+    getStorageKeyFn: () => "ge-demo-order-tree",
+    getRowId: node => node.id,
+    autoRestoreCollapsedExpandedState: true,
+    autoRestoreScrollPosition: true
+  }
 };
 const tableModel = createOrderTreeModel(createOrders(5_000), tableOptions);
 
