@@ -1,9 +1,11 @@
-import { AreaModel, AreaModelObjectArray } from "@guiexpert/table";
+import { AreaModel, AreaModelObjectArray, ColumnDefIf } from "@guiexpert/table";
 import { Order } from "../data/orders";
 
 // Episode 016 – a footer that follows filter and sorting: it reads the rows the body currently shows.
 export class OrderTotalsFooterModel extends AreaModel {
-  constructor(private readonly getBody: () => AreaModelObjectArray<Order>) {
+  constructor(
+    private readonly getBody: () => AreaModelObjectArray<Order>,
+    private readonly columnDefs: ColumnDefIf[]) {
     super();
     this.areaIdent = "footer";
   }
@@ -14,9 +16,11 @@ export class OrderTotalsFooterModel extends AreaModel {
 
   override getValueAt(_rowIndex: number, columnIndex: number): any {
     const t = this.totals();
-    if (columnIndex === 2) return `${t.length.toLocaleString("en")} orders`;  // customer
-    if (columnIndex === 7) return t.qty;                                       // qty
-    if (columnIndex === 10) return Math.round(t.total * 100) / 100;            // total
+    switch (this.columnDefs[columnIndex]?.property) {     // by property, not by position
+      case "customer": return `${t.length.toLocaleString("en")} orders`;
+      case "quantity": return t.qty;
+      case "total": return Math.round(t.total * 100) / 100;
+    }
     return "";
   }
 

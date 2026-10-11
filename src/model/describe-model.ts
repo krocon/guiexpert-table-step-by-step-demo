@@ -8,5 +8,7 @@ export function describeModel(tableModel: TableModelIf): string {
   const rows = `${header.getRowCount()} / ${body.getRowCount()} / ${footer.getRowCount()}`;
   const firstCustomer = body.getValueAt(0, 2);           // row 0, column 2
   const columns = tableModel.getColumnCount();
-  return `rows (header / body / footer): ${rows} · ${columns} columns · first customer: ${firstCustomer}`;
+  const left = tableModel.getFixedLeftColumnCount(), right = tableModel.getFixedRightColumnCount();
+  const fixed = left || right ? ` · fixed west / east: ${left} / ${right}` : "";      // episode 018
+  return `rows (header / body / footer): ${rows} · ${columns} columns${fixed} · first customer: ${firstCustomer}`;
 }

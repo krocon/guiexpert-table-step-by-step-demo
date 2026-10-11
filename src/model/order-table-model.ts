@@ -11,7 +11,7 @@ export function createOrdersModel(orders: Order[]): TableModelIf {
     rows: orders,
     columnDefs: ORDER_COLUMNS,
     footerAreaModel: new OrderTotalsFooterModel(
-      () => tableModel.getBodyModel() as AreaModelObjectArray<Order>)
+      () => tableModel.getBodyModel() as AreaModelObjectArray<Order>, ORDER_COLUMNS)
   });
   return tableModel;
 }

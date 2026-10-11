@@ -452,3 +452,28 @@ Seiten nach. `getConstantRowHeight()` gibt es ab `@guiexpert/table@1.1.85`.
 ```bash
 npm run dev   # → http://localhost:5173/two-million/   (?rows=10000000 für 10 Mio.)
 ```
+
+---
+
+## Folge 018 – Spalten links und rechts fixieren
+
+Fixierte Spalten gehören ins **Modell**, nicht in die Options. `createWideOrdersModel()`
+(`src/model/order-wide-model.ts`) zeigt 41 Spalten – ID bleibt links, Total rechts stehen:
+
+```ts
+const tableModel = TableFactory.createTableModel({
+  rows: widenOrders(orders),
+  columnDefs: WIDE_COLUMNS,          // ID, …, 30 Monatsspalten, Total
+  fixedLeftColumnCount: 1,           // west
+  fixedRightColumnCount: 1,          // east
+  footerAreaModel: new OrderTotalsFooterModel(() => …, WIDE_COLUMNS)
+});
+```
+
+Das sind die Seiten `west` / `center` / `east` aus Folge 011 – in Header, Body **und** Footer.
+Auch horizontal wird virtuell gerendert: nur sichtbare Spalten liegen im DOM.
+Der Footer aus Folge 016 sucht seine Spalten jetzt über die Property statt über die Position.
+
+```bash
+npm run dev   # → http://localhost:5173/fixed-columns/
+```
