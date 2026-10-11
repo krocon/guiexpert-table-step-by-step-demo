@@ -304,3 +304,24 @@ const body = tableModel.getAreaModel("body");
 body.getRowCount();       // 100000
 body.getValueAt(0, 2);    // "Dupont SA"
 ```
+
+---
+
+## Folge 012 – Array<T> → TableModel
+
+```ts
+// src/model/order-table-model.ts
+const ORDER_PROPERTIES: (keyof Order)[] =
+  ["id", "date", "customer", "country", "product", "quantity", "total", "status"];
+
+export function createOrdersModel(orders: Order[]): TableModelIf {
+  return TableFactory.createTableModel({ rows: orders, properties: ORDER_PROPERTIES });
+}
+```
+
+1. Nur `rows` → jeder Key der ersten Zeile wird eine Spalte (Folge 005).
+2. `properties` → Auswahl **und** Reihenfolge der Spalten.
+3. `(keyof Order)[]` → ein Tippfehler im Spaltennamen ist ein Compile-Fehler.
+4. Überschrift = Property in Großbuchstaben – eigene Überschriften, Breiten und Ausrichtung: Folge 013 (`ColumnDef`).
+
+Weitere Fabrik-Methoden: `TableFactory.buildByTypedRows<T>(rows, columnDefs, options)`, `createByObjectArray`, `createByAreaModels`.
