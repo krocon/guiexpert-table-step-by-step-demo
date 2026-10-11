@@ -802,3 +802,30 @@ export class TimetableModel extends AreaModelArrayOfArrays<string> {
 ```bash
 npm run dev   # → http://localhost:5173/timetable/
 ```
+
+---
+
+## Folge 030 – Baumtabelle mit Checkboxen
+
+5.000 Orders gruppiert nach Land → Kunde → Bestellung (`src/model/order-tree.ts`):
+
+```ts
+const rows = TreeFactory.buildTreeRows<OrderNode>(buildOrderTree(orders),
+  { childrenProperty: "children", expanded: false });                       // zugeklappt starten
+const tableModel = TableFactory.createTableModel({ rows, columnDefs, tableOptions });
+
+const tableOptions = { ...new TableOptions(), showCheckboxWihoutExtraColumn: true };    // Checkbox in der Baum-Spalte
+class TreeEvents extends EventAdapter {
+  override onCheckboxChanged(rows: any[]) { … }      // alle angehakten Zeilen (Eltern haken ihre Kinder mit an)
+}
+```
+
+- `expanded: false` startet zugeklappt (ab 1.1.90; Standard: alles offen). Auch als Funktion,
+  z. B. `(row, deep) => deep === 0` öffnet nur die erste Ebene.
+- Auf-/Zuklappen per Pfeil oder Alt+Klick, alles auf einmal über das Symbol oben links.
+- Summen pro Knoten stehen in den Daten (`orders`, `total`), Renderer aus Folge 025 funktionieren auch hier.
+- Ab 1.1.89: leere Zellen statt „undefined“ in Elternzeilen; zwei schnelle Klicks auf verschiedene Pfeile gehen nicht mehr verloren.
+
+```bash
+npm run dev   # → http://localhost:5173/tree/
+```
