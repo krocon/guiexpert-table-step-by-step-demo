@@ -745,3 +745,30 @@ export class RevenueHeatmapModel extends AreaModelArrayOfArrays<string | number>
 ```bash
 npm run dev   # → http://localhost:5173/heatmap/
 ```
+
+---
+
+## Folge 028 – Theming und Dark Mode mit CSS-Variablen
+
+Alles an der Tabelle ist eine CSS-Variable (`--ge-table-*`, über 100 Stück). Eigener Look in `src/theme.css`,
+geladen **nach** `@guiexpert/table/css/main.css`:
+
+```css
+html[data-theme="light"] {
+  --ge-table-header-center-bg: #eef2ff;
+  --ge-table-header-center-text: #3730a3;
+  --ge-table-body-center-text: #111827;      /* sonst folgt der Body der Header-Farbe */
+  --ge-table-row-even-bg: #fdf2f8;           /* Zebra */
+  --ge-table-hover-row-bg: rgba(244, 114, 182, 0.18);
+  --ge-table-focus-border: #db2777;
+}
+html[data-theme="dark"] { --ge-table-header-center-text: #f9a8d4; … }
+```
+
+Light und Dark sind eingebaut – umgeschaltet wird mit einem Attribut:
+`document.documentElement.dataset.theme = "dark"` (Button „light / dark“, gemerkt in `localStorage`).
+Alle Variablen: `node_modules/@guiexpert/table/css/table-color-vars.css`.
+
+```bash
+npm run dev   # → http://localhost:5173/?theme=dark
+```

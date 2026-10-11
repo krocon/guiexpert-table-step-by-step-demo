@@ -1,0 +1,27 @@
+/* Episode 028 – the table in your own look: everything is a CSS variable (--ge-table-*).
+   Loaded after @guiexpert/table/css/main.css; light and dark are switched via html[data-theme]. */
+
+html[data-theme="light"] {
+  --ge-table-header-center-bg: #eef2ff;              /* indigo-50 */
+  --ge-table-header-center-text: #3730a3;            /* indigo-800 */
+  --ge-table-body-center-text: #111827;              /* body text stays dark (default follows the header) */
+  --ge-table-body-west-text: #111827;
+  --ge-table-body-east-text: #111827;
+  --ge-table-row-even-bg: #fdf2f8;                   /* zebra: pink-50 */
+  --ge-table-hover-row-bg: rgba(244, 114, 182, 0.18);
+  --ge-table-focus-border: #db2777;
+  --ge-table-body-center-selected-range-bg: rgba(79, 70, 229, 0.22);
+  --ge-table-color-progress-bar: #f472b6;
+  --ge-table-footer-center-bg: #e0e7ff;
+}
+
+html[data-theme="dark"] {
+  --ge-table-header-center-text: #f9a8d4;            /* pink-300 */
+  --ge-table-hover-row-bg: rgba(244, 114, 182, 0.2);
+  --ge-table-focus-border: #f472b6;
+  --ge-table-body-center-selected-range-bg: rgba(129, 140, 248, 0.35);
+  --ge-table-body-center-selected-range-text: #ffffff;
+  --ge-table-color-progress-bar: #f472b6;
+}
+
+html[data-theme="dark"] body { background: #111827; color: #f9fafb; }

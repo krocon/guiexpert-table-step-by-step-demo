@@ -1,5 +1,6 @@
 import "@guiexpert/table/css/main.css";   // styles of the table (CSS variables --ge-table-*)
 import "./style.css";
+import "./theme.css";                        // episode 028: own colours, light + dark
 import { SimpleDomService, TableOptions, TableScope } from "@guiexpert/table";
 import { createOrders, Order } from "./data/orders";
 import { describeModel } from "./model/describe-model";
@@ -73,6 +74,15 @@ document.querySelector("#copy")?.addEventListener("click", async () => {
 // Episode 024 – Excel: the current view or all data
 document.querySelector("#xlsx-view")?.addEventListener("click", () => downloadView(tableApi));
 document.querySelector("#xlsx-all")?.addEventListener("click", () => downloadAll(tableApi));
+// Episode 028 – light / dark: one attribute on <html>
+const setTheme = (theme: string) => {
+  document.documentElement.dataset.theme = theme;
+  try { localStorage.setItem("theme", theme); } catch { /* private mode */ }
+};
+try { const saved = localStorage.getItem("theme"); if (saved) setTheme(saved); } catch { /* ignore */ }
+if (params.has("theme")) setTheme(params.get("theme")!);
+document.querySelector("#theme")?.addEventListener("click", () =>
+  setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark"));
 if (params.has("scrollTo")) tableApi.scrollToIndex(0, Number(params.get("scrollTo")));
 
 // (only for the demo) show what it cost
