@@ -985,6 +985,7 @@ npm run dev   # → http://localhost:5173/   (sortieren, scrollen, neu laden)
 | 033 | Zustand merken: Sortierung, Scroll-Position, aufgeklappte Knoten | `git checkout ep-033` |
 | 034 | Finale: Wann GuiExpert Table – und wann nicht | `git checkout ep-034` |
 | 035 | Barrierefreie Tabellen: Tastatur und Screenreader | `git checkout ep-035` |
+| 036 | Row Grouping: Summen je Land, Stadt oder Monat | `git checkout ep-036` |
 | 040 | Eine Tabellenkalkulation im Browser: Formeln, Copy & Paste, Undo | `git checkout ep-040` |
 
 ---
@@ -1012,6 +1013,33 @@ api.announce("1,000 orders loaded");    // eigene Ansage über die Live-Region
 
 ```bash
 npm run dev   # → http://localhost:5173/accessibility/
+```
+
+---
+
+## Folge 036 – Row Grouping: Summen je Land, Stadt oder Monat
+
+Ab `@guiexpert/table` **1.1.94** (`row-grouping/row-grouping.ts`, die Live-Demo aus Kapitel 36 der Schulung).
+
+100.000 Bestellungen nach Land und Stadt gruppiert, mit Summen je Gruppe und einer Gesamtzeile – eine Fabrik:
+
+```ts
+const tableModel = RowGroupFactory.createTableModel<Order>({
+  rows: orders,
+  columnDefs: columns,
+  groupBy: ["country", "city"],                                   // Ebenen, oberste zuerst
+  aggregations: { quantity: "sum", price: "avg", total: "sum" },  // je Spalte, auch für die Gesamtzeile
+  expanded: 1,                                                    // Länder offen, Städte zu
+});
+api.setRowGroupBy(["category", "product"]);   // umgruppieren ohne neues Modell
+```
+
+- Der Filter bekommt die Bestellungen (nicht die Gruppen); Summen und Anzahlen folgen ihm.
+- Sortieren sortiert Gruppen nach ihrer Summe, Detailzeilen innerhalb der Gruppe.
+- Gruppen nach berechneten Werten: `{ name, label, value: o => … }` statt eines Feldnamens.
+
+```bash
+npm run dev   # → http://localhost:5173/row-grouping/
 ```
 
 ---

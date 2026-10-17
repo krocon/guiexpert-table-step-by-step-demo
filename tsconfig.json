@@ -9,5 +9,5 @@
     "skipLibCheck": true,
     "types": ["vite/client"]
   },
-  "include": ["src", "naive", "virtual", "web-component", "csv", "header-groups", "accessibility", "spreadsheet"]
+  "include": ["src", "naive", "virtual", "web-component", "csv", "header-groups", "accessibility", "spreadsheet", "row-grouping"]
 }
