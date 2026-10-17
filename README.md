@@ -987,6 +987,7 @@ npm run dev   # → http://localhost:5173/   (sortieren, scrollen, neu laden)
 | 035 | Barrierefreie Tabellen: Tastatur und Screenreader | `git checkout ep-035` |
 | 036 | Row Grouping: Summen je Land, Stadt oder Monat | `git checkout ep-036` |
 | 037 | Pivot-Tabellen: Länder × Quartale in einem Aufruf | `git checkout ep-037` |
+| 038 | Master/Detail: eine Bestellung und ihre Positionen | `git checkout ep-038` |
 | 040 | Eine Tabellenkalkulation im Browser: Formeln, Copy & Paste, Undo | `git checkout ep-040` |
 
 ---
@@ -1069,6 +1070,36 @@ api.setPivotConfig({ columnFields: [YEAR] });   // neu pivotieren, Breiten und F
 
 ```bash
 npm run dev   # → http://localhost:5173/pivot/
+```
+
+---
+
+## Folge 038 – Master/Detail: eine Bestellung und ihre Positionen
+
+Ab `@guiexpert/table` **1.1.97** (`master-detail/master-detail.ts`, die Live-Demo aus Kapitel 38 der Schulung).
+
+Eine Zeile aufklappen und darunter beliebigen Inhalt zeigen – hier eine zweite Tabelle mit den Positionen, auch bei
+100.000 Bestellungen:
+
+```ts
+const tableOptions: TableOptionsIf = {
+  ...new TableOptions(),
+  masterDetail: {
+    detailHeight: "auto",                                 // gemessen – oder eine Zahl bzw. Funktion
+    detailRenderer: (container, order: Order, ctx) => {
+      ctx.createTable({ tableModel: TableFactory.createTableModel({ rows: itemsOf(order) }) });
+    },
+  },
+};
+api.setDetailExpanded(0, true);
+```
+
+- Details entstehen erst, wenn sie ins Bild scrollen, und behalten ihren Zustand beim Scrollen.
+- Enter klappt auf und zu, Tab springt ins offene Detail, Shift+Tab zurück.
+- Tabellen aus `ctx.createTable()` räumt die äußere Tabelle selbst ab.
+
+```bash
+npm run dev   # → http://localhost:5173/master-detail/
 ```
 
 ---

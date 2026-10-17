@@ -3,7 +3,7 @@ import { existsSync } from "node:fs";
 import { resolve } from "node:path";
 
 // every folder with an index.html is its own page (/, /naive/, /virtual/ …)
-const pages = ["index.html", "naive/index.html", "virtual/index.html", "web-component/index.html", "csv/index.html", "header-groups/index.html", "two-million/index.html", "fixed-columns/index.html", "heatmap/index.html", "timetable/index.html", "tree/index.html", "live/index.html", "spreadsheet/index.html", "accessibility/index.html", "row-grouping/index.html", "pivot/index.html"]
+const pages = ["index.html", "naive/index.html", "virtual/index.html", "web-component/index.html", "csv/index.html", "header-groups/index.html", "two-million/index.html", "fixed-columns/index.html", "heatmap/index.html", "timetable/index.html", "tree/index.html", "live/index.html", "spreadsheet/index.html", "accessibility/index.html", "row-grouping/index.html", "pivot/index.html", "master-detail/index.html"]
   .filter(p => existsSync(resolve(__dirname, p)));
 
 export default defineConfig({
