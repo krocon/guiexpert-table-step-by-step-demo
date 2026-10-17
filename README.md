@@ -941,8 +941,9 @@ npm run dev   # → http://localhost:5173/   (sortieren, scrollen, neu laden)
 
 ### Ehrlich: Hier lieber etwas anderes
 
-- **Pivot-Tabellen**, **Row Grouping mit Aggregation per Klick** oder ein fertiges **Server-Side Row Model** gibt es
-  nicht von der Stange – das baust du mit eigenen Modellen selbst (Baum: 030, eigenes AreaModel: 017).
+- Ein fertiges **Server-Side Row Model** gibt es nicht von der Stange – das baust du mit einem eigenen AreaModel
+  selbst (017). Row Grouping und Pivot-Tabellen sind seit 1.1.94 eingebaut, eine Tabellenkalkulation mit Formeln,
+  Copy & Paste und Undo seit 1.1.99 (040).
 - Eingebaute Filter-Zeilen, Spaltenmenüs oder Kontextmenüs gibt es bewusst nicht – die UI gehört dir (021, 023).
 
 ### Alle Folgen
@@ -983,3 +984,41 @@ npm run dev   # → http://localhost:5173/   (sortieren, scrollen, neu laden)
 | 032 | Live-Daten ohne Neuaufbau | `git checkout ep-032` |
 | 033 | Zustand merken: Sortierung, Scroll-Position, aufgeklappte Knoten | `git checkout ep-033` |
 | 034 | Finale: Wann GuiExpert Table – und wann nicht | `git checkout ep-034` |
+| 040 | Eine Tabellenkalkulation im Browser: Formeln, Copy & Paste, Undo | `git checkout ep-040` |
+
+---
+
+## Folge 040 – Eine Tabellenkalkulation im Browser: Formeln, Copy & Paste, Undo
+
+Ab `@guiexpert/table` **1.1.99**. Ein Aufruf baut ein Tabellenblatt – Spaltenbuchstaben, Zeilennummern, Zellformeln
+mit A1-Bezügen (`spreadsheet/spreadsheet.ts`):
+
+```ts
+const { tableModel, tableOptions } = SpreadsheetFactory.create({
+  data: [
+    ["Item", "Jan", "Feb", "Mar", "Total"],
+    ["Rent", 950, 950, 950, "=SUM(B2:D2)"],
+    ["Sum", "=SUM(B2:B5)", "=SUM(C2:C5)", "=SUM(D2:D5)", "=SUM(E2:E5)"],
+  ],
+  rowCount: 1_000,           // 1.000 Zeilen × A–Z – Speicher kosten nur gefüllte Zellen
+});
+new FormulaBar(container, api);   // optional: Adresse + Formel der aktiven Zelle
+```
+
+- **Bearbeiten wie in Excel:** lostippen überschreibt, F2 bearbeitet, Enter/Tab springen weiter, Entf leert,
+  Strg+Enter füllt die Auswahl, Strg+Pfeil springt zum Rand der Daten.
+- **Formeln:** `B2`, `$B$2`, `B2:D5`, 70 Excel-Funktionen (`SUM`, `IF`, `VLOOKUP`, `XLOOKUP`, `SUMIFS` …). Beim
+  Tippen werden Bezüge farbig, Pfeiltasten zeigen auf Zellen, F4 schaltet `$` um. Eigener Parser – kein `eval`.
+- **Copy & Paste mit Excel und Google Sheets** (Strg+C / Strg+X / Strg+V), **Undo/Redo** (Strg+Z / Strg+Y);
+  `onUndoStackChanged` schaltet die Knöpfe.
+- **Zeilen und Spalten einfügen/löschen** (`api.insertRows`, `deleteRows`, `insertColumns`, `deleteColumns`): die
+  Bezüge wandern mit, ein gelöschter Bezug wird `#REF!`.
+- **Speichern und Excel:** `api.getSheetData()` liefert die Eingaben (Formeln, nicht Ergebnisse) für JSON;
+  `downloadExcel("budget.xlsx", "", { cellFormulas: true })` schreibt echte Formeln.
+- Bestehende Tabellen bekommen dasselbe mit `tableOptions.spreadsheet = true` (oder einzeln `editing`, `clipboard`,
+  `undo`, `cellFormulas`). Schulung: https://gui.expert/training/spreadsheet/
+
+```bash
+npm run dev   # → http://localhost:5173/spreadsheet/
+```
+

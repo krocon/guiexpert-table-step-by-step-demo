@@ -1,0 +1,3 @@
+/* Episode 040 – the formula bar sits between the header and the table */
+.formula-bar { height: 30px; }
+.table-div { height: calc(100vh - 70px); }

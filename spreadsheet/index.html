@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <title>Episode 040 – a spreadsheet in the browser</title>
+</head>
+<body>
+  <header class="app-header">
+    <b>Budget</b>
+    <button id="undo" disabled>undo</button>
+    <button id="redo" disabled>redo</button>
+    <button id="insert">insert row</button>
+    <button id="excel">Excel</button>
+    <span id="info"></span>
+  </header>
+  <div class="formula-bar"></div>
+  <div class="table-div"></div>
+  <script type="module" src="./spreadsheet.ts"></script>
+</body>
+</html>
