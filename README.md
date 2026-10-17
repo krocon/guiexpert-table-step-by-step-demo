@@ -984,7 +984,35 @@ npm run dev   # → http://localhost:5173/   (sortieren, scrollen, neu laden)
 | 032 | Live-Daten ohne Neuaufbau | `git checkout ep-032` |
 | 033 | Zustand merken: Sortierung, Scroll-Position, aufgeklappte Knoten | `git checkout ep-033` |
 | 034 | Finale: Wann GuiExpert Table – und wann nicht | `git checkout ep-034` |
+| 035 | Barrierefreie Tabellen: Tastatur und Screenreader | `git checkout ep-035` |
 | 040 | Eine Tabellenkalkulation im Browser: Formeln, Copy & Paste, Undo | `git checkout ep-040` |
+
+---
+
+## Folge 035 – Barrierefreie Tabellen: Tastatur und Screenreader
+
+Ab `@guiexpert/table` **1.1.91** (`accessibility/accessibility.ts`, die Live-Demo aus Kapitel 35 der Schulung).
+
+Die Tabelle ist ein WAI-ARIA-Grid – ohne eigenen Code: Screenreader hören Zeilen- und Spaltenzahl (auch bei
+virtuellem Scrollen), die fokussierte Zelle, Sortierung und Auswahl. Bedienung nur mit der Tastatur: Pfeile,
+Pos1/Ende, Bild↑/↓, Enter, ↑ aus der ersten Zeile in den Header.
+
+```ts
+const tableOptions: TableOptionsIf = {
+  ...new TableOptions(),
+  ariaLabel: "Orders",                  // oder ariaLabelledBy: "id-einer-überschrift"
+  ariaTexts: german,                    // Ansagen auf Deutsch (sonst Englisch)
+};
+api.announce("1,000 orders loaded");    // eigene Ansage über die Live-Region
+```
+
+- `ariaTexts` überschreibt einzelne Ansagen (`sorted`, `filtered`, `copied` …), der Rest bleibt Englisch.
+- Die Tabelle ist **ein** Tab-Stopp; Bedienelemente in Zellen bekommen `tabindex="-1"`.
+- Eigene Renderer: Text über `textContent`, Deko mit `aria-hidden="true"`.
+
+```bash
+npm run dev   # → http://localhost:5173/accessibility/
+```
 
 ---
 
