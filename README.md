@@ -986,6 +986,7 @@ npm run dev   # → http://localhost:5173/   (sortieren, scrollen, neu laden)
 | 034 | Finale: Wann GuiExpert Table – und wann nicht | `git checkout ep-034` |
 | 035 | Barrierefreie Tabellen: Tastatur und Screenreader | `git checkout ep-035` |
 | 036 | Row Grouping: Summen je Land, Stadt oder Monat | `git checkout ep-036` |
+| 037 | Pivot-Tabellen: Länder × Quartale in einem Aufruf | `git checkout ep-037` |
 | 040 | Eine Tabellenkalkulation im Browser: Formeln, Copy & Paste, Undo | `git checkout ep-040` |
 
 ---
@@ -1040,6 +1041,34 @@ api.setRowGroupBy(["category", "product"]);   // umgruppieren ohne neues Modell
 
 ```bash
 npm run dev   # → http://localhost:5173/row-grouping/
+```
+
+---
+
+## Folge 037 – Pivot-Tabellen: Länder × Quartale in einem Aufruf
+
+Ab `@guiexpert/table` **1.1.94** (`pivot/pivot-tables.ts`, die Live-Demo aus Kapitel 37 der Schulung).
+
+Zeilen nach Land und Stadt, Spalten nach Jahr und Quartal – aus den Daten erzeugt, mit Zwischen- und Gesamtsummen:
+
+```ts
+const tableModel = PivotFactory.createTableModel<Order>({
+  rows: orders,
+  rowFields: ["country", "city"],          // Zeilen: Hierarchie mit Zwischensummen
+  columnFields: [YEAR, QUARTER],           // Spalten: aus den Daten
+  values: [
+    { value: "total", label: "Revenue" },  // Summe ist der Default
+    { value: "id", aggregator: "count", label: "Orders" },
+  ],
+});
+api.setPivotConfig({ columnFields: [YEAR] });   // neu pivotieren, Breiten und Filter bleiben
+```
+
+- Leere Kombinationen bleiben leer (nicht 0); die Gesamtzeile rechnet über alle Zeilen, nicht über die Pivot-Zeilen.
+- Drill-down: `body.getCellSourceRows(row, column)` liefert die Bestellungen hinter einer Zelle.
+
+```bash
+npm run dev   # → http://localhost:5173/pivot/
 ```
 
 ---
