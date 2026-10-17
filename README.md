@@ -988,6 +988,7 @@ npm run dev   # → http://localhost:5173/   (sortieren, scrollen, neu laden)
 | 036 | Row Grouping: Summen je Land, Stadt oder Monat | `git checkout ep-036` |
 | 037 | Pivot-Tabellen: Länder × Quartale in einem Aufruf | `git checkout ep-037` |
 | 038 | Master/Detail: eine Bestellung und ihre Positionen | `git checkout ep-038` |
+| 039 | Berechnete Spalten, „Show values as“ und Formeln | `git checkout ep-039` |
 | 040 | Eine Tabellenkalkulation im Browser: Formeln, Copy & Paste, Undo | `git checkout ep-040` |
 
 ---
@@ -1100,6 +1101,34 @@ api.setDetailExpanded(0, true);
 
 ```bash
 npm run dev   # → http://localhost:5173/master-detail/
+```
+
+---
+
+## Folge 039 – Berechnete Spalten, „Show values as“ und Formeln
+
+Ab `@guiexpert/table` **1.1.95** (`formulas/formulas.ts`, die Live-Demo aus Kapitel 39 der Schulung).
+
+Netto, Brutto, Anteil am Gesamtwert und eine Formel, die Anwender tippen – berechnet, wenn eine Zelle sichtbar wird,
+ohne die Daten zu ändern. Sortieren, Filter, Summen, Copy und Excel nutzen die berechneten Werte:
+
+```ts
+ColumnDef.create({ property: "net", headerLabel: "Net",
+  valueGetter: (o: Order) => Math.round(o.quantity * o.price * 100) / 100 }),
+ColumnDef.create({ property: "gross", headerLabel: "Gross",
+  formula: "ROUND([net] * 1.19, 2)" }),                          // ein Text – eigener Parser, kein eval
+ColumnDef.create({ property: "share", headerLabel: "Share of net",
+  valueGetter: (o: Order, c) => c.getValue(o, "net"),
+  showValuesAs: { mode: "percentOfColumnTotal", fractionDigits: 2 } }),
+api.setColumnFormula("custom", 'IF([quantity] >= 10, "bulk", "single")');
+```
+
+- „Show values as“: Anteile, laufende Summe, Differenz zum Vorgänger, Rang – bezogen auf die gefilterten Zeilen.
+- Fehler sind Werte (`#DIV/0!`, `#NAME?`) – eine Formel wirft nie.
+- Zellbezüge wie `=B2*C2` in den Zellen selbst: Folge 040.
+
+```bash
+npm run dev   # → http://localhost:5173/formulas/
 ```
 
 ---
